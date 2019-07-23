@@ -8,8 +8,8 @@ module.exports = {
   entry: [path.resolve('src/app.js')],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist/'
+    path: path.resolve(__dirname, 'docs'),
+    publicPath: 'docs/'
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
