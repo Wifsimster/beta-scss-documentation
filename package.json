@@ -2,7 +2,7 @@
   "name": "beta-scss-documentation",
   "description": "beta-scss documentation",
   "author": "Wifsimster <battistella@protonmail.com>",
-  "version": "0.15.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --config webpack.local.js --mode development",
@@ -28,6 +28,7 @@
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
     "node-sass": "^4.12.0",

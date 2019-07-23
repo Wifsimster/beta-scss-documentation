@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const packageJson = require('./package.json')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
@@ -21,12 +22,13 @@ module.exports = {
     }
   },
   plugins: [
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(packageJson.version),
       BUILD_DATE: JSON.stringify(new Date())
-    })
+    }),
+    new CopyWebpackPlugin([{ from: 'index.html', to: 'index.html' }])
   ],
   module: {
     rules: [
