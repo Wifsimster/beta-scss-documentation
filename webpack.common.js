@@ -14,7 +14,10 @@ module.exports = {
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {
-      components: path.resolve(__dirname, 'src/components/')
+      components: path.resolve(__dirname, 'src/components/'),
+      fonts: path.resolve(__dirname, 'src/fonts/'),
+      plugins: path.resolve(__dirname, 'src/plugins/'),
+      scss: path.resolve(__dirname, 'src/scss/')
     }
   },
   plugins: [

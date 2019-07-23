@@ -21,10 +21,10 @@
 </template>
 
 <script>
-const ComHeader = () => import("../components/Header.vue");
-const ComSidebar = () => import("../components/Sidebar.vue");
+const ComHeader = () => import("components/Header.vue");
+const ComSidebar = () => import("components/Sidebar.vue");
 
-import "../fonts/Montserrat/style.css";
+import "fonts/Montserrat/style.css";
 
 export default {
   components: {

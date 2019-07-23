@@ -111,7 +111,6 @@
   </div>
 </template>
 
-
 <style lang="scss" scoped>
 #sidebar {
   min-width: 88px;
