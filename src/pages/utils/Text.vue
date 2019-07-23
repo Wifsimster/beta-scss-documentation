@@ -1,52 +1,53 @@
 <template>
-  <div>
-    <h1>Texte</h1>
-
-    <div>
+  <card>
+    <template #header>Text</template>
+    <template #navigation>
       <div class="bg:grey-lighter w:full px:1/2">
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/color'}"
           to="/text/color"
-        >Couleur</router-link>
+        >Color</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/size'}"
           to="/text/size"
-        >Taille</router-link>
+        >Size</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/weigth'}"
           to="/text/weigth"
-        >Poid</router-link>
+        >Weigth</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/alignment'}"
           to="/text/alignment"
-        >Alignement</router-link>
+        >Alignment</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/decoration'}"
           to="/text/decoration"
-        >Décoration</router-link>
+        >Decoration</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:2 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/text/line-height'}"
           to="/text/line-height"
-        >Hauteur de ligne</router-link>
+        >Line height</router-link>
       </div>
-    </div>
+    </template>
 
-    <transition name="opacity" mode="out-in">
-      <router-view></router-view>
-    </transition>
-  </div>
+    <template #content>
+      <transition name="opacity" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </template>
+  </card>
 </template>
 
 <script>

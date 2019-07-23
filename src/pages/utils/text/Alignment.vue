@@ -4,7 +4,7 @@
       <table class="w:full">
         <thead>
           <tr>
-            <th>Classe</th>
+            <th>Class</th>
             <th></th>
           </tr>
         </thead>

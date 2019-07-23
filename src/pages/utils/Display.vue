@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <h1>Affichage</h1>
-
-    <div class="flex:1">
+  <card>
+    <template #header>Display</template>
+    <template #content>
       <div class="flex flex:wrap">
-        <div class="flex:1">
+        <div class="flex:2">
           <table class="w:full">
             <thead>
               <tr>
-                <th>Classe</th>
-                <th>Propriétés</th>
+                <th>Class</th>
+                <th>Properties</th>
               </tr>
             </thead>
             <tbody>
@@ -127,8 +126,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </card>
 </template>
 
 <script>

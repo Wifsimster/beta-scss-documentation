@@ -5,7 +5,7 @@
         <table class="w:full">
           <thead>
             <tr>
-              <th>Classe</th>
+              <th>Class</th>
               <th></th>
             </tr>
           </thead>
@@ -16,7 +16,7 @@
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="color === 'black'"
-                >Défaut</pre>
+                >Default</pre>
               </td>
               <td class="px:1/2 border:b border:grey-light" :class="'text:'+color">Aa</td>
             </tr>

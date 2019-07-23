@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <h1>Positionnement</h1>
-
-    <div class="flex:1">
+  <card>
+    <template #header>Position</template>
+    <template #content>
       <div class="flex flex:row">
-        <div class="flex:1 mr:1">
+        <div class="flex:2 mr:1">
           <div class="flex flex:col">
             <div class="flex:1 mb:2">
               <table class="w:full">
                 <thead>
                   <tr>
-                    <th>Classe</th>
-                    <th>Propriétés</th>
+                    <th>Class</th>
+                    <th>Properties</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -98,7 +97,7 @@
           </div>
         </div>
 
-        <div class="flex:3">
+        <div class="flex:2">
           <div class="flex flex:wrap">
             <div class="flex:1 py:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
@@ -201,8 +200,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </card>
 </template>
 
 <script>

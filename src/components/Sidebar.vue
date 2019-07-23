@@ -1,108 +1,108 @@
 <template>
-  <div id="sidebar" class="bg:grey-darkest">
+  <div id="sidebar" class="bg:black">
     <div id="sidebar-content">
       <div class="overflow-y:auto">
         <ul class="list-reset text:white m:0">
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/flexbox"
           >Flexbox</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/color"
-          >Couleurs</router-link>
+          >Colors</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/text"
-          >Texte</router-link>
+          >Text</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/typography"
-          >Typographie</router-link>
+          >Typography</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/display"
-          >Affichage</router-link>
+          >Display</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/position"
-          >Positionnement</router-link>
+          >Position</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/float"
           >Float</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/spacing"
-          >Espacement</router-link>
+          >Spacing</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/border"
-          >Bordure</router-link>
+          >Border</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/rounded"
-          >Arrondi</router-link>
+          >Rounded</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/width"
-          >Largeur</router-link>
+          >Width</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/height"
-          >Hauteur</router-link>
+          >Height</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/effect"
-          >Effets</router-link>
+          >Effect</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/overflow"
           >Overflow</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/zindex"
           >Z-index</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/interactivity"
-          >Interactivité</router-link>
+          >Interactivity</router-link>
           <router-link
-            class="px:1 py:1/2 hover:bg:user cursor:pointer text:white"
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
-            active-class="bg:user"
+            active-class="bg:grey-darkest text:white"
             to="/animation"
           >Animation</router-link>
         </ul>
@@ -113,7 +113,7 @@
 
 <style lang="scss" scoped>
 #sidebar {
-  min-width: 88px;
+  min-width: 110px;
   #sidebar-content {
     & > div {
       height: calc(100vh - 40px);

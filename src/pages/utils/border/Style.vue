@@ -4,7 +4,7 @@
       <table class="w:full">
         <thead>
           <tr>
-            <th>Classe</th>
+            <th>Class</th>
           </tr>
         </thead>
         <tbody>
@@ -14,7 +14,7 @@
               <pre
                 class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                 v-if="style === 'solid'"
-              >Défaut</pre>
+              >Default</pre>
             </td>
           </tr>
         </tbody>

@@ -1,13 +1,11 @@
 <template>
   <div>
-    <div>Flexbox est un module CSS3 permettant de disposer, aligner et distribuer l'espace entre les éléments d'un conteneur de manière dynamique.</div>
-
     <div class="flex flex:col bg:grey-lighter mt:1 p:1/2 rounded">
       <div class="flex flex:wrap">
-        <div class="flex:1 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Elément</div>
-        <div class="flex:2 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Elément</div>
+        <div class="flex:1 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Item</div>
+        <div class="flex:2 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Item</div>
       </div>
-      <div class="flex:1 text:center">Conteneur</div>
+      <div class="flex:1 text:center">Content</div>
     </div>
 
     <div class="flex flex:wrap">

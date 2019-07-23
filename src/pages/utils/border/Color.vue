@@ -5,7 +5,7 @@
         <table class="w:full">
           <thead>
             <tr>
-              <th>Classe</th>
+              <th>Class</th>
               <th></th>
             </tr>
           </thead>
@@ -16,7 +16,7 @@
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="color === 'grey-light'"
-                >Défaut</pre>
+                >Default</pre>
               </td>
               <td class="px:1 py:1/2 border:b border:grey-lighter">
                 <div class="border px:1 py:3" :class="'border:'+color"></div>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="flex:3">
+    <div class="flex:2">
       <div class="flex flex:wrap">
         <div class="flex:1 py:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
@@ -49,7 +49,7 @@
 
         <div class="flex:1 py:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <input class="bg:grey-lighter border:b hover:border:green">
+            <input class="bg:grey-lighter border:b hover:border:green" />
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="exemple3"></pre>
@@ -58,7 +58,7 @@
 
         <div class="flex:1 py:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <input class="bg:grey-lighter border:b focus:border:green">
+            <input class="bg:grey-lighter border:b focus:border:green" />
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="exemple4"></pre>

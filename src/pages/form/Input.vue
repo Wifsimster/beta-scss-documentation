@@ -6,7 +6,7 @@
           <div class="flex:1 py:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1">
               <label for="inputId">Input text</label>
-              <input id="inputId" type="text">
+              <input id="inputId" type="text" />
             </div>
             <div class="bg:black rounded:b:1/2">
               <pre class="language-html" v-html="exemple2"></pre>
@@ -16,7 +16,7 @@
           <div class="flex:1 py:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1">
               <label for="numberId">Input number</label>
-              <input id="numberId" type="number">
+              <input id="numberId" type="number" />
             </div>
             <div class="bg:black rounded:b:1/2">
               <pre class="language-html" v-html="exemple3"></pre>
@@ -26,7 +26,7 @@
           <div class="flex:1 py:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1">
               <label for="readonlyId">Input readonly</label>
-              <input id="readonlyId" type="text" readonly v-model="readonly">
+              <input id="readonlyId" type="text" readonly v-model="readonly" />
             </div>
             <div class="bg:black rounded:b:1/2">
               <pre class="language-html" v-html="exemple4"></pre>
@@ -35,13 +35,13 @@
         </div>
       </div>
       <div class="flex:1">
-        <div class="text:5/4 text:grey-darkest mb:1">Propriétés</div>
+        <div class="text:5/4 text:grey-darkest mb:1">Properties</div>
         <table class="mb:2">
           <thead>
             <tr>
               <th>Nom</th>
               <th>Type</th>
-              <th>Défaut</th>
+              <th>Default</th>
               <th>Description</th>
             </tr>
           </thead>

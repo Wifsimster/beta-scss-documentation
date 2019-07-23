@@ -4,8 +4,8 @@
       <table class="w:full">
         <thead>
           <tr>
-            <th>Classe</th>
-            <th>Propriétés</th>
+            <th>Class</th>
+            <th>Properties</th>
             <th></th>
           </tr>
         </thead>
@@ -16,7 +16,7 @@
               <pre
                 class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                 v-if="weight.key === 'light'"
-              >Défaut</pre>
+              >Default</pre>
             </td>
             <td>
               <pre class="text:blue">{{ weight.value }}</pre>

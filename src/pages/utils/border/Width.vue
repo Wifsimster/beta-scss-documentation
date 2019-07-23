@@ -4,14 +4,14 @@
       <table class="w:full">
         <thead>
           <tr>
-            <th>Classe</th>
+            <th>Class</th>
             <th>
-              Côté
-              <span class="text:grey text:3/4">(Optionnel)</span>
+              Side
+              <span class="text:grey text:3/4">(Optional)</span>
             </th>
             <th>
-              Largeur
-              <span class="text:grey text:3/4">(Optionnel)</span>
+              Width
+              <span class="text:grey text:3/4">(Optional)</span>
             </th>
             <th>
               Px
@@ -27,7 +27,7 @@
             <td class="px:1 border:b border:grey-lighter">
               <code class="border rounded bg:grey-light m:1/4 p:1/2">&nbsp;</code>
               All
-              <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Défaut</pre>
+              <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Default</pre>
             </td>
             <td class="px:1 border:b border:grey-lighter">
               <code class="border rounded mr:1/4 px:1/5 py:1/4">0</code> 0
@@ -41,7 +41,7 @@
             </td>
             <td class="px:1 border:b border:grey-lighter">
               <code class="border rounded bg:grey-light m:1/4 p:1/2">&nbsp;</code> 0.0625rem
-              <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Défaut</pre>
+              <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Default</pre>
             </td>
             <td class="px:1 border:b border:grey-lighter">1px</td>
           </tr>
@@ -99,7 +99,7 @@
       </table>
     </div>
 
-    <div class="flex:2">
+    <div class="flex:1">
       <div class="flex flex:wrap">
         <div class="flex:1 py:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">

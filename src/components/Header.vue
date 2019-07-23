@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="flex justify:between bg:grey-darkest">
+  <div id="header" class="flex justify:between bg:black">
     <div>
       <router-link
         tag="div"

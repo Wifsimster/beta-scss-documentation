@@ -1,15 +1,12 @@
 <template>
   <div>
-    <div
-      class="text:grey-darkest px:1 text:5/4"
-    >Permet de modifier l'ordre d'affichage des éléments.</div>
     <div class="flex flex:wrap">
-      <div class="flex:initial mr:1">
+      <div class="flex:1 mr:1">
         <table class="w:full">
           <thead>
             <tr>
-              <th>Classe</th>
-              <th>Propriétés</th>
+              <th>Class</th>
+              <th>Properties</th>
             </tr>
           </thead>
           <tbody>
@@ -25,7 +22,7 @@
         </table>
       </div>
 
-      <div class="flex:1">
+      <div class="flex:2">
         <div class="flex flex:col flex:wrap">
           <div class="flex:1 mb:1">
             <div class="border rounded:t:1/2 p:1">

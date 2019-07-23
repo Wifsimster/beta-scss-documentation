@@ -1,15 +1,12 @@
 <template>
   <div>
-    <div
-      class="text:grey-darkest px:1 text:5/4"
-    >Contrôle la disposition des lignes dans le conteneur.</div>
     <div class="flex flex:wrap">
-      <div class="flex:initial mr:1">
+      <div class="flex:1 mr:1">
         <table class="w:full">
           <thead>
             <tr>
-              <th>Classe</th>
-              <th>Propriétés</th>
+              <th>Class</th>
+              <th>Properties</th>
             </tr>
           </thead>
           <tbody>
@@ -19,7 +16,7 @@
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="item[0] === 'start'"
-                >Défaut</pre>
+                >Default</pre>
               </td>
               <td class="px:1/2 py:1 border:b border:grey-light">
                 <pre class="inline text:blue">align-content: {{ item[1] }};</pre>
@@ -29,7 +26,7 @@
         </table>
       </div>
 
-      <div class="flex:1">
+      <div class="flex:2">
         <div class="flex flex:col flex:wrap">
           <div class="flex:1 mb:1">
             <div class="border rounded:t:1/2 p:1">

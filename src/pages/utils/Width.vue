@@ -1,60 +1,62 @@
 <template>
-  <div>
-    <h1>Largeurs</h1>
-    <div class="flex flex:wrap">
-      <div class="flex:1 mr:1">
-        <table class="w:full">
-          <thead>
-            <tr>
-              <th>Classe</th>
-              <th>Largeur</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(size, index) in sizes" :key="index">
-              <td v-if="index === 0" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded mr:1/4 px:1/5 py:1/4">w</code>
-                Width
-              </td>
-              <td v-else-if="index === 1" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded mr:1/4 px:1/5 py:1/4">min-w</code>
-                Min-width
-              </td>
-              <td v-else-if="index === 2" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded mr:1/4 px:1/5 py:1/4">max-w</code>
-                Max-width
-              </td>
-              <td v-else class="px:1/2 border:b border:grey-lighter"></td>
-              <td class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded mr:1/4 px:1/5 py:1/4">
-                  {{
-                  size.key
-                  }}
-                </code>
-                {{ size.value }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <card>
+    <template #header>Width</template>
+    <template #content>
+      <div class="flex flex:wrap">
+        <div class="flex:1 mr:1">
+          <table class="w:full">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Width</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(size, index) in sizes" :key="index">
+                <td v-if="index === 0" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">w</code>
+                  Width
+                </td>
+                <td v-else-if="index === 1" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">min-w</code>
+                  Min-width
+                </td>
+                <td v-else-if="index === 2" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">max-w</code>
+                  Max-width
+                </td>
+                <td v-else class="px:1/2 border:b border:grey-lighter"></td>
+                <td class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">
+                    {{
+                    size.key
+                    }}
+                  </code>
+                  {{ size.value }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <div class="flex:2 mb:1">
-        <div class="border rounded:1/2 p:1 mb:1" v-for="(grids, index) in widths" :key="index">
-          <div
-            class="flex items:center mb:1/2 bg:grey-lighter rounded"
-            v-for="(width, i) in grids"
-            :key="i"
-          >
-            <pre class="inline text:purple m:0 pt:1/4 w:1/12">
+        <div class="flex:2 mb:1">
+          <div class="border rounded:1/2 p:1 mb:1" v-for="(grids, index) in widths" :key="index">
+            <div
+              class="flex items:center mb:1/2 bg:grey-lighter rounded"
+              v-for="(width, i) in grids"
+              :key="i"
+            >
+              <pre class="inline text:purple m:0 pt:1/4 w:1/12">
 .w:{{ width }}</pre>
-            <div class="w:11/12">
-              <div class="bg:grey-light" :class="'w:' + width" style="height: 25px;"></div>
+              <div class="w:11/12">
+                <div class="bg:grey-light" :class="'w:' + width" style="height: 25px;"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </card>
 </template>
 
 <script>

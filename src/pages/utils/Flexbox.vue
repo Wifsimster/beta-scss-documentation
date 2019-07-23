@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h1>Flexbox</h1>
-
-    <div>
+  <card>
+    <template #header>Flexbox</template>
+    <template #navigation>
       <div class="bg:grey-lighter w:full px:1/2">
         <router-link
           tag="span"
@@ -74,12 +73,14 @@
           to="/flexbox/flex-shrink"
         >Flex Shrink</router-link>
       </div>
-    </div>
+    </template>
 
-    <transition name="opacity" mode="out-in">
-      <router-view></router-view>
-    </transition>
-  </div>
+    <template #content>
+      <transition name="opacity" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </template>
+  </card>
 </template>
 
 <script>

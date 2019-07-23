@@ -15,10 +15,14 @@
 
 html {
   color: map-get($colors, 'black');
+  background-color: map-get($colors, 'grey-lighter');
 }
 
 #app {
   #wrapper {
-    height: calc(100vh - 40px - 38px);
+    height: calc(100vh - 40px);
   }
 }
+
+@import 'table.scss';
+@import 'transition.scss';

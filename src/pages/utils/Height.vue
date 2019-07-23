@@ -1,65 +1,67 @@
 <template>
-  <div>
-    <h1>Hauteurs</h1>
+  <card>
+    <template #header>Height</template>
 
-    <div class="flex flex:wrap">
-      <div class="flex:1 mr:1">
-        <table class="w:full">
-          <thead>
-            <tr>
-              <th>Classe</th>
-              <th>Hauteur</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(size, index) in sizes" :key="size.key">
-              <td v-if="index === 0" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded m:1/4 px:1/5 py:1/4">h</code>
-                Height
-              </td>
-              <td v-else-if="index === 1" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded m:1/4 px:1/5 py:1/4">min-h</code>
-                Min-height
-              </td>
-              <td v-else-if="index === 2" class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded m:1/4 px:1/5 py:1/4">max-h</code>
-                Max-height
-              </td>
-              <td v-else class="px:1/2 border:b border:grey-lighter"></td>
-              <td class="px:1/2 border:b border:grey-lighter">
-                <code class="border rounded m:1/4 px:1/5 py:1/4">
-                  {{
-                  size.key
-                  }}
-                </code>
-                {{ size.value }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <template #content>
+      <div class="flex flex:wrap">
+        <div class="flex:1 mr:1">
+          <table class="w:full">
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Height</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(size, index) in sizes" :key="size.key">
+                <td v-if="index === 0" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded m:1/4 px:1/5 py:1/4">h</code>
+                  Height
+                </td>
+                <td v-else-if="index === 1" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded m:1/4 px:1/5 py:1/4">min-h</code>
+                  Min-height
+                </td>
+                <td v-else-if="index === 2" class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded m:1/4 px:1/5 py:1/4">max-h</code>
+                  Max-height
+                </td>
+                <td v-else class="px:1/2 border:b border:grey-lighter"></td>
+                <td class="px:1/2 border:b border:grey-lighter">
+                  <code class="border rounded m:1/4 px:1/5 py:1/4">
+                    {{
+                    size.key
+                    }}
+                  </code>
+                  {{ size.value }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <div class="flex:2">
-        <div class="flex flex:wrap">
-          <div
-            class="flex:1 border rounded:1/2 p:1/2 mb:1"
-            v-for="(grids, index) in heights"
-            :key="index"
-          >
-            <div class="flex justify:around bg:grey-lighter rounded" style="height: 200px;">
-              <div v-for="(height, i) in grids" :key="i" class="h:full">
-                <pre class="inline text:center text:sm text:purple mx:1/2 py:1/2 h:2/12">
+        <div class="flex:2">
+          <div class="flex flex:wrap">
+            <div
+              class="flex:1 border rounded:1/2 p:1/2 mb:1"
+              v-for="(grids, index) in heights"
+              :key="index"
+            >
+              <div class="flex justify:around bg:grey-lighter rounded" style="height: 200px;">
+                <div v-for="(height, i) in grids" :key="i" class="h:full">
+                  <pre class="inline text:center text:sm text:purple mx:1/2 py:1/2 h:2/12">
 h:{{ height }}</pre>
-                <div class="h:10/12 my:1/4">
-                  <div :class="'bg:grey-light border h:' + height"></div>
+                  <div class="h:10/12 my:1/4">
+                    <div :class="'bg:grey-light border h:' + height"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </card>
 </template>
 
 <script>
