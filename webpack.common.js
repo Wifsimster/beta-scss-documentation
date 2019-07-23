@@ -28,7 +28,7 @@ module.exports = {
       VERSION: JSON.stringify(packageJson.version),
       BUILD_DATE: JSON.stringify(new Date())
     }),
-    new CopyWebpackPlugin([{ from: 'index.html', to: 'index.html' }])
+    new CopyWebpackPlugin([{ from: 'index.html', to: 'index.html' }, { from: 'fonts/', to: 'fonts/' }])
   ],
   module: {
     rules: [
@@ -37,8 +37,8 @@ module.exports = {
       { test: /\.html$/, use: [{ loader: 'vue-html-loader' }] },
       { test: /\.css$/, use: ['vue-style-loader', 'css-loader'] },
       { test: /\.scss$/, use: ['vue-style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.(png|jpg|gif|svg)$/, loader: 'url-loader?limit=8192&name=../img/[name].[ext]' },
-      { test: /\.(woff(2)?|eot|otf|ttf|svg)(\?[a-z0-9=\.]+)?$/, loader: 'file-loader?name=../fonts/[name].[ext]' }
+      { test: /\.(png|jpg|gif|svg)$/, loader: 'url-loader?limit=8192&name=./img/[name].[ext]' },
+      { test: /\.(woff(2)?|eot|otf|ttf|svg)(\?[a-z0-9=\.]+)?$/, loader: 'file-loader?name=./fonts/[name].[ext]' }
     ]
   }
 }
