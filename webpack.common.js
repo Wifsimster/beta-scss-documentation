@@ -21,7 +21,7 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(packageJson.version),
