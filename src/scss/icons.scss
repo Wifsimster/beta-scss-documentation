@@ -1,0 +1,20 @@
+.icon-list {
+  position: relative;
+  overflow: hidden;
+  .container-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .icon {
+      padding: 15px 0;
+      line-height: 1.25;
+      flex: 1 1 15%;
+      i {
+        font-size: 32px !important;
+      }
+      .caption {
+        font-size: 12px;
+      }
+    }
+  }
+}

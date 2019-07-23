@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  @extend .w\:full;
+  thead {
+    @extend .border\:b\:1\/8;
+    @extend .border\:teal;
+    th {
+      @extend .text\:teal;
+      @extend .text\:normal;
+      @extend .px\:1\/2;
+      @extend .py\:1\/3;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        @extend .bg\:grey-lightest;
+      }
+      @extend .border\:b;
+      @extend .hover\:bg\:blue-lightest;
+      td {
+        @extend .px\:1\/2;
+        @extend .py\:1\/3;
+      }
+    }
+  }
+}
