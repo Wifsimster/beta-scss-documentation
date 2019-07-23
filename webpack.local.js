@@ -5,7 +5,7 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue: 'vue/docs/vue.js'
     }
   },
   plugins: [
