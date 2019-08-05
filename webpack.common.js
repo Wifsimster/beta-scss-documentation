@@ -7,17 +7,13 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: [path.resolve('src/app.js')],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'docs'),
-    publicPath: '/beta-scss-documentation/'
-  },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
       fonts: path.resolve(__dirname, 'src/fonts/'),
-      plugins: path.resolve(__dirname, 'src/plugins/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+      router: path.resolve(__dirname, 'src/router/'),
       scss: path.resolve(__dirname, 'src/scss/')
     }
   },
