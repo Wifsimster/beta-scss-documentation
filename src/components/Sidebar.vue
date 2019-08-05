@@ -13,6 +13,12 @@
             class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
             tag="li"
             active-class="bg:grey-darkest text:white"
+            to="/responsive"
+          >Responsive Grid</router-link>
+          <router-link
+            class="px:1 py:1/2 hover:text:white cursor:pointer text:grey transition"
+            tag="li"
+            active-class="bg:grey-darkest text:white"
             to="/color"
           >Colors</router-link>
           <router-link
@@ -113,7 +119,7 @@
 
 <style lang="scss" scoped>
 #sidebar {
-  min-width: 110px;
+  min-width: 120px;
   #sidebar-content {
     & > div {
       height: calc(100vh - 40px);

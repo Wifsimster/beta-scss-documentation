@@ -16,6 +16,7 @@ const Rounded = () => import('../pages/utils/Rounded.vue')
 const Float = () => import('../pages/utils/Float.vue')
 const Overflow = () => import('../pages/utils/Overflow.vue')
 const Zindex = () => import('../pages/utils/Z-index.vue')
+const Responsive = () => import('../pages/utils/Responsive.vue')
 
 // Flexbox
 const Flexbox = () => import('../pages/utils/Flexbox.vue')
@@ -111,7 +112,8 @@ let router = new Router({
     { path: '/float', component: Float },
     { path: '/zindex', component: Zindex },
     { path: '/rounded', component: Rounded },
-    { path: '/transition', component: Transition }
+    { path: '/transition', component: Transition },
+    { path: '/responsive', component: Responsive }
   ]
 })
 

@@ -103,7 +103,20 @@ export default {
 
         { key: "full", value: "100%" },
         { key: "screen", value: "100vw" },
-        { key: "auto", value: "auto" }
+        { key: "inherit", value: "inherit" },
+        { key: "auto", value: "auto" },
+
+        { key: "xs", value: "20rem" },
+        { key: "sm", value: "30rem" },
+        { key: "md", value: "40rem" },
+        { key: "lg", value: "50rem" },
+        { key: "xl", value: "60rem" },
+        { key: "2xl", value: "70rem" },
+        { key: "3xl", value: "80rem" },
+        { key: "4xl", value: "90rem" },
+        { key: "5xl", value: "100rem" },
+        { key: "6xl", value: "110rem" },
+        { key: "7xl", value: "120rem" }
       ],
       heights: [
         ["1/2"],

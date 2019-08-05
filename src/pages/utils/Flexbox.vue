@@ -47,7 +47,7 @@
           class="cursor:pointer text:bold py:1 px:1/2"
           :class="{ 'border:b:1/8 border:orange': $route.path === '/flexbox/order'}"
           to="/flexbox/order"
-        >Ordre</router-link>
+        >Order</router-link>
         <router-link
           tag="span"
           class="cursor:pointer text:bold py:1 px:1/2"

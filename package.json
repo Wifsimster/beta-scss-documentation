@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@babel/runtime": "^7.5.5",
-    "beta-scss": "^1.2.2",
+    "beta-scss": "^1.2.3",
     "date-fns": "^2.0.0-beta.3",
     "moment": "^2.24.0",
     "pikaday": "^1.8.0",
