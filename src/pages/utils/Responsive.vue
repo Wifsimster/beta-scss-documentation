@@ -5,7 +5,7 @@
       <div class="flex flex:wrap">
         <div class="flex:1">
           <p>Automatically builds a responsive grid in flexbox based on media queries.</p>
-          <table class="w:full">
+          <table class="w:full mx:1">
             <thead>
               <tr>
                 <th>Class</th>
