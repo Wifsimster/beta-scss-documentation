@@ -3,7 +3,7 @@
     <template #header>Responsive Grid</template>
     <template #content>
       <div class="flex flex:wrap">
-        <div class="flex:1">
+        <div class="flex:1 min-w:sm">
           <p>Automatically builds a responsive grid in flexbox based on media queries.</p>
           <table class="w:full mx:1">
             <thead>
@@ -14,26 +14,23 @@
             </thead>
             <tbody>
               <tr v-for="grid in grids" :key="grid.key">
-                <td class="p:0 border:b border:grey-light">
+                <td class="px:1/4 border:b border:grey-light">
                   <pre class="text:purple">.responsive:{{ grid.key }}</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="px:1/4 border:b border:grey-light">
                   <pre class="text:blue">{{ grid.value }}</pre>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-
-        <div class="w:full">
+        <div class="flex:1 min-w:sm">
           <div class="p:1/4 ml:1 mb:1">
-            <h2>4 columns grid</h2>
+            <h2>2 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
-              <div class="responsive:4">
+              <div class="responsive:2">
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">1</div>
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">2</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">3</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">4</div>
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -42,7 +39,7 @@
           </div>
         </div>
 
-        <div class="w:full">
+        <div class="flex:1 min-w:sm">
           <div class="p:1/4 ml:1 mb:1">
             <h2>6 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
@@ -61,11 +58,11 @@
           </div>
         </div>
 
-        <div class="w:full">
+        <div class="flex:1 min-w:sm">
           <div class="p:1/4 ml:1 mb:1">
-            <h2>8 columns grid</h2>
+            <h2>12 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
-              <div class="responsive:8">
+              <div class="responsive:12">
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">1</div>
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">2</div>
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">3</div>
@@ -74,6 +71,10 @@
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">6</div>
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">7</div>
                 <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">8</div>
+                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">9</div>
+                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">10</div>
+                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">11</div>
+                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">12</div>
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -92,6 +93,8 @@ export default {
   data() {
     return {
       grids: [
+        { key: "2", value: "2 columns" },
+        { key: "3", value: "3 columns" },
         { key: "4", value: "4 columns" },
         { key: "6", value: "6 columns" },
         { key: "8", value: "8 columns" },
@@ -105,11 +108,9 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="responsive:4">
+      `<div class="responsive:2">
   <div>1</div>
   <div>2</div>
-  <div>3</div>
-  <div>4</div>
 </div>`,
       Prism.languages.html,
       "html"
@@ -129,7 +130,7 @@ export default {
     );
 
     this.exemple3 = Prism.highlight(
-      `<div class="responsive:8">
+      `<div class="responsive:12">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -138,6 +139,10 @@ export default {
   <div>6</div>
   <div>7</div>
   <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
 </div>`,
       Prism.languages.html,
       "html"
