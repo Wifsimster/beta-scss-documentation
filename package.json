@@ -11,8 +11,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@babel/runtime": "^7.5.5",
-    "beta-scss": "^1.2.4",
-    "date-fns": "^2.0.0-beta.4",
+    "beta-scss": "^1.2.7",
+    "date-fns": "^2.0.0-beta.5",
     "moment": "^2.24.0",
     "pikaday": "^1.8.0",
     "prismjs": "^1.17.1",
@@ -39,9 +39,9 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
   }
 }

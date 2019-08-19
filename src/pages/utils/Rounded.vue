@@ -43,6 +43,16 @@
                   <code class="border rounded mr:1/4 px:1/5 py:1/4">t</code> Top
                 </td>
                 <td class="px:1 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">1/8</code> 0.125rem
+                </td>
+                <td class="px:1 border:b border:grey-lighter">2px</td>
+              </tr>
+              <tr>
+                <td class="px:1 border:b border:grey-lighter"></td>
+                <td class="px:1 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">r</code> Right
+                </td>
+                <td class="px:1 border:b border:grey-lighter">
                   <code class="border rounded bg:grey-light m:1/4 p:1/2">&nbsp;</code> 0.25rem
                   <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Default</pre>
                 </td>
@@ -51,7 +61,7 @@
               <tr>
                 <td class="px:1 border:b border:grey-lighter"></td>
                 <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">r</code> Right
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">b</code> Bottom
                 </td>
                 <td class="px:1 border:b border:grey-lighter">
                   <code class="border rounded mr:1/4 px:1/5 py:1/4">1/2</code> 0.5rem
@@ -61,7 +71,7 @@
               <tr>
                 <td class="px:1 border:b border:grey-lighter"></td>
                 <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">b</code> Bottom
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">l</code> Left
                 </td>
                 <td class="px:1 border:b border:grey-lighter">
                   <code class="border rounded mr:1/4 px:1/5 py:1/4">3/4</code> 0.75rem
@@ -70,9 +80,7 @@
               </tr>
               <tr>
                 <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">l</code> Left
-                </td>
+                <td class="px:1 border:b border:grey-lighter"></td>
                 <td class="px:1 border:b border:grey-lighter">
                   <code class="border rounded mr:1/4 px:1/5 py:1/4">1</code> 1rem
                 </td>
