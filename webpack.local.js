@@ -6,8 +6,8 @@ const path = require("path")
 module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "docs"),
-    publicPath: "docs/"
+    path: path.resolve(__dirname, "docs")
+    // publicPath: "/"
   },
   resolve: {
     alias: {
