@@ -3,8 +3,8 @@
     <template #header>Documentation</template>
     <template #content>
       <div class="flex:1 mb:2">
-          This is the
-          <a href="https://github.com/Wifsimster/beta-scss" target="_blank">beta-scss</a> documentation.
+        This is the
+        <a href="https://github.com/Wifsimster/beta-scss" target="_blank">beta-scss</a> documentation.
       </div>
 
       <div class="flex:1">
@@ -68,16 +68,10 @@
               </li>
             </ul>
           </div>
-          
+
           <div class="flex:1">
-            Pseudo-class : 
+            Pseudo-class :
             <ul class="line-height:2">
-              <li>
-                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">active:{class}</pre>
-              </li>
-              <li>
-                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">visited:{class}</pre>
-              </li>
               <li>
                 <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">hover:{class}</pre>
               </li>
@@ -93,11 +87,23 @@
               <li>
                 <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">last:{class}</pre>
               </li>
+            </ul>
+          </div>
+
+          <div class="flex:1">
+            Breakpoints :
+            <ul class="line-height:2">
               <li>
-                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">odd:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">sm</pre>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">40 rem</pre>
               </li>
               <li>
-                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">even:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">md</pre>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">50 rem</pre>
+              </li>
+              <li>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">lg</pre>
+                <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">80 rem</pre>
               </li>
             </ul>
           </div>
