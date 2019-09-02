@@ -7,7 +7,7 @@ module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "docs"),
-    publicPath: "/beta-scss-documentation/"
+    publicPath: "docs/"
   },
   plugins: [
     new webpack.DefinePlugin({
