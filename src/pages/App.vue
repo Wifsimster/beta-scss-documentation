@@ -1,20 +1,12 @@
 <template>
-  <div class="flex flex:col overflow:hidden" id="app">
-    <com-header></com-header>
-    <div>
-      <div class="flex flex:row">
-        <com-sidebar id="sidebar"></com-sidebar>
-        <div class="flex:auto">
-          <div class="flex flex:col">
-            <div id="wrapper" class="overflow:auto relative">
-              <div class="container p:0 m:auto">
-                <transition name="opacity" mode="out-in">
-                  <router-view></router-view>
-                </transition>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div id="app">
+    <com-header id="header"></com-header>
+    <div class="flex">
+      <com-sidebar id="sidebar"></com-sidebar>
+      <div id="container" class="py:2 px:1 h:screen w:screen overflow:auto">
+        <transition name="opacity" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>

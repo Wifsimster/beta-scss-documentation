@@ -1,25 +1,14 @@
 <template>
-  <div id="header" class="flex justify:between bg:black">
-    <div>
-      <router-link
-        tag="div"
-        class="text:white text:2 line-height:5/2 cursor:pointer"
-        to="/"
-        exact
-      >beta-scss</router-link>
-    </div>
-    <div>
-      <router-link
-        tag="div"
-        class="text:white text:3/2 line-height:5/2 cursor:pointer h:full"
-        to="/"
-        exact
-      >
-        Documentation
-        <span class="text:7/8">{{ version }}</span>
-      </router-link>
-    </div>
-    <div class="py:1/2 line-height:5/2 text:white text:7/8">Dernière mise à jour : {{ date }}</div>
+  <div
+    id="header"
+    class="flex justify:between items:baseline bg:black text:white shadow:large border:b border:grey-darkest"
+  >
+    <router-link tag="div" class="text:3/2 cursor:pointer my:1/4 mt:1/4" to="/" exact>beta-scss</router-link>
+    <router-link tag="div" class="text:3/2 cursor:pointer h:full" to="/" exact>
+      Documentation
+      <span class="text:7/8">{{ version }}</span>
+    </router-link>
+    <div class="my:1/4 text:7/8">Dernière mise à jour : {{ date }}</div>
   </div>
 </template>
 

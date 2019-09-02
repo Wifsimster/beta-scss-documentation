@@ -58,12 +58,12 @@ export default {
     };
   },
   created() {
-    this.$router.push("/text/color");
+    this.$router.push("/text/color").catch(err => {});
   },
   watch: {
     "$route.path"(val) {
       if (this.$route.path === "/text") {
-        this.$router.push("/text/color");
+        this.$router.push("/text/color").catch(err => {});
       }
     }
   }

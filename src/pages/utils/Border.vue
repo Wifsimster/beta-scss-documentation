@@ -40,12 +40,12 @@ export default {
     };
   },
   created() {
-    this.$router.push("/border/color");
+    this.$router.push("/border/color").catch(err => {});
   },
   watch: {
     "$route.path"(val) {
       if (this.$route.path === "/border") {
-        this.$router.push("/border/color");
+        this.$router.push("/border/color").catch(err => {});
       }
     }
   }

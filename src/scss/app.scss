@@ -1,28 +1,32 @@
-@import '../../node_modules/beta-scss/scss/global';
+@import "~beta-scss/packages/global";
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
 
   &:focus {
-    outline-color: map-get($colors, 'transparent');
+    outline-color: map-get($colors, "transparent");
   }
   &::selection {
-    background-color: map-get($colors, 'teal-darker');
-    color: map-get($colors, 'white');
+    background-color: map-get($colors, "teal-darker");
+    color: map-get($colors, "white");
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: map-get($colors, "grey-darkest");
+  }
+  ::-webkit-scrollbar-thumb {
+    background: map-get($colors, "blue-dark");
   }
 }
 
 html {
-  color: map-get($colors, 'black');
-  background-color: map-get($colors, 'grey-lighter');
+  color: map-get($colors, "black");
+  background-color: map-get($colors, "black");
 }
 
-#app {
-  #wrapper {
-    height: calc(100vh - 40px);
-  }
-}
-
-@import 'table.scss';
-@import 'transition.scss';
+@import "table.scss";
+@import "transition.scss";

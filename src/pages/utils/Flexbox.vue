@@ -72,6 +72,12 @@
           :class="{ 'border:b:1/8 border:orange': $route.path === '/flexbox/flex-shrink'}"
           to="/flexbox/flex-shrink"
         >Flex Shrink</router-link>
+        <router-link
+          tag="span"
+          class="cursor:pointer text:bold py:1 px:1/2"
+          :class="{ 'border:b:1/8 border:orange': $route.path === '/flexbox/flex-basic'}"
+          to="/flexbox/flex-basic"
+        >Flex Basic</router-link>
       </div>
     </template>
 
@@ -86,12 +92,12 @@
 <script>
 export default {
   created() {
-    this.$router.push("/flexbox/intro");
+    this.$router.push("/flexbox/intro").catch(err => {});
   },
   watch: {
     "$route.path"(val) {
       if (this.$route.path === "/flexbox") {
-        this.$router.push("/flexbox/intro");
+        this.$router.push("/flexbox/intro").catch(err => {});
       }
     }
   }

@@ -43,11 +43,11 @@
         <div class="flex:2">
           <div class="flex flex:wrap">
             <div
-              class="flex:1 border rounded:1/2 p:1/2 mb:1"
+              class="flex:1 border rounded:1/2 p:1/2 mt:2 mb:1"
               v-for="(grids, index) in heights"
               :key="index"
             >
-              <div class="flex justify:around bg:grey-lighter rounded" style="height: 200px;">
+              <div class="flex justify:around bg:grey-lighter rounded" style="height: 350px;">
                 <div v-for="(height, i) in grids" :key="i" class="h:full">
                   <pre class="inline text:center text:sm text:purple mx:1/2 py:1/2 h:2/12">
 h:{{ height }}</pre>
@@ -69,26 +69,7 @@ export default {
   data() {
     return {
       sizes: [
-        { key: "1/2", value: "50%" },
-
-        { key: "1/3", value: "33.33333%" },
-        { key: "2/3", value: "66.66667%" },
-
-        { key: "1/4", value: "25%" },
-        { key: "2/4", value: "50%" },
-        { key: "3/4", value: "75%" },
-
-        { key: "1/5", value: "20%" },
-        { key: "2/5", value: "40%" },
-        { key: "3/5", value: "60%" },
-        { key: "4/5", value: "80%" },
-
-        { key: "1/6", value: "16.66667%" },
-        { key: "2/6", value: "33.33333%" },
-        { key: "3/6", value: "50%" },
-        { key: "4/6", value: "66.66667%" },
-        { key: "5/6", value: "83.33333%" },
-
+        { key: "0", value: "0" },
         { key: "1/12", value: "8.33333%" },
         { key: "2/12", value: "16.66667%" },
         { key: "3/12", value: "25%" },
@@ -104,26 +85,9 @@ export default {
         { key: "full", value: "100%" },
         { key: "screen", value: "100vw" },
         { key: "inherit", value: "inherit" },
-        { key: "auto", value: "auto" },
-
-        { key: "xs", value: "20rem" },
-        { key: "sm", value: "30rem" },
-        { key: "md", value: "40rem" },
-        { key: "lg", value: "50rem" },
-        { key: "xl", value: "60rem" },
-        { key: "2xl", value: "70rem" },
-        { key: "3xl", value: "80rem" },
-        { key: "4xl", value: "90rem" },
-        { key: "5xl", value: "100rem" },
-        { key: "6xl", value: "110rem" },
-        { key: "7xl", value: "120rem" }
+        { key: "auto", value: "auto" }
       ],
       heights: [
-        ["1/2"],
-        ["1/3", "2/3"],
-        ["1/4", "2/4", "3/4"],
-        ["1/5", "2/5", "3/5", "4/5"],
-        ["1/6", "2/6", "3/6", "4/6", "5/6"],
         [
           "1/12",
           "2/12",
