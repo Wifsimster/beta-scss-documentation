@@ -68,6 +68,7 @@ export default {
         { key: "3/4", value: "0.75rem" },
         { key: "7/8", value: "0.875rem" },
         { key: "1", value: "1rem" },
+        { key: "9/8", value: "1.125rem" },
         { key: "5/4", value: "1.25rem" },
         { key: "3/2", value: "1.5rem" },
         { key: "7/4", value: "1.75rem" },
