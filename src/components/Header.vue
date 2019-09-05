@@ -8,7 +8,7 @@
       Documentation
       <span class="text:7/8">{{ version }}</span>
     </router-link>
-    <div class="my:1/4 text:7/8">Dernière mise à jour : {{ date }}</div>
+    <div class="my:1/4 text:7/8">Latest update : {{ date }}</div>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       version: VERSION,
-      date: format(parseISO(BUILD_DATE), `dd/MM/yyyy HH:mm`)
+      date: format(parseISO(BUILD_DATE), `MM/dd/yyyy HH:mm`)
     };
   }
 };
