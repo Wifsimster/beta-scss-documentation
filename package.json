@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --config webpack.local.js --mode development",
-    "build:production": "node_modules/.bin/webpack --config webpack.prod.js --mode production"
+    "build:prod": "node_modules/.bin/webpack --config webpack.prod.js --mode production"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",

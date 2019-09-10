@@ -32,7 +32,7 @@
               <li>
                 <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">{class}:1</pre>&nbsp;=>
                 <pre class="inline text:blue">1 rem</pre>&nbsp;soit
-                <pre class="inline text:blue">16px</pre>
+                <pre class="inline text:blue">14px</pre>
               </li>
               <li>
                 <pre class="inline bg:grey-lighter rounded py:1/4 text:purple">{class}:2</pre>&nbsp;=>

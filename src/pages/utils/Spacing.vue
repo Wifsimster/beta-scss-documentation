@@ -15,7 +15,7 @@
                 <th>Taille</th>
                 <th>
                   Px
-                  <span class="text:grey text:3/4">(* 16px)</span>
+                  <span class="text:grey text:3/4">(* 14px)</span>
                 </th>
               </tr>
             </thead>

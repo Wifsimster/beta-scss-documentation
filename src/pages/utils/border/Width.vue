@@ -15,7 +15,7 @@
             </th>
             <th>
               Px
-              <span class="text:grey text:3/4">(* 16px)</span>
+              <span class="text:grey text:3/4">(* 14px)</span>
             </th>
           </tr>
         </thead>
@@ -93,7 +93,7 @@
             <td class="px:1 border:b border:grey-lighter">
               <code class="border rounded mr:1/4 px:1/5 py:1/4">1</code> 1rem
             </td>
-            <td class="px:1 border:b border:grey-lighter">16px</td>
+            <td class="px:1 border:b border:grey-lighter">14px</td>
           </tr>
         </tbody>
       </table>
