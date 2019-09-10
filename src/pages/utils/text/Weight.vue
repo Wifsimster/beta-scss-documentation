@@ -6,7 +6,7 @@
           <tr>
             <th>Class</th>
             <th>Properties</th>
-            <th></th>
+            <th>Result</th>
           </tr>
         </thead>
         <tbody>
@@ -18,16 +18,16 @@
                 v-if="weight.key === 'light'"
               >Default</pre>
             </td>
-            <td>
+            <td class="text:center">
               <pre class="text:blue">{{ weight.value }}</pre>
             </td>
-            <td class="px:1/2 border:b border:grey-light" :class="'text:'+weight.key">Aa</td>
+            <td class="text:center px:1/2 border:b border:grey-light" :class="'text:'+weight.key">Aa</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="flex:3">
+    <div class="flex:2">
       <div class="flex flex:wrap">
         <div class="flex:1 py:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">

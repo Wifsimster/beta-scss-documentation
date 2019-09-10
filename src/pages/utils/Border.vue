@@ -2,23 +2,23 @@
   <card>
     <template #header>Border</template>
     <template #navigation>
-      <div class="bg:grey-lighter w:full px:1/2">
+      <div class="bg:grey-lighter w:full px:1/2 flex flex:wrap">
         <router-link
           tag="span"
-          class="cursor:pointer text:bold py:2 px:1/2"
-          :class="{ 'border:b:1/8 border:orange': $route.path === '/border/color'}"
+          class="cursor:pointer text:bold py:2"
+          :class="{ 'text:orange': $route.path === '/border/color'}"
           to="/border/color"
         >Color</router-link>
         <router-link
           tag="span"
-          class="cursor:pointer text:bold py:2 px:1/2"
-          :class="{ 'border:b:1/8 border:orange': $route.path === '/border/style'}"
+          class="cursor:pointer text:bold py:2"
+          :class="{ 'text:orange': $route.path === '/border/style'}"
           to="/border/style"
         >Style</router-link>
         <router-link
           tag="span"
-          class="cursor:pointer text:bold py:2 px:1/2"
-          :class="{ 'border:b:1/8 border:orange': $route.path === '/border/width'}"
+          class="cursor:pointer text:bold py:2"
+          :class="{ 'text:orange': $route.path === '/border/width'}"
           to="/border/width"
         >Width</router-link>
       </div>

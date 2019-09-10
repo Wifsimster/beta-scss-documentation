@@ -17,82 +17,30 @@
                   <span class="text:grey text:3/4">(Optional)</span>
                 </th>
                 <th>
-                  Px
-                  <span class="text:grey text:3/4">(* 14px)</span>
+                  <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
+                    <option v-for="item in pixels" :value="item">{{ item }}px</option>
+                  </select>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr v-for="(item, index) in sizes">
                 <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">rounded</code>
+                  <code v-if="index === 0" class="border rounded mr:1/4 px:1/5 py:1/4">rounded</code>
                 </td>
                 <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded bg:grey-light m:1/4 p:1/2">&nbsp;</code>
-                  All
-                  <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Default</pre>
+                  <code v-if="item.prefix" class="border rounded m:1/4 p:1/2">{{ item.prefix }}</code>
+                  {{ item.side }}
+                  <pre
+                    v-if="item.default"
+                    class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
+                  >Default</pre>
                 </td>
                 <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">0</code> 0
+                  <code class="border rounded mr:1/4 px:1/5 py:1/4">{{ item.key }}</code>
+                  {{ item.value }}
                 </td>
-                <td class="px:1 border:b border:grey-lighter">0</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">t</code> Top
-                </td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">1/8</code> 0.125rem
-                </td>
-                <td class="px:1 border:b border:grey-lighter">2px</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">r</code> Right
-                </td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded bg:grey-light m:1/4 p:1/2">&nbsp;</code> 0.25rem
-                  <pre class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4">Default</pre>
-                </td>
-                <td class="px:1 border:b border:grey-lighter">4px</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">b</code> Bottom
-                </td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">1/2</code> 0.5rem
-                </td>
-                <td class="px:1 border:b border:grey-lighter">8px</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">l</code> Left
-                </td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">3/4</code> 0.75rem
-                </td>
-                <td class="px:1 border:b border:grey-lighter">12px</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">1</code> 1rem
-                </td>
-                <td class="px:1 border:b border:grey-lighter">14px</td>
-              </tr>
-              <tr>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter"></td>
-                <td class="px:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">full</code> 9999px
-                </td>
-                <td class="px:1 border:b border:grey-lighter">9999px</td>
+                <td class="px:1 border:b border:grey-lighter">{{ rem2Px(item.value) }}</td>
               </tr>
             </tbody>
           </table>
@@ -156,12 +104,39 @@ import Prism from "prismjs";
 export default {
   data() {
     return {
+      pixels: [12, 14, 16, 18],
+      selectedPixel: 14,
+      sizes: [
+        {
+          class: "rounded",
+          prefix: " ",
+          side: "All",
+          default: true,
+          key: "0",
+          value: "0"
+        },
+        { prefix: "t", side: "Top", key: "1/8", value: "0.125" },
+        { prefix: "r", side: "Right", key: "", value: "0.25" },
+        { prefix: "b", side: "Bottom", key: "1/2", value: "0.5" },
+        { prefix: "l", side: "Left", key: "3/4", value: "0.75" },
+        { key: "1", value: "1" },
+        { key: "full", value: "" }
+      ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null,
       exemple5: null
     };
+  },
+  methods: {
+    rem2Px(val) {
+      if (val && !isNaN(Number(val))) {
+        let result = val * this.selectedPixel;
+        return `${result.toFixed(1)} px`;
+      }
+      return null;
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(

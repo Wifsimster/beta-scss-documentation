@@ -101,7 +101,7 @@ white-space: nowrap;
           <table class="w:full">
             <thead>
               <tr>
-                <th class="border:b:1/8 border:teal text:teal" colspan="2">Listes</th>
+                <th class="border:b:1/8 border:teal text:teal" colspan="2">Lists</th>
               </tr>
             </thead>
             <tbody>

@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th>Class</th>
-            <th></th>
+            <th>Result</th>
           </tr>
         </thead>
         <tbody>
@@ -13,7 +13,7 @@
             <td>
               <pre class="inline text:purple">.{{item}}</pre>
             </td>
-            <td class="px:1/2 border:b border:grey-light" :class="item">Aa</td>
+            <td class="text:center px:1/2 border:b border:grey-light" :class="item">Aa</td>
           </tr>
         </tbody>
       </table>

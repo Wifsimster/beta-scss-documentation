@@ -6,7 +6,7 @@
           <thead>
             <tr>
               <th>Class</th>
-              <th></th>
+              <th>Result</th>
             </tr>
           </thead>
           <tbody>
@@ -18,7 +18,7 @@
                   v-if="color === 'black'"
                 >Default</pre>
               </td>
-              <td class="px:1/2 border:b border:grey-light" :class="'text:'+color">Aa</td>
+              <td class="text:center px:1/2 border:b border:grey-light" :class="'text:'+color">Aa</td>
             </tr>
           </tbody>
         </table>

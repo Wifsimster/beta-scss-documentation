@@ -1,14 +1,11 @@
 <template>
   <div
     id="header"
-    class="flex justify:between items:baseline bg:black text:white shadow:large border:b border:grey-darkest"
+    class="flex justify:between items:center bg:black text:white shadow:large border:b border:grey-darkest py:1/3"
   >
-    <router-link tag="div" class="text:3/2 cursor:pointer my:1/4 mt:1/4" to="/" exact>beta-scss</router-link>
-    <router-link tag="div" class="text:3/2 cursor:pointer h:full" to="/" exact>
-      Documentation
-      <span class="text:7/8">{{ version }}</span>
-    </router-link>
-    <div class="my:1/4 text:7/8">Latest update : {{ date }}</div>
+    <router-link tag="div" class="text:3/2 cursor:pointer" to="/" exact>beta-scss</router-link>
+    <router-link tag="div" class="text:3/2 cursor:pointer" to="/" exact>Documentation</router-link>
+    <div class="text:7/8">Latest update : {{ date }}</div>
   </div>
 </template>
 

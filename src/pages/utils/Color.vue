@@ -10,7 +10,7 @@
         <div class="flex">
           <div
             v-if="color === 'grey'"
-            class="flex:1 text:black text:bold line-height:1 text:3/4 py:1/2 px:1"
+            class="flex:1 text:black text:bold line-height:1 text:3/4 py:1 px:3/2"
           >
             <div class="font:normal opacity:75">
               <pre>white</pre>
@@ -20,7 +20,7 @@
           <div
             v-for="variant in variants"
             :key="variant"
-            class="flex:1 text:black text:bold line-height:1 text:3/4 py:1/2 px:1"
+            class="flex:1 text:black text:bold line-height:1 text:3/4 py:1 px:3/2"
             :class="'bg:'+color+variant"
           >
             <div
@@ -33,7 +33,7 @@
 
           <div
             v-if="color === 'grey'"
-            class="flex:1 text:white text:bold line-height:1 text:3/4 bg:black py:1/2 px:1"
+            class="flex:1 text:white text:bold line-height:1 text:3/4 bg:black py:1 px:3/2"
           >
             <div class="font:normal opacity:75">
               <pre>black</pre>

@@ -54,10 +54,11 @@
                 <thead>
                   <tr>
                     <th>Position</th>
-                    <th>Taille</th>
+                    <th>Size</th>
                     <th>
-                      Px
-                      <span class="text:grey text:3/4">(* 14px)</span>
+                      <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
+                        <option v-for="item in pixels" :value="item">{{ item }}px</option>
+                      </select>
                     </th>
                   </tr>
                 </thead>
@@ -85,11 +86,9 @@
 
                     <td class="px:1 border:b border:grey-lighter">
                       <code class="border rounded mr:1/4 px:1/5 py:1/4">{{ size.key }}</code>
-                      {{ size.value}}
                     </td>
 
-                    <td class="px:1 border:b border:grey-lighter" v-if="size.px">{{ size.px }}px</td>
-                    <td class="px:1 border:b border:grey-lighter" v-else></td>
+                    <td class="px:1 border:b border:grey-lighter">{{ rem2Px(size.value) }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -209,19 +208,21 @@ import Prism from "prismjs";
 export default {
   data() {
     return {
+      pixels: [12, 14, 16, 18],
+      selectedPixel: 14,
       sizes: [
-        { key: "0", value: "0", px: "0" },
-        { key: "1/4", value: "0.25rem", px: "4" },
-        { key: "1/2", value: "0.5rem", px: "8" },
-        { key: "3/4", value: "0.75rem", px: "12" },
-        { key: "1", value: "1rem", px: "16" },
-        { key: "5/4", value: "1.25rem", px: "20" },
-        { key: "3/2", value: "1.5rem", px: "24" },
-        { key: "7/4", value: "1.75rem", px: "28" },
-        { key: "2", value: "2rem", px: "32" },
-        { key: "5/2", value: "2.5rem", px: "40" },
-        { key: "3", value: "3rem", px: "48" },
-        { key: "4", value: "4rem", px: "64" },
+        { key: "0", value: "0" },
+        { key: "1/4", value: "0.25" },
+        { key: "1/2", value: "0.5" },
+        { key: "3/4", value: "0.75" },
+        { key: "1", value: "1" },
+        { key: "5/4", value: "1.25" },
+        { key: "3/2", value: "1.5" },
+        { key: "7/4", value: "1.75" },
+        { key: "2", value: "2" },
+        { key: "5/2", value: "2.5" },
+        { key: "3", value: "3" },
+        { key: "4", value: "4" },
         { key: "auto", value: "auto" }
       ],
       exemple1: null,
@@ -234,6 +235,15 @@ export default {
       exemple8: null,
       exemple9: null
     };
+  },
+  methods: {
+    rem2Px(val) {
+      if (val && !isNaN(Number(val))) {
+        let result = val * this.selectedPixel;
+        return `${result.toFixed(1)} px`;
+      }
+      return null;
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(

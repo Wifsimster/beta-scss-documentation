@@ -13,10 +13,10 @@
             </thead>
             <tbody>
               <tr v-for="item in overflow" :key="item[0]">
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue"><span class="text:purple">.{{ item[0] }}</span></pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">overflow: {{ item[1] }};</pre>
                 </td>
               </tr>

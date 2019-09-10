@@ -13,50 +13,50 @@
             </thead>
             <tbody>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:auto</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: auto;</pre>
                 </td>
               </tr>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:default</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: default;</pre>
                 </td>
               </tr>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:pointer</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: pointer;</pre>
                 </td>
               </tr>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:wait</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: wait;</pre>
                 </td>
               </tr>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:move</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: move;</pre>
                 </td>
               </tr>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.cursor:not-allowed</pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">cursor: not-allowed;</pre>
                 </td>
               </tr>
@@ -108,18 +108,18 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:purple">.pointer-events:none</pre>
                   </td>
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:blue">pointer-events: none;</pre>
                   </td>
                 </tr>
                 <tr>
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:purple">.pointer-events:auto</pre>
                   </td>
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:blue">pointer-events: auto;</pre>
                   </td>
                 </tr>

@@ -5,10 +5,10 @@
         <thead>
           <tr>
             <th>Class</th>
-            <th>Properties</th>
             <th>
-              Px
-              <span class="text:grey text:3/4">(* 14px)</span>
+              <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
+                <option v-for="item in pixels" :value="item">{{ item }}px</option>
+              </select>
             </th>
           </tr>
         </thead>
@@ -23,10 +23,7 @@
               >
 Default</pre>
             </td>
-            <td>
-              <pre class="text:blue">{{ height.value }}</pre>
-            </td>
-            <td>{{ Number(height.value.replace("rem", "")) * 16 }}px</td>
+            <td>{{ rem2Px(height.value) }}</td>
           </tr>
         </tbody>
       </table>
@@ -77,17 +74,28 @@ import Prism from "prismjs";
 export default {
   data() {
     return {
+      pixels: [12, 14, 16, 18],
+      selectedPixel: 14,
       heights: [
-        { key: "1/2", value: "0.5rem" },
-        { key: "3/4", value: "0.75rem" },
-        { key: "1", value: "1rem" },
-        { key: "3/2", value: "1.5rem" },
-        { key: "2", value: "2rem" },
-        { key: "5/2", value: "2.5rem" },
-        { key: "3", value: "3rem" }
+        { key: "1/2", value: "0.5" },
+        { key: "3/4", value: "0.75" },
+        { key: "1", value: "1" },
+        { key: "3/2", value: "1.5" },
+        { key: "2", value: "2" },
+        { key: "5/2", value: "2.5" },
+        { key: "3", value: "3" }
       ],
       exemple1: null
     };
+  },
+  methods: {
+    rem2Px(val) {
+      if (val && !isNaN(Number(val))) {
+        let result = val * this.selectedPixel;
+        return `${result.toFixed(1)} px`;
+      }
+      return null;
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(

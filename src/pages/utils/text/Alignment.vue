@@ -5,7 +5,7 @@
         <thead>
           <tr>
             <th>Class</th>
-            <th></th>
+            <th>Result</th>
           </tr>
         </thead>
         <tbody>

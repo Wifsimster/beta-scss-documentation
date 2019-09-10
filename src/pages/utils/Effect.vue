@@ -12,12 +12,12 @@
             </thead>
             <tbody>
               <tr>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.shadow</pre>
                 </td>
               </tr>
               <tr v-for="shadow in shadows" :key="shadow">
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:purple">.shadow:{{shadow}}</pre>
                 </td>
               </tr>
@@ -57,10 +57,10 @@
               </thead>
               <tbody>
                 <tr v-for="opacity in opacities" :key="opacity">
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:purple">.opacity:{{opacity}}</pre>
                   </td>
-                  <td class="p:0 border:b border:grey-light">
+                  <td class="border:b border:grey-light">
                     <pre class="text:blue">{{opacity}}%</pre>
                   </td>
                 </tr>

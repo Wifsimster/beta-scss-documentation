@@ -13,10 +13,10 @@
             </thead>
             <tbody>
               <tr v-for="item in z" :key="item">
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue"><span class="text:purple">.z:{{item}}</span></pre>
                 </td>
-                <td class="p:0 border:b border:grey-light">
+                <td class="border:b border:grey-light">
                   <pre class="text:blue">z-index: {{item}};</pre>
                 </td>
               </tr>
