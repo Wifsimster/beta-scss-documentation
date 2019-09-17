@@ -15,7 +15,7 @@
               <pre class="inline text:purple">.text:{{ weight.key }}</pre>
               <pre
                 class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                v-if="weight.key === 'light'"
+                v-if="weight.key === 'normal'"
               >Default</pre>
             </td>
             <td class="text:center">
