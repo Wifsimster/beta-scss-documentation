@@ -2,7 +2,7 @@
   "name": "beta-scss-documentation",
   "description": "beta-scss documentation",
   "author": "Wifsimster <battistella@protonmail.com>",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config webpack.local.js --mode development",
