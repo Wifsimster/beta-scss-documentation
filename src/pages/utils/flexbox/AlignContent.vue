@@ -11,14 +11,14 @@
           </thead>
           <tbody>
             <tr v-for="item in contents" :key="item[0]">
-              <td class="px:1/2 py:1 border:b border:grey-light">
+              <td class="py:1/2 px:1 border:b border:grey-light">
                 <pre class="inline text:purple">.content:{{ item[0] }}</pre>
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="item[0] === 'start'"
                 >Default</pre>
               </td>
-              <td class="px:1/2 py:1 border:b border:grey-light">
+              <td class="py:1/2 px:1 border:b border:grey-light">
                 <pre class="inline text:blue">align-content: {{ item[1] }};</pre>
               </td>
             </tr>

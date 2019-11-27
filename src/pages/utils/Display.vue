@@ -22,7 +22,9 @@
               </tr>
               <tr>
                 <td class="p:0 border:b border:grey-light">
-                  <pre class="text:blue"><span class="text:purple">.visibile</span></pre>
+                  <pre
+                    class="text:blue"
+                  ><span class="text:purple">.visibile</span></pre>
                 </td>
                 <td class="p:0 border:b border:grey-light">
                   <pre class="text:blue">visiblity: visible;</pre>
@@ -30,7 +32,9 @@
               </tr>
               <tr>
                 <td class="p:0 border:b border:grey-light">
-                  <pre class="text:blue"><span class="text:purple">.invisible</span></pre>
+                  <pre
+                    class="text:blue"
+                  ><span class="text:purple">.invisible</span></pre>
                 </td>
                 <td class="p:0 border:b border:grey-light">
                   <pre class="text:blue">visibility: hidden;</pre>
@@ -45,9 +49,18 @@
             <h2>Inline</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="bg:grey-lighter p:1">
-                <span class="inline text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">1</span>
-                <span class="inline text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">2</span>
-                <span class="inline text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">3</span>
+                <span
+                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >1</span
+                >
+                <span
+                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >2</span
+                >
+                <span
+                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >3</span
+                >
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -61,9 +74,18 @@
             <h2>Block</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="bg:grey-lighter p:1">
-                <span class="block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">1</span>
-                <span class="block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">2</span>
-                <span class="block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">3</span>
+                <span
+                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >1</span
+                >
+                <span
+                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >2</span
+                >
+                <span
+                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >3</span
+                >
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -78,14 +100,17 @@
             <div class="border rounded:t:1/2 p:1">
               <div class="bg:grey-lighter p:1">
                 <span
-                  class="inline-block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2"
-                >1</span>
+                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >1</span
+                >
                 <span
-                  class="inline-block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2"
-                >2</span>
+                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >2</span
+                >
                 <span
-                  class="inline-block text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2"
-                >3</span>
+                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >3</span
+                >
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -99,9 +124,18 @@
             <h2>Flex</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="flex bg:grey-lighter p:1">
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">1</span>
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">2</span>
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">3</span>
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >1</span
+                >
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >2</span
+                >
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >3</span
+                >
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -115,9 +149,18 @@
             <h2>Inline Flex</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="inline-flex bg:grey-lighter p:1">
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">1</span>
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">2</span>
-                <span class="flex:1 text:grey-dark text:center bg:grey-light px:1/2 py:1 mx:1/2">3</span>
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >1</span
+                >
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >2</span
+                >
+                <span
+                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
+                  >3</span
+                >
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -131,7 +174,7 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from "prismjs"
 export default {
   data() {
     return {
@@ -148,7 +191,7 @@ export default {
       exemple3: null,
       exemple4: null,
       exemple5: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -159,7 +202,7 @@ export default {
 </div>`,
       Prism.languages.html,
       "html"
-    );
+    )
 
     this.exemple2 = Prism.highlight(
       `<div>
@@ -169,7 +212,7 @@ export default {
 </div>`,
       Prism.languages.html,
       "html"
-    );
+    )
 
     this.exemple3 = Prism.highlight(
       `<div>
@@ -185,7 +228,7 @@ export default {
 </div>`,
       Prism.languages.html,
       "html"
-    );
+    )
 
     this.exemple4 = Prism.highlight(
       `<div class="flex">
@@ -195,7 +238,7 @@ export default {
 </div>`,
       Prism.languages.html,
       "html"
-    );
+    )
 
     this.exemple5 = Prism.highlight(
       `<div class="inline-flex">
@@ -205,7 +248,7 @@ export default {
 </div>`,
       Prism.languages.html,
       "html"
-    );
+    )
   }
-};
+}
 </script>

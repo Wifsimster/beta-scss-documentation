@@ -5,7 +5,7 @@
       <div class="flex flex:wrap">
         <div class="flex:1 min-w:sm">
           <p>Automatically builds a responsive grid in flexbox based on media queries.</p>
-          <table class="w:full mx:1">
+          <table class="w:full my:1">
             <thead>
               <tr>
                 <th>Class</th>
@@ -14,10 +14,10 @@
             </thead>
             <tbody>
               <tr v-for="grid in grids" :key="grid.key">
-                <td class="px:1/4 border:b border:grey-light">
+                <td class="py:1/4 border:b border:grey-light">
                   <pre class="text:purple">.responsive:{{ grid.key }}</pre>
                 </td>
-                <td class="px:1/4 border:b border:grey-light">
+                <td class="py:1/4 border:b border:grey-light">
                   <pre class="text:blue">{{ grid.value }}</pre>
                 </td>
               </tr>
@@ -29,8 +29,8 @@
             <h2>2 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="responsive:2">
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">1</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">2</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">1</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">2</div>
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -44,12 +44,12 @@
             <h2>6 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="responsive:6">
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">1</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">2</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">3</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">4</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">5</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">6</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">1</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">2</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">3</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">4</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">5</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">6</div>
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">
@@ -63,18 +63,18 @@
             <h2>12 columns grid</h2>
             <div class="border rounded:t:1/2 p:1">
               <div class="responsive:12">
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">1</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">2</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">3</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">4</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">5</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">6</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">7</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">8</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">9</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">10</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">11</div>
-                <div class="text:grey-dark text:center bg:grey-light px:1/2 py:1">12</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">1</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">2</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">3</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">4</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">5</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">6</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">7</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">8</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">9</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">10</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">11</div>
+                <div class="text:grey-dark text:center bg:grey-light py:1/2 px:1">12</div>
               </div>
             </div>
             <div class="bg:black rounded:b:1/2">

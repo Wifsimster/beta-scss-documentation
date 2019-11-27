@@ -11,15 +11,15 @@
           </thead>
           <tbody>
             <tr v-for="color in colors" :key="color">
-              <td class="px:1 border:b border:grey-lighter">
+              <td class="py:1 border:b border:grey-lighter">
                 <pre class="inline text:purple">.border:{{ color }}</pre>
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="color === 'grey-light'"
                 >Default</pre>
               </td>
-              <td class="px:1 py:1/2 border:b border:grey-lighter">
-                <div class="border px:1 py:3" :class="'border:'+color"></div>
+              <td class="py:1 px:1/2 border:b border:grey-lighter">
+                <div class="border py:1 px:3" :class="'border:'+color"></div>
               </td>
             </tr>
           </tbody>
@@ -29,25 +29,25 @@
 
     <div class="flex:2">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border border:teal"></div>
+            <div class="py:1 bg:grey-lighter border border:teal"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="exemple1"></pre>
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border:b border:red"></div>
+            <div class="py:1 bg:grey-lighter border:b border:red"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="exemple2"></pre>
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
             <input class="bg:grey-lighter border:b hover:border:green" />
           </div>
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
             <input class="bg:grey-lighter border:b focus:border:green" />
           </div>
@@ -156,13 +156,13 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="px:1 bg:grey-lighter border border:teal"></div>`,
+      `<div class="py:1 bg:grey-lighter border border:teal"></div>`,
       Prism.languages.html,
       "html"
     );
 
     this.exemple2 = Prism.highlight(
-      `<div class="px:1 bg:grey-lighter border:b border:red"></div>`,
+      `<div class="py:1 bg:grey-lighter border:b border:red"></div>`,
       Prism.languages.html,
       "html"
     );

@@ -10,7 +10,7 @@
           </thead>
           <tbody>
             <tr v-for="item in columns" :key="item">
-              <td class="px:1/2 py:1 border:b border:grey-light">
+              <td class="py:1/2 px:1 border:b border:grey-light">
                 <pre class="inline text:purple">.flex:{{ item }}</pre>
               </td>
             </tr>

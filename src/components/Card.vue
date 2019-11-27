@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex:col shadow:large mx:2 pb:1/4 bg:white rounded:1/2">
+    <div class="flex flex:col shadow:large my:2 pb:1/4 bg:white rounded:1/2">
       <div
         class="flex flex:wrap content:between relative m:1 pb:1/4 text:5/4 border:b:1/8 border:grey-lighter"
       >

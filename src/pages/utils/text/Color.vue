@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1 mr:1">
-      <div class="overflow-y:auto line:normal mb:1 my:1/2" style="max-height: 680px;">
+      <div
+        class="overflow-y:auto line:normal mb:1 mx:1/2"
+        style="max-height: 680px;"
+      >
         <table class="w:full">
           <thead>
             <tr>
@@ -16,9 +19,16 @@
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="color === 'black'"
-                >Default</pre>
+                >
+Default</pre
+                >
               </td>
-              <td class="text:center px:1/2 border:b border:grey-light" :class="'text:'+color">Aa</td>
+              <td
+                class="text:center py:1/2 border:b border:grey-light"
+                :class="'text:' + color"
+              >
+                Aa
+              </td>
             </tr>
           </tbody>
         </table>
@@ -27,17 +37,17 @@
 
     <div class="flex:3">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div
-              class="px:1 text:red-light"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-            <div
-              class="px:1 text:teal-dark"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-            <div
-              class="px:1 text:purple"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+            <div class="py:1 text:red-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.
+            </div>
+            <div class="py:1 text:teal-dark">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.
+            </div>
+            <div class="py:1 text:purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.
+            </div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="exemple1"></pre>
@@ -49,7 +59,7 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from "prismjs"
 export default {
   data() {
     return {
@@ -128,17 +138,16 @@ export default {
         "pink-lightest"
       ],
       exemple1: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="px:1 text:red-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 text:teal-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 text:purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
+      `<div class="py:1 text:red-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 text:teal-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 text:purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
       "html"
-    );
+    )
   }
-};
+}
 </script>
-

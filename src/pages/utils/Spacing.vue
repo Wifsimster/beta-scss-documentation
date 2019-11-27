@@ -25,7 +25,7 @@
                 <td class="p:1 whitespace:no-wrap border:b border:grey-lighter">
                   <code
                     v-if="size.classPrefix"
-                    class="border rounded mr:1/4 px:1/5 py:1/4"
+                    class="border rounded mr:1/4 py:1/5 px:1/4"
                   >{{ size.classPrefix }}</code>
                   {{ size.class }}
                 </td>
@@ -33,7 +33,7 @@
                 <td class="p:1 whitespace:no-wrap border:b border:grey-lighter">
                   <code
                     v-if="size.side"
-                    class="border rounded mr:1/4 px:1/5 py:1/4"
+                    class="border rounded mr:1/4 py:1/5 px:1/4"
                   >{{ size.prefix }}</code>
                   {{ size.side }}
                   <span
@@ -43,7 +43,7 @@
                 </td>
 
                 <td class="p:1 whitespace:no-wrap border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">{{ size.key }}</code>
+                  <code class="border rounded mr:1/4 py:1/5 px:1/4">{{ size.key }}</code>
                 </td>
 
                 <td
@@ -56,7 +56,7 @@
 
         <div class="flex:2">
           <div class="flex flex:wrap">
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
                 <div class="bg:grey-lighter p:1/2">
                   <div class="bg:grey-light p:2">Lo ipsum dolor sit amet.</div>
@@ -66,27 +66,27 @@
                 <pre class="language-html" v-html="exemple1"></pre>
               </div>
             </div>
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
                 <div class="bg:grey-lighter p:1/2">
-                  <div class="bg:grey-light px:1 py:2">Lo ipsum dolor sit amet.</div>
+                  <div class="bg:grey-light py:1 px:2">Lo ipsum dolor sit amet.</div>
                 </div>
               </div>
               <div class="bg:black rounded:b:1/2">
                 <pre class="language-html" v-html="exemple2"></pre>
               </div>
             </div>
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
                 <div class="bg:grey-lighter p:1/2">
-                  <div class="bg:grey-light pt:1/4 pr:2/5 px:3/5 pl:3/4">Lo ipsum dolor sit amet.</div>
+                  <div class="bg:grey-light pt:1/4 pr:2/5 py:3/5 pl:3/4">Lo ipsum dolor sit amet.</div>
                 </div>
               </div>
               <div class="bg:black rounded:b:1/2">
                 <pre class="language-html" v-html="exemple3"></pre>
               </div>
             </div>
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
                 <div class="bg:grey-lighter p:1/2">
                   <div class="bg:grey-light m:2">Lo ipsum dolor sit amet.</div>
@@ -172,7 +172,7 @@ export default {
 
     this.exemple2 = Prism.highlight(
       `<div class="bg:grey-lighter p:1/2">
-    <div class="bg:grey-lighter px:1 py:2">Lo ipsum dolor sit amet.</div>
+    <div class="bg:grey-lighter py:1 px:2">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
       "html"
@@ -180,7 +180,7 @@ export default {
 
     this.exemple3 = Prism.highlight(
       `<div class="bg:grey-lighter p:1/2">
-    <div class="bg:grey-lighter pt:1/4 pr:2/5 px:3/5 pl:3/4">Lo ipsum dolor sit amet.</div>
+    <div class="bg:grey-lighter pt:1/4 pr:2/5 py:3/5 pl:3/4">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
       "html"

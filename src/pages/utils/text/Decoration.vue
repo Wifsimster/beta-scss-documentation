@@ -13,7 +13,7 @@
             <td>
               <pre class="inline text:purple">.{{item}}</pre>
             </td>
-            <td class="text:center px:1/2 border:b border:grey-light" :class="item">Aa</td>
+            <td class="text:center py:1/2 border:b border:grey-light" :class="item">Aa</td>
           </tr>
         </tbody>
       </table>
@@ -21,17 +21,17 @@
 
     <div class="flex:3">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+            <div class="py:1 italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 uppercase"
+              class="py:1 uppercase"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 capitalize"
+              class="py:1 capitalize"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 underline"
+              class="py:1 underline"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
           </div>
           <div class="bg:black rounded:b:1/2">
@@ -64,10 +64,10 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="px:1 italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
+      `<div class="py:1 italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
       "html"
     );

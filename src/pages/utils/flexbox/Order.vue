@@ -11,10 +11,10 @@
           </thead>
           <tbody>
             <tr v-for="item in orders" :key="item[0]">
-              <td class="px:1/2 py:1 border:b border:grey-light">
+              <td class="py:1/2 px:1 border:b border:grey-light">
                 <pre class="inline text:purple">.order:{{ item[0] }}</pre>
               </td>
-              <td class="px:1/2 py:1 border:b border:grey-light">
+              <td class="py:1/2 px:1 border:b border:grey-light">
                 <pre class="inline text:blue">order: {{ item[1] }};</pre>
               </td>
             </tr>

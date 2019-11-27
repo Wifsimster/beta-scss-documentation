@@ -1,7 +1,7 @@
 <template>
   <div class="flex:1">
     <div class="flex flex:wrap">
-      <div class="flex:1 py:1/2 mb:1">
+      <div class="flex:1 px:1/2 mb:1">
         <div class="border rounded:t:1/2 p:1">
           <fieldset class="border:1/8 border:teal">&nbsp;</fieldset>
         </div>
@@ -9,7 +9,7 @@
           <pre class="language-html" v-html="html01"></pre>
         </div>
       </div>
-      <div class="flex:1 py:1/2 mb:1">
+      <div class="flex:1 px:1/2 mb:1">
         <div class="border rounded:t:1/2 p:1">
           <fieldset class="border:1/8 border:teal">
             <legend>Légende</legend>

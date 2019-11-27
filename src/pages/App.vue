@@ -3,7 +3,7 @@
     <com-header id="header"></com-header>
     <div class="flex">
       <com-sidebar id="sidebar"></com-sidebar>
-      <div id="container" class="py:2 px:1 h:screen w:screen overflow:auto">
+      <div id="container" class="px:2 py:1 h:screen w:screen overflow:auto">
         <transition name="opacity" mode="out-in">
           <router-view></router-view>
         </transition>

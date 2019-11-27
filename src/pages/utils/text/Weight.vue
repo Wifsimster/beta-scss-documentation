@@ -21,7 +21,7 @@
             <td class="text:center">
               <pre class="text:blue">{{ weight.value }}</pre>
             </td>
-            <td class="text:center px:1/2 border:b border:grey-light" :class="'text:'+weight.key">Aa</td>
+            <td class="text:center py:1/2 border:b border:grey-light" :class="'text:'+weight.key">Aa</td>
           </tr>
         </tbody>
       </table>
@@ -29,19 +29,19 @@
 
     <div class="flex:2">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
             <div
-              class="px:1 text:lighter"
+              class="py:1 text:lighter"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 text:light"
+              class="py:1 text:light"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 text:normal"
+              class="py:1 text:normal"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
             <div
-              class="px:1 text:bold"
+              class="py:1 text:bold"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
           </div>
           <div class="bg:black rounded:b:1/2">
@@ -72,10 +72,10 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="px:1 text:lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 text:light">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 text:normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
-<div class="px:1 text:bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
+      `<div class="py:1 text:lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 text:light">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 text:normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
+<div class="py:1 text:bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
       "html"
     );

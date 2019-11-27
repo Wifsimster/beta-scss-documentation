@@ -2,19 +2,19 @@
   <div>
     <div class="flex flex:col bg:grey-lighter mt:1 p:1/2 rounded">
       <div class="flex flex:wrap">
-        <div class="flex:1 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Item</div>
-        <div class="flex:2 text:center bg:grey-light m:1/2 py:1/4 px:1 rounded">Item</div>
+        <div class="flex:1 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item</div>
+        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item</div>
       </div>
       <div class="flex:1 text:center">Content</div>
     </div>
 
     <div class="flex flex:wrap">
-      <div class="flex:1 py:1 mx:1">
+      <div class="flex:1 px:1 my:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">1</div>
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">2</div>
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">3</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">2</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">3</div>
           </div>
         </div>
         <div class="bg:black rounded:b:1/2">
@@ -22,12 +22,12 @@
         </div>
       </div>
 
-      <div class="flex:1 py:1 mx:1">
+      <div class="flex:1 px:1 my:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex flex:col bg:grey-lighter">
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">1</div>
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">2</div>
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">3</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">2</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">3</div>
           </div>
         </div>
         <div class="bg:black rounded:b:1/2">
@@ -35,12 +35,12 @@
         </div>
       </div>
 
-      <div class="flex:2 py:1 mx:1">
+      <div class="flex:2 px:1 my:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">1</div>
-            <div class="flex:2 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">2</div>
-            <div class="flex:3 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">3</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
+            <div class="flex:2 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">2</div>
+            <div class="flex:3 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">3</div>
           </div>
         </div>
         <div class="bg:black rounded:b:1/2">
@@ -48,15 +48,15 @@
         </div>
       </div>
 
-      <div class="flex:2 py:1 mx:1">
+      <div class="flex:2 px:1 my:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
-            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">1</div>
+            <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
             <div class="flex:2">
               <div class="flex flex:col">
-                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">2</div>
-                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">3</div>
-                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 py:1/4 px:1">4</div>
+                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">2</div>
+                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">3</div>
+                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">4</div>
               </div>
             </div>
           </div>

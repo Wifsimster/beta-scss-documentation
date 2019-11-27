@@ -13,24 +13,31 @@
             </thead>
             <tbody>
               <tr v-for="(size, index) in sizes" :key="index">
-                <td v-if="index === 0" class="px:1/2 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">w</code>
+                <td
+                  v-if="index === 0"
+                  class="py:1/2 border:b border:grey-lighter"
+                >
+                  <code class="border rounded mr:1/4 py:1/5 px:1/4">w</code>
                   Width
                 </td>
-                <td v-else-if="index === 1" class="px:1/2 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">min-w</code>
+                <td
+                  v-else-if="index === 1"
+                  class="py:1/2 border:b border:grey-lighter"
+                >
+                  <code class="border rounded mr:1/4 py:1/5 px:1/4">min-w</code>
                   Min-width
                 </td>
-                <td v-else-if="index === 2" class="px:1/2 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">max-w</code>
+                <td
+                  v-else-if="index === 2"
+                  class="py:1/2 border:b border:grey-lighter"
+                >
+                  <code class="border rounded mr:1/4 py:1/5 px:1/4">max-w</code>
                   Max-width
                 </td>
-                <td v-else class="px:1/2 border:b border:grey-lighter"></td>
-                <td class="px:1/2 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 px:1/5 py:1/4">
-                    {{
-                    size.key
-                    }}
+                <td v-else class="py:1/2 border:b border:grey-lighter"></td>
+                <td class="py:1/2 border:b border:grey-lighter">
+                  <code class="border rounded mr:1/4 py:1/5 px:1/4">
+                    {{ size.key }}
                   </code>
                   {{ size.value }}
                 </td>
@@ -40,16 +47,23 @@
         </div>
 
         <div class="flex:2 mt:2 mb:1">
-          <div class="border rounded:1/2 p:1 mb:1" v-for="(grids, index) in widths" :key="index">
+          <div
+            class="border rounded:1/2 p:1 mb:1"
+            v-for="(grids, index) in widths"
+            :key="index"
+          >
             <div
               class="flex items:center mb:1/2 bg:grey-lighter rounded"
               v-for="(width, i) in grids"
               :key="i"
             >
-              <pre class="inline text:purple my:1 w:1/12">
-.w:{{ width }}</pre>
+              <pre class="inline text:purple mx:1 w:1/12">.w:{{ width }}</pre>
               <div class="w:11/12">
-                <div class="bg:grey-light" :class="'w:' + width" style="height: 30px;"></div>
+                <div
+                  class="bg:grey-light"
+                  :class="'w:' + width"
+                  style="height: 30px;"
+                ></div>
               </div>
             </div>
           </div>
@@ -98,7 +112,7 @@ export default {
           "11/12"
         ]
       ]
-    };
+    }
   }
-};
+}
 </script>

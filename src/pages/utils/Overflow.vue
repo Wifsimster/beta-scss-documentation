@@ -26,7 +26,7 @@
 
         <div class="flex:2">
           <div class="flex flex:wrap">
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1 overflow:hidden">
                 <div
                   class="overflow:visible bg:grey-light p:1/2"
@@ -38,7 +38,7 @@
               </div>
             </div>
 
-            <div class="flex:1 py:1/2 mb:1">
+            <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1 overflow:hidden">
                 <div
                   class="overflow:scroll bg:grey-light p:1/2"
@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="flex:1 py:1/2 mb:1">
+          <div class="flex:1 px:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1 overflow:hidden">
               <div
                 class="overflow-x:scroll bg:grey-light p:1/2"
@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <div class="flex:1 py:1/2 mb:1">
+          <div class="flex:1 px:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1 overflow:hidden">
               <div
                 class="overflow-y:scroll bg:grey-light p:1/2"
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-          <div class="flex:1 py:1/2 mb:1">
+          <div class="flex:1 px:1/2 mb:1">
             <div class="border rounded:t:1/2 p:1 overflow:hidden">
               <div
                 class="overflow:auto bg:grey-light p:1/2"

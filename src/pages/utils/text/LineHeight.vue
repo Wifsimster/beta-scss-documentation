@@ -31,9 +31,9 @@ Default</pre>
 
     <div class="flex:2">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 line-height:1">
+            <div class="py:1 line-height:1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -42,7 +42,7 @@ Default</pre>
               nulla pariatur.
             </div>
 
-            <div class="px:1 line-height:3/2">
+            <div class="py:1 line-height:3/2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -51,7 +51,7 @@ Default</pre>
               nulla pariatur.
             </div>
 
-            <div class="px:1 line-height:2">
+            <div class="py:1 line-height:2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -99,9 +99,9 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="px:1 line-height:1">Lorem ipsum dolor sit amet...</div>
-<div class="px:1 line-height:3/2">Lorem ipsum dolor sit amet...</div>
-<div class="px:1 line-height:2">Lorem ipsum dolor sit amet...</div>`,
+      `<div class="py:1 line-height:1">Lorem ipsum dolor sit amet...</div>
+<div class="py:1 line-height:3/2">Lorem ipsum dolor sit amet...</div>
+<div class="py:1 line-height:2">Lorem ipsum dolor sit amet...</div>`,
       Prism.languages.html,
       "html"
     );

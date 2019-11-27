@@ -9,7 +9,7 @@
         </thead>
         <tbody>
           <tr v-for="style in styles" :key="style">
-            <td class="px:1 border:b border:grey-lighter">
+            <td class="py:1 border:b border:grey-lighter">
               <pre class="inline text:purple">.border:{{ style }}</pre>
               <pre
                 class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
@@ -22,36 +22,36 @@
     </div>
     <div class="flex:3">
       <div class="flex flex:wrap">
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border:solid border:1/4"></div>
+            <div class="py:1 bg:grey-lighter border:solid border:1/4"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="borderStyle1"></pre>
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border:dashed border:1/4"></div>
+            <div class="py:1 bg:grey-lighter border:dashed border:1/4"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="borderStyle2"></pre>
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border:dotted border:1/4"></div>
+            <div class="py:1 bg:grey-lighter border:dotted border:1/4"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="borderStyle3"></pre>
           </div>
         </div>
 
-        <div class="flex:1 py:1/2 mb:1">
+        <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="px:1 bg:grey-lighter border:none border:1/4"></div>
+            <div class="py:1 bg:grey-lighter border:none border:1/4"></div>
           </div>
           <div class="bg:black rounded:b:1/2">
             <pre class="language-html" v-html="borderStyle4"></pre>
