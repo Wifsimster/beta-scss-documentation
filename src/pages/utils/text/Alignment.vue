@@ -46,13 +46,13 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
-      alignments: ["left", "center", "right", "justify"],
+      alignments: ['left', 'center', 'right', 'justify'],
       exemple1: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -61,9 +61,9 @@ export default {
 <div class="py:1 text:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
 <div class="py:1 text:justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

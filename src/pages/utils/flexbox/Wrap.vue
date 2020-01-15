@@ -71,20 +71,20 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       wraps: [
-        ["no-wrap", "nowrap"],
-        ["wrap", "wrap"],
-        ["wrap-reverse", "wrap-reverse"]
+        ['no-wrap', 'nowrap'],
+        ['wrap', 'wrap'],
+        ['wrap-reverse', 'wrap-reverse']
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -94,8 +94,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       ` <div class="flex flex:wrap">
@@ -104,8 +104,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       ` <div class="flex flex:wrap-reverse">
@@ -114,9 +114,9 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

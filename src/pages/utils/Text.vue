@@ -54,18 +54,18 @@
 export default {
   data() {
     return {
-      tab: "color"
-    };
+      tab: 'color'
+    }
   },
   created() {
-    this.$router.push("/text/color").catch(err => {});
+    this.$router.push('/text/color').catch(() => {})
   },
   watch: {
-    "$route.path"(val) {
-      if (this.$route.path === "/text") {
-        this.$router.push("/text/color").catch(err => {});
+    '$route.path'() {
+      if (this.$route.path === '/text') {
+        this.$router.push('/text/color').catch(() => {})
       }
     }
   }
-};
+}
 </script>

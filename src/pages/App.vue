@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <com-header id="header"></com-header>
     <div class="flex">
       <com-sidebar id="sidebar"></com-sidebar>
@@ -13,17 +13,17 @@
 </template>
 
 <script>
-const ComHeader = () => import("components/Header.vue");
-const ComSidebar = () => import("components/Sidebar.vue");
+const ComHeader = () => import('components/Header.vue')
+const ComSidebar = () => import('components/Sidebar.vue')
 
-import "fonts/Montserrat/style.css";
+import 'fonts/Montserrat/style.css'
 
 export default {
   components: {
     ComHeader,
     ComSidebar
   }
-};
+}
 </script>
 
 <style lang="scss">

@@ -95,24 +95,24 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       contents: [
-        ["start", "flex:start"],
-        ["center", "center"],
-        ["end", "flex-end"],
-        ["between", "space-between"],
-        ["around", "space-around"]
+        ['start', 'flex:start'],
+        ['center', 'center'],
+        ['end', 'flex-end'],
+        ['between', 'space-between'],
+        ['around', 'space-around']
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null,
       exemple5: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -122,8 +122,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       ` <div class="flex justify:center">
@@ -132,8 +132,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       ` <div class="flex justify:end">
@@ -142,8 +142,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       ` <div class="flex justify:between">
@@ -152,8 +152,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       ` <div class="flex justify:around">
@@ -162,9 +162,9 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

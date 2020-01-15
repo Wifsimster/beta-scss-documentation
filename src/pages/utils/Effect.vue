@@ -92,15 +92,15 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
-      shadows: ["large", "larger", "inner", "outline", "none"],
-      opacities: ["0", "25", "50", "75", "100"],
+      shadows: ['large', 'larger', 'inner', 'outline', 'none'],
+      opacities: ['0', '25', '50', '75', '100'],
       exemple1: null,
       exemple2: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -111,8 +111,8 @@ export default {
 <div class="shadow:outline"></div>
 <div class="shadow:none"></div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="opacity:0"></div>
@@ -121,8 +121,8 @@ export default {
 <div class="opacity:75"></div>
 <div class="opacity:100"></div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>

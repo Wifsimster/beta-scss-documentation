@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import Datepicker from "../../components/utils/Datepicker.vue";
+import Datepicker from '../../components/utils/Datepicker.vue'
 export default {
   components: { Datepicker },
   data() {
     return {
       date: null
-    };
+    }
   }
-};
+}
 </script>

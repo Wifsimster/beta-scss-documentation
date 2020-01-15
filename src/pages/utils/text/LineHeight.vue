@@ -7,7 +7,7 @@
             <th>Class</th>
             <th>
               <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
-                <option v-for="item in pixels" :value="item">{{ item }}px</option>
+                <option v-for="item in pixels" :value="item" :key="item">{{ item }}px</option>
               </select>
             </th>
           </tr>
@@ -70,31 +70,31 @@ Default</pre>
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       pixels: [12, 14, 16, 18],
       selectedPixel: 14,
       heights: [
-        { key: "1/2", value: "0.5" },
-        { key: "3/4", value: "0.75" },
-        { key: "1", value: "1" },
-        { key: "3/2", value: "1.5" },
-        { key: "2", value: "2" },
-        { key: "5/2", value: "2.5" },
-        { key: "3", value: "3" }
+        { key: '1/2', value: '0.5' },
+        { key: '3/4', value: '0.75' },
+        { key: '1', value: '1' },
+        { key: '3/2', value: '1.5' },
+        { key: '2', value: '2' },
+        { key: '5/2', value: '2.5' },
+        { key: '3', value: '3' }
       ],
       exemple1: null
-    };
+    }
   },
   methods: {
     rem2Px(val) {
       if (val && !isNaN(Number(val))) {
-        let result = val * this.selectedPixel;
-        return `${result.toFixed(1)} px`;
+        let result = val * this.selectedPixel
+        return `${result.toFixed(1)} px`
       }
-      return null;
+      return null
     }
   },
   mounted() {
@@ -103,9 +103,9 @@ export default {
 <div class="py:1 line-height:3/2">Lorem ipsum dolor sit amet...</div>
 <div class="py:1 line-height:2">Lorem ipsum dolor sit amet...</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

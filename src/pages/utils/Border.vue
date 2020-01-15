@@ -36,18 +36,18 @@
 export default {
   data() {
     return {
-      tab: "color"
-    };
+      tab: 'color'
+    }
   },
   created() {
-    this.$router.push("/border/color").catch(err => {});
+    this.$router.push('/border/color').catch(() => {})
   },
   watch: {
-    "$route.path"(val) {
-      if (this.$route.path === "/border") {
-        this.$router.push("/border/color").catch(err => {});
+    '$route.path'() {
+      if (this.$route.path === '/border') {
+        this.$router.push('/border/color').catch(() => {})
       }
     }
   }
-};
+}
 </script>

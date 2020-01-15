@@ -51,15 +51,15 @@
               <div class="bg:grey-lighter p:1">
                 <span
                   class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >1</span
+                >1</span
                 >
                 <span
                   class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >2</span
+                >2</span
                 >
                 <span
                   class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >3</span
+                >3</span
                 >
               </div>
             </div>
@@ -76,15 +76,15 @@
               <div class="bg:grey-lighter p:1">
                 <span
                   class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >1</span
+                >1</span
                 >
                 <span
                   class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >2</span
+                >2</span
                 >
                 <span
                   class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >3</span
+                >3</span
                 >
               </div>
             </div>
@@ -101,15 +101,15 @@
               <div class="bg:grey-lighter p:1">
                 <span
                   class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >1</span
+                >1</span
                 >
                 <span
                   class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >2</span
+                >2</span
                 >
                 <span
                   class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >3</span
+                >3</span
                 >
               </div>
             </div>
@@ -126,15 +126,15 @@
               <div class="flex bg:grey-lighter p:1">
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >1</span
+                >1</span
                 >
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >2</span
+                >2</span
                 >
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >3</span
+                >3</span
                 >
               </div>
             </div>
@@ -151,15 +151,15 @@
               <div class="inline-flex bg:grey-lighter p:1">
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >1</span
+                >1</span
                 >
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >2</span
+                >2</span
                 >
                 <span
                   class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                  >3</span
+                >3</span
                 >
               </div>
             </div>
@@ -174,17 +174,17 @@
 </template>
 
 <script>
-import Prism from "prismjs"
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       displayList: [
-        "inline",
-        "block",
-        "inline-block",
-        "none",
-        "flex",
-        "inline-flex"
+        'inline',
+        'block',
+        'inline-block',
+        'none',
+        'flex',
+        'inline-flex'
       ],
       exemple1: null,
       exemple2: null,
@@ -201,7 +201,7 @@ export default {
   <span class="inline">3</span>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple2 = Prism.highlight(
@@ -211,7 +211,7 @@ export default {
   <span class="block">3</span>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple3 = Prism.highlight(
@@ -227,7 +227,7 @@ export default {
   >3</span>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple4 = Prism.highlight(
@@ -237,7 +237,7 @@ export default {
   <span class="flex:1">3</span>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple5 = Prism.highlight(
@@ -247,7 +247,7 @@ export default {
   <span class="flex:1">3</span>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
   }
 }

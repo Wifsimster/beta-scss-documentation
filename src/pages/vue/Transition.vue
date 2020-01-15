@@ -45,7 +45,7 @@ export default {
       slideTop: false,
       slideBottom: false,
       opacity: false
-    };
+    }
   }
-};
+}
 </script>

@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
@@ -78,7 +78,7 @@ export default {
       exemple2: null,
       exemple3: null,
       exemple4: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -88,8 +88,8 @@ export default {
   <div class="flex:1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="flex flex:col">
@@ -98,8 +98,8 @@ export default {
   <div class="flex:1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="flex">
@@ -108,8 +108,8 @@ export default {
   <div class="flex:3">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       ` <div class="flex">
@@ -123,9 +123,9 @@ export default {
     </div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

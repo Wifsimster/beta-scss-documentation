@@ -54,21 +54,21 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       weights: [
-        { key: "lightest", value: "100" },
-        { key: "lighter", value: "200" },
-        { key: "light", value: "300" },
-        { key: "normal", value: "400" },
-        { key: "bold", value: "500" },
-        { key: "bolder", value: "600" },
-        { key: "boldest", value: "700" }
+        { key: 'lightest', value: '100' },
+        { key: 'lighter', value: '200' },
+        { key: 'light', value: '300' },
+        { key: 'normal', value: '400' },
+        { key: 'bold', value: '500' },
+        { key: 'bolder', value: '600' },
+        { key: 'boldest', value: '700' }
       ],
       exemple1: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -77,9 +77,9 @@ export default {
 <div class="py:1 text:normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
 <div class="py:1 text:bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

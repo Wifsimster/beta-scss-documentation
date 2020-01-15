@@ -86,39 +86,39 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       data: null,
-      readonly: "Value",
+      readonly: 'Value',
       exemple2: null,
       exemple3: null,
       exemple4: null
-    };
+    }
   },
   mounted() {
     this.exemple2 = Prism.highlight(
       `<label for="inputId">Input text</label>
 <input id="inputId" type="text" v-model="data">`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<label for="numberId">Input number</label>
 <input id="numberId" type="number" v-model="data">`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       ` <label for="readonlyId">Input readonly</label>
 <input id="readonlyId" type="text" v-model="data" readonly>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

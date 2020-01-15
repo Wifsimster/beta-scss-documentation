@@ -15,7 +15,7 @@
                 <th>Size</th>
                 <th>
                   <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
-                    <option v-for="item in pixels" :value="item">{{ item }}px</option>
+                    <option v-for="item in pixels" :value="item" :key="item">{{ item }}px</option>
                   </select>
                 </th>
               </tr>
@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
@@ -112,53 +112,53 @@ export default {
       selectedPixel: 14,
       sizes: [
         {
-          classPrefix: "p",
-          class: "Padding",
-          prefix: "",
-          side: "All",
+          classPrefix: 'p',
+          class: 'Padding',
+          prefix: '',
+          side: 'All',
           default: true,
-          key: "0",
-          value: "0"
+          key: '0',
+          value: '0'
         },
         {
-          classPrefix: "m",
-          class: "Margin",
-          prefix: "t",
-          side: "Top",
-          key: "1/5",
-          value: "0.2"
+          classPrefix: 'm',
+          class: 'Margin',
+          prefix: 't',
+          side: 'Top',
+          key: '1/5',
+          value: '0.2'
         },
-        { prefix: "r", side: "Right", key: "1/4", value: "0.25" },
-        { prefix: "b", side: "Bottom", key: "1/3", value: "0.33333" },
-        { prefix: "l", side: "Left", key: "2/5", value: "0.4" },
-        { prefix: "x", side: "Horizontal", key: "1/2", value: "0.5" },
-        { prefix: "y", side: "Vertical", key: "3/5", value: "0.6" },
-        { key: "2/3", value: "0.66667" },
-        { key: "3/4", value: "0.75" },
-        { key: "4/5", value: "0.8" },
-        { key: "1", value: "1" },
-        { key: "5/4", value: "1.25" },
-        { key: "3/2", value: "1.5" },
-        { key: "7/4", value: "1.75" },
-        { key: "2", value: "2" },
-        { key: "5/2", value: "2.5" },
-        { key: "3", value: "3" },
-        { key: "4", value: "4" },
-        { key: "auto", value: "auto" }
+        { prefix: 'r', side: 'Right', key: '1/4', value: '0.25' },
+        { prefix: 'b', side: 'Bottom', key: '1/3', value: '0.33333' },
+        { prefix: 'l', side: 'Left', key: '2/5', value: '0.4' },
+        { prefix: 'x', side: 'Horizontal', key: '1/2', value: '0.5' },
+        { prefix: 'y', side: 'Vertical', key: '3/5', value: '0.6' },
+        { key: '2/3', value: '0.66667' },
+        { key: '3/4', value: '0.75' },
+        { key: '4/5', value: '0.8' },
+        { key: '1', value: '1' },
+        { key: '5/4', value: '1.25' },
+        { key: '3/2', value: '1.5' },
+        { key: '7/4', value: '1.75' },
+        { key: '2', value: '2' },
+        { key: '5/2', value: '2.5' },
+        { key: '3', value: '3' },
+        { key: '4', value: '4' },
+        { key: 'auto', value: 'auto' }
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null
-    };
+    }
   },
   methods: {
     rem2Px(val) {
       if (val && !isNaN(Number(val))) {
-        let result = val * this.selectedPixel;
-        return `${result.toFixed(1)} px`;
+        let result = val * this.selectedPixel
+        return `${result.toFixed(1)} px`
       }
-      return null;
+      return null
     }
   },
   mounted() {
@@ -167,33 +167,33 @@ export default {
   <div class="bg:grey-light p:2">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="bg:grey-lighter p:1/2">
     <div class="bg:grey-lighter py:1 px:2">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="bg:grey-lighter p:1/2">
     <div class="bg:grey-lighter pt:1/4 pr:2/5 py:3/5 pl:3/4">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       `<div class="bg:grey-lighter p:1/2">
     <div class="bg:grey-light m:1/2">Lo ipsum dolor sit amet.</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

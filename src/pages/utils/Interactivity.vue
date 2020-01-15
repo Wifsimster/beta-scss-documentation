@@ -154,13 +154,13 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       exemple1: null,
       exemple2: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -171,15 +171,15 @@ export default {
 <div class="cursor:move">Lorem ipsum dolor sit amet.</div>
 <div class="cursor:not-allowed">Lorem ipsum dolor sit amet.</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="pointer-events:none" onclick="alert('event')">Click</div>
 <div class="pointer-events:auto" onclick="alert('event')">Click</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>

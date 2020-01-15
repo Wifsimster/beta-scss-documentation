@@ -60,8 +60,9 @@
                         v-model="selectedPixel"
                         class="text:teal text:normal text:7/8"
                       >
-                        <option v-for="item in pixels" :value="item"
-                          >{{ item }}px</option
+                        <option
+                          v-for="item in pixels" :value="item" :key="item"
+                        >{{ item }}px</option
                         >
                       </select>
                     </th>
@@ -237,26 +238,26 @@
 </template>
 
 <script>
-import Prism from "prismjs"
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       pixels: [12, 14, 16, 18],
       selectedPixel: 14,
       sizes: [
-        { key: "0", value: "0" },
-        { key: "1/4", value: "0.25" },
-        { key: "1/2", value: "0.5" },
-        { key: "3/4", value: "0.75" },
-        { key: "1", value: "1" },
-        { key: "5/4", value: "1.25" },
-        { key: "3/2", value: "1.5" },
-        { key: "7/4", value: "1.75" },
-        { key: "2", value: "2" },
-        { key: "5/2", value: "2.5" },
-        { key: "3", value: "3" },
-        { key: "4", value: "4" },
-        { key: "auto", value: "auto" }
+        { key: '0', value: '0' },
+        { key: '1/4', value: '0.25' },
+        { key: '1/2', value: '0.5' },
+        { key: '3/4', value: '0.75' },
+        { key: '1', value: '1' },
+        { key: '5/4', value: '1.25' },
+        { key: '3/2', value: '1.5' },
+        { key: '7/4', value: '1.75' },
+        { key: '2', value: '2' },
+        { key: '5/2', value: '2.5' },
+        { key: '3', value: '3' },
+        { key: '4', value: '4' },
+        { key: 'auto', value: 'auto' }
       ],
       exemple1: null,
       exemple2: null,
@@ -284,7 +285,7 @@ export default {
   <div class="absolute t:0 x:0 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple2 = Prism.highlight(
@@ -292,7 +293,7 @@ export default {
   <div class="absolute y:0 r:0 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple3 = Prism.highlight(
@@ -300,7 +301,7 @@ export default {
   <div class="absolute b:0 x:0 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple4 = Prism.highlight(
@@ -308,7 +309,7 @@ export default {
   <div class="absolute l:0 y:0 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple5 = Prism.highlight(
@@ -316,7 +317,7 @@ export default {
   <div class="absolute y:0 x:0 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple6 = Prism.highlight(
@@ -324,7 +325,7 @@ export default {
   <div class="absolute l:0 t:0 h:8 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple7 = Prism.highlight(
@@ -332,7 +333,7 @@ export default {
   <div class="absolute r:0 t:0 h:8 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple8 = Prism.highlight(
@@ -340,7 +341,7 @@ export default {
   <div class="absolute b:0 r:0 h:8 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple9 = Prism.highlight(
@@ -348,7 +349,7 @@ export default {
   <div class="absolute l:0 b:0 h:8 p:1 bg:grey-darker"></div>
 </div>`,
       Prism.languages.html,
-      "html"
+      'html'
     )
   }
 }

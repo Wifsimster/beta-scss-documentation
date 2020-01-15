@@ -93,30 +93,30 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       overflow: [
-        ["overflow:auto", "auto"],
-        ["overflow:hidden", "hidden"],
-        ["overflow:visible", "visible"],
-        ["overflow:scroll", "scroll"],
-        ["overflow-x:auto", "auto"],
-        ["overflow-y:auto", "auto"],
-        ["overflow-x:hidden", "hidden"],
-        ["overflow-y:hidden", "hidden"],
-        ["overflow-x:visible", "visible"],
-        ["overflow-y:visible", "visible"],
-        ["overflow-x:scroll", "scroll"],
-        ["overflow-y:scroll", "scroll"]
+        ['overflow:auto', 'auto'],
+        ['overflow:hidden', 'hidden'],
+        ['overflow:visible', 'visible'],
+        ['overflow:scroll', 'scroll'],
+        ['overflow-x:auto', 'auto'],
+        ['overflow-y:auto', 'auto'],
+        ['overflow-x:hidden', 'hidden'],
+        ['overflow-y:hidden', 'hidden'],
+        ['overflow-x:visible', 'visible'],
+        ['overflow-y:visible', 'visible'],
+        ['overflow-x:scroll', 'scroll'],
+        ['overflow-y:scroll', 'scroll']
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null,
       exemple5: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -124,41 +124,41 @@ export default {
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="overflow:scroll">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="overflow-x:scroll">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       `<div class="overflow-y:scroll">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       `<div class="overflow:auto">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

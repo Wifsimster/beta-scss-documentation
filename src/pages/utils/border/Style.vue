@@ -63,41 +63,41 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
-      styles: ["solid", "dashed", "dotted", "none"],
+      styles: ['solid', 'dashed', 'dotted', 'none'],
       borderStyle1: null,
       borderStyle2: null,
       borderStyle3: null,
       borderStyle4: null
-    };
+    }
   },
   mounted() {
     this.borderStyle1 = Prism.highlight(
-      `<div class="border:solid border:1/4"></div>`,
+      '<div class="border:solid border:1/4"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.borderStyle2 = Prism.highlight(
-      `<div class="border:dashed border:1/4"></div>`,
+      '<div class="border:dashed border:1/4"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.borderStyle3 = Prism.highlight(
-      `<div class="border:dotted border:1/4"></div>`,
+      '<div class="border:dotted border:1/4"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.borderStyle4 = Prism.highlight(
-      `<div class="border:none border:1/4"></div>`,
+      '<div class="border:none border:1/4"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>

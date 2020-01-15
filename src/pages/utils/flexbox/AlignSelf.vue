@@ -101,24 +101,24 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       selfs: [
-        ["auto", "auto"],
-        ["start", "flex-start"],
-        ["center", "center"],
-        ["end", "flex-end"],
-        ["stretch", "stretch"]
+        ['auto', 'auto'],
+        ['start', 'flex-start'],
+        ['center', 'center'],
+        ['end', 'flex-end'],
+        ['stretch', 'stretch']
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null,
       exemple5: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -128,8 +128,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       ` <div class="flex items:stretch">
@@ -138,8 +138,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       ` <div class="flex items:stretch">
@@ -148,8 +148,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       ` <div class="flex items:stretch">
@@ -158,8 +158,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       ` <div class="flex items:stretch">
@@ -168,9 +168,9 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

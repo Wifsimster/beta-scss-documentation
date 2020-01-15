@@ -52,27 +52,27 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       columns: [
-        "1/12",
-        "2/12",
-        "3/12",
-        "4/12",
-        "5/12",
-        "6/12",
-        "7/12",
-        "8/12",
-        "9/12",
-        "10/12",
-        "11/12"
+        '1/12',
+        '2/12',
+        '3/12',
+        '4/12',
+        '5/12',
+        '6/12',
+        '7/12',
+        '8/12',
+        '9/12',
+        '10/12',
+        '11/12'
       ],
       exemple1: null,
       exemple2: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -82,8 +82,8 @@ export default {
   <div class="flex:3/12">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="flex">
@@ -93,9 +93,9 @@ export default {
   <div class="flex:1/12">4</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

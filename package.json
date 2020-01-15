@@ -5,41 +5,55 @@
   "version": "1.2.0",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint --fix --ext .js,.vue src/",
     "start": "webpack-dev-server --config webpack.local.js --mode development",
     "build:prod": "webpack --config webpack.prod.js --mode production"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.7.0",
-    "@babel/runtime": "^7.7.4",
-    "beta-scss": "^1.5.0",
-    "date-fns": "^2.8.1",
-    "prismjs": "^1.17.1",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3",
-    "vue-template-compiler": "^2.6.10"
+    "@babel/polyfill": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "beta-scss": "^1.5.1",
+    "date-fns": "^2.9.0",
+    "prismjs": "^1.19.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.4",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
-    "@babel/plugin-transform-runtime": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.5",
-    "css-loader": "^3.2.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.1.2",
     "file-loader": "^5.0.2",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
+    "husky": "^4.0.9",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.2",
     "script-loader": "^0.7.2",
-    "style-loader": "^1.0.1",
+    "style-loader": "^1.1.2",
     "url-loader": "^3.0.0",
     "vue-html-loader": "^1.2.4",
-    "vue-loader": "^15.7.2",
+    "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
+    "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
+  },
+  "eslintIgnore": [
+    "liga.js"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

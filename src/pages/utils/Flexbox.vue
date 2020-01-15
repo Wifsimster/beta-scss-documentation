@@ -93,16 +93,16 @@
 <script>
 export default {
   created() {
-    this.$router.push("/flexbox/intro").catch(err => {});
+    this.$router.push('/flexbox/intro').catch(() => {})
   },
   watch: {
-    "$route.path"(val) {
-      if (this.$route.path === "/flexbox") {
-        this.$router.push("/flexbox/intro").catch(err => {});
+    '$route.path'() {
+      if (this.$route.path === '/flexbox') {
+        this.$router.push('/flexbox/intro').catch(() => {})
       }
     }
   }
-};
+}
 </script>
 
 

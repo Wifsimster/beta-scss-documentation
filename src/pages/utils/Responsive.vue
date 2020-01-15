@@ -88,23 +88,23 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       grids: [
-        { key: "2", value: "2 columns" },
-        { key: "3", value: "3 columns" },
-        { key: "4", value: "4 columns" },
-        { key: "6", value: "6 columns" },
-        { key: "8", value: "8 columns" },
-        { key: "10", value: "10 columns" },
-        { key: "12", value: "12 columns" }
+        { key: '2', value: '2 columns' },
+        { key: '3', value: '3 columns' },
+        { key: '4', value: '4 columns' },
+        { key: '6', value: '6 columns' },
+        { key: '8', value: '8 columns' },
+        { key: '10', value: '10 columns' },
+        { key: '12', value: '12 columns' }
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -113,8 +113,8 @@ export default {
   <div>2</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="responsive:6">
@@ -126,8 +126,8 @@ export default {
   <div>6</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="responsive:12">
@@ -145,8 +145,8 @@ export default {
   <div>12</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>

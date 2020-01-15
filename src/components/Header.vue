@@ -10,16 +10,17 @@
 </template>
 
 <script>
-import format from "date-fns/format";
-import parseISO from "date-fns/parseISO";
+/* eslint-disable no-undef */
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
 export default {
   data() {
     return {
       version: VERSION,
-      date: format(parseISO(BUILD_DATE), `MM/dd/yyyy HH:mm`)
-    };
+      date: format(parseISO(BUILD_DATE), 'MM/dd/yyyy HH:mm')
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

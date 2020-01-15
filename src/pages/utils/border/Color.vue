@@ -70,116 +70,116 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       colors: [
-        "black",
-        "grey-darkest",
-        "grey-darker",
-        "grey-dark",
-        "grey",
-        "grey-light",
-        "grey-lighter",
-        "grey-lightest",
-        "white",
-        "red-darkest",
-        "red-darker",
-        "red-dark",
-        "red",
-        "red-light",
-        "red-lighter",
-        "red-lightest",
-        "orange-darkest",
-        "orange-darker",
-        "orange-dark",
-        "orange",
-        "orange-light",
-        "orange-lighter",
-        "orange-lightest",
-        "yellow:darkest",
-        "yellow:darker",
-        "yellow:dark",
-        "yellow",
-        "yellow:light",
-        "yellow:lighter",
-        "yellow:lightest",
-        "green-darkest",
-        "green-darker",
-        "green-dark",
-        "green",
-        "green-light",
-        "green-lighter",
-        "green-lightest",
-        "teal-darkest",
-        "teal-darker",
-        "teal-dark",
-        "teal",
-        "teal-light",
-        "teal-lighter",
-        "teal-lightest",
-        "blue-darkest",
-        "blue-darker",
-        "blue-dark",
-        "blue",
-        "blue-light",
-        "blue-lighter",
-        "blue-lightest",
-        "indigo-darkest",
-        "indigo-darker",
-        "indigo-dark",
-        "indigo",
-        "indigo-light",
-        "indigo-lighter",
-        "indigo-lightest",
-        "purple-darkest",
-        "purple-darker",
-        "purple-dark",
-        "purple",
-        "purple-light",
-        "purple-lighter",
-        "purple-lightest",
-        "pink-darkest",
-        "pink-darker",
-        "pink-dark",
-        "pink",
-        "pink-light",
-        "pink-lighter",
-        "pink-lightest"
+        'black',
+        'grey-darkest',
+        'grey-darker',
+        'grey-dark',
+        'grey',
+        'grey-light',
+        'grey-lighter',
+        'grey-lightest',
+        'white',
+        'red-darkest',
+        'red-darker',
+        'red-dark',
+        'red',
+        'red-light',
+        'red-lighter',
+        'red-lightest',
+        'orange-darkest',
+        'orange-darker',
+        'orange-dark',
+        'orange',
+        'orange-light',
+        'orange-lighter',
+        'orange-lightest',
+        'yellow:darkest',
+        'yellow:darker',
+        'yellow:dark',
+        'yellow',
+        'yellow:light',
+        'yellow:lighter',
+        'yellow:lightest',
+        'green-darkest',
+        'green-darker',
+        'green-dark',
+        'green',
+        'green-light',
+        'green-lighter',
+        'green-lightest',
+        'teal-darkest',
+        'teal-darker',
+        'teal-dark',
+        'teal',
+        'teal-light',
+        'teal-lighter',
+        'teal-lightest',
+        'blue-darkest',
+        'blue-darker',
+        'blue-dark',
+        'blue',
+        'blue-light',
+        'blue-lighter',
+        'blue-lightest',
+        'indigo-darkest',
+        'indigo-darker',
+        'indigo-dark',
+        'indigo',
+        'indigo-light',
+        'indigo-lighter',
+        'indigo-lightest',
+        'purple-darkest',
+        'purple-darker',
+        'purple-dark',
+        'purple',
+        'purple-light',
+        'purple-lighter',
+        'purple-lightest',
+        'pink-darkest',
+        'pink-darker',
+        'pink-dark',
+        'pink',
+        'pink-light',
+        'pink-lighter',
+        'pink-lightest'
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null,
       exemple4: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="py:1 bg:grey-lighter border border:teal"></div>`,
+      '<div class="py:1 bg:grey-lighter border border:teal"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
-      `<div class="py:1 bg:grey-lighter border:b border:red"></div>`,
+      '<div class="py:1 bg:grey-lighter border:b border:red"></div>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
-      `<input class="bg:grey-lighter border:b hover:border:green">`,
+      '<input class="bg:grey-lighter border:b hover:border:green">',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
-      `<input class="bg:grey-lighter border:b focus:border:green">`,
+      '<input class="bg:grey-lighter border:b focus:border:green">',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

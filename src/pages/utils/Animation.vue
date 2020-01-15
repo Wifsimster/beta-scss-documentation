@@ -103,13 +103,13 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       exemple1: null,
       exemple2: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -119,8 +119,8 @@ export default {
 <i class="rotate:270">top</i>
 <i class="rotating">config</i>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<i class="rotate:90 hover:rotate:0">top</i>
@@ -129,9 +129,9 @@ export default {
 <i class="hover:rotate:270">top</i>
 <i class="hover:rotating">config</i>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

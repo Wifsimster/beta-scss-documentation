@@ -45,13 +45,13 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
-      z: ["0", "10", "20", "30", "40", "50", "auto"],
+      z: ['0', '10', '20', '30', '40', '50', 'auto'],
       exemple1: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -64,9 +64,9 @@ export default {
   <div class="absolute z:0 ml:5/2 mt:5/2 bg:grey-darkest">z:0</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

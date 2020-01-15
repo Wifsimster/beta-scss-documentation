@@ -24,29 +24,29 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       html01: null,
       html02: null
-    };
+    }
   },
   mounted() {
     this.html01 = Prism.highlight(
-      `<fieldset class="border:1/8 border:teal"></fieldset>`,
+      '<fieldset class="border:1/8 border:teal"></fieldset>',
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.html02 = Prism.highlight(
       `<fieldset class="border:1/8 border:teal">
     <legend>Légende</legend>
 </fieldset>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

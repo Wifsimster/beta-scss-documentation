@@ -18,20 +18,21 @@
                 v-model="selectedPixel"
                 class="text:teal text:normal text:7/8"
               >
-                <option v-for="item in pixels" :value="item"
-                  >{{ item }}px</option
+                <option
+                  v-for="item in pixels" :value="item" :key="item"
+                >{{ item }}px</option
                 >
               </select>
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in sizes">
+          <tr v-for="(item, index) in sizes" :key="item">
             <td class="py:1 border:b border:grey-lighter">
               <code
                 v-if="index === 0"
                 class="border rounded mr:1/4 py:1/5 px:1/4"
-                >border</code
+              >border</code
               >
             </td>
             <td class="py:1 border:b border:grey-lighter">
@@ -106,20 +107,20 @@ Default</pre
 </template>
 
 <script>
-import Prism from "prismjs"
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       pixels: [12, 14, 16, 18],
       selectedPixel: 14,
       sizes: [
-        { prefix: "", side: "All", default: true, key: "0", value: "0" },
-        { prefix: "t", side: "Top", key: "1/16", value: "0.0625" },
-        { prefix: "r", side: "Right", key: "1/8", value: "0.125" },
-        { prefix: "b", side: "Bottom", key: "1/4", value: "0.25" },
-        { prefix: "l", side: "Left", key: "1/2", value: "0.5" },
-        { prefix: "x", side: "Horizontal", key: "3/4", value: "0.75" },
-        { prefix: "y", side: "Vertical", key: "1", value: "1" }
+        { prefix: '', side: 'All', default: true, key: '0', value: '0' },
+        { prefix: 't', side: 'Top', key: '1/16', value: '0.0625' },
+        { prefix: 'r', side: 'Right', key: '1/8', value: '0.125' },
+        { prefix: 'b', side: 'Bottom', key: '1/4', value: '0.25' },
+        { prefix: 'l', side: 'Left', key: '1/2', value: '0.5' },
+        { prefix: 'x', side: 'Horizontal', key: '3/4', value: '0.75' },
+        { prefix: 'y', side: 'Vertical', key: '1', value: '1' }
       ],
       exemple1: null,
       exemple2: null,
@@ -138,27 +139,27 @@ export default {
   },
   mounted() {
     this.exemple1 = Prism.highlight(
-      `<div class="border:1/2"></div>`,
+      '<div class="border:1/2"></div>',
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple2 = Prism.highlight(
-      `<div class="border:b:1/4"></div>`,
+      '<div class="border:b:1/4"></div>',
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple3 = Prism.highlight(
-      `<div class="border:l:1/2"></div>`,
+      '<div class="border:l:1/2"></div>',
       Prism.languages.html,
-      "html"
+      'html'
     )
 
     this.exemple4 = Prism.highlight(
-      `<div class="border:y:1"></div>`,
+      '<div class="border:y:1"></div>',
       Prism.languages.html,
-      "html"
+      'html'
     )
   }
 }

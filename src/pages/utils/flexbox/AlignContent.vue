@@ -107,18 +107,18 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       contents: [
-        ["start", "flex:start"],
-        ["center", "center"],
-        ["end", "flex-end"],
-        ["stretch", "stretch"],
-        ["between", "space-between"],
-        ["around", "space-around"]
+        ['start', 'flex:start'],
+        ['center', 'center'],
+        ['end', 'flex-end'],
+        ['stretch', 'stretch'],
+        ['between', 'space-between'],
+        ['around', 'space-around']
       ],
       exemple1: null,
       exemple2: null,
@@ -126,7 +126,7 @@ export default {
       exemple4: null,
       exemple5: null,
       exemple6: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -136,8 +136,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       ` <div class="flex flex:wrap content:center">
@@ -146,8 +146,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       ` <div class="flex flex:wrap content:end">
@@ -156,8 +156,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       ` <div class="flex flex:wrap content:stretch">
@@ -166,8 +166,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       ` <div class="flex flex:wrap content:between">
@@ -176,8 +176,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple6 = Prism.highlight(
       ` <div class="flex flex:wrap content:around">
@@ -186,9 +186,9 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

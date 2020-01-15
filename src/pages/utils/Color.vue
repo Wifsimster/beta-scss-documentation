@@ -59,25 +59,25 @@ export default {
   data() {
     return {
       colors: [
-        "grey",
-        "red",
-        "orange",
-        "yellow",
-        "green",
-        "teal",
-        "blue",
-        "indigo",
-        "purple",
-        "pink"
+        'grey',
+        'red',
+        'orange',
+        'yellow',
+        'green',
+        'teal',
+        'blue',
+        'indigo',
+        'purple',
+        'pink'
       ],
       variants: [
-        "-lightest",
-        "-lighter",
-        "-light",
-        "",
-        "-dark",
-        "-darker",
-        "-darkest"
+        '-lightest',
+        '-lighter',
+        '-light',
+        '',
+        '-dark',
+        '-darker',
+        '-darkest'
       ]
     }
   }

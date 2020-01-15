@@ -7,7 +7,7 @@
             <th>Class</th>
             <th>
               <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
-                <option v-for="item in pixels" :value="item">{{ item }}px</option>
+                <option v-for="item in pixels" :value="item" :key="item">{{ item }}px</option>
               </select>
             </th>
             <th>Result</th>
@@ -54,34 +54,34 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
       pixels: [12, 14, 16, 18],
       selectedPixel: 14,
       sizes: [
-        { key: "1/2", value: "0.5" },
-        { key: "3/4", value: "0.75" },
-        { key: "7/8", value: "0.875" },
-        { key: "1", value: "1" },
-        { key: "9/8", value: "1.125" },
-        { key: "5/4", value: "1.25" },
-        { key: "3/2", value: "1.5" },
-        { key: "7/4", value: "1.75" },
-        { key: "2", value: "2" },
-        { key: "3", value: "3" }
+        { key: '1/2', value: '0.5' },
+        { key: '3/4', value: '0.75' },
+        { key: '7/8', value: '0.875' },
+        { key: '1', value: '1' },
+        { key: '9/8', value: '1.125' },
+        { key: '5/4', value: '1.25' },
+        { key: '3/2', value: '1.5' },
+        { key: '7/4', value: '1.75' },
+        { key: '2', value: '2' },
+        { key: '3', value: '3' }
       ],
       exemple1: null
-    };
+    }
   },
   methods: {
     rem2Px(val) {
       if (val && !isNaN(Number(val))) {
-        let result = val * this.selectedPixel;
-        return `${result.toFixed(1)} px`;
+        let result = val * this.selectedPixel
+        return `${result.toFixed(1)} px`
       }
-      return null;
+      return null
     }
   },
   mounted() {
@@ -91,9 +91,9 @@ export default {
 <div class="py:1 text:5/4">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>
 <div class="py:1 text:3/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua.</div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

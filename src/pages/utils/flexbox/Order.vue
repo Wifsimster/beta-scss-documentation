@@ -67,25 +67,25 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       orders: [
-        ["first", "-1"],
-        ["last", "999"],
-        ["none", "0"],
-        ["1", "1"],
-        ["2", "2"],
-        ["3", "3"],
-        ["4", "4"],
-        ["5", "5"]
+        ['first', '-1'],
+        ['last', '999'],
+        ['none', '0'],
+        ['1', '1'],
+        ['2', '2'],
+        ['3', '3'],
+        ['4', '4'],
+        ['5', '5']
       ],
       exemple1: null,
       exemple2: null,
       exemple3: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -95,8 +95,8 @@ export default {
     <div>3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       ` <div class="flex">
@@ -105,8 +105,8 @@ export default {
     <div class="order:first">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       ` <div class="flex">
@@ -115,9 +115,9 @@ export default {
     <div class="1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
 

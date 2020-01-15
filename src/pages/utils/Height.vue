@@ -82,37 +82,37 @@ export default {
   data() {
     return {
       sizes: [
-        { key: "0", value: "0" },
-        { key: "1/12", value: "8.33333%" },
-        { key: "2/12", value: "16.66667%" },
-        { key: "3/12", value: "25%" },
-        { key: "4/12", value: "33.33333%" },
-        { key: "5/12", value: "41.66667%" },
-        { key: "6/12", value: "50%" },
-        { key: "7/12", value: "58.33333%" },
-        { key: "8/12", value: "66.66667%" },
-        { key: "9/12", value: "75%" },
-        { key: "10/12", value: "83.33333%" },
-        { key: "11/12", value: "91.66667%" },
+        { key: '0', value: '0' },
+        { key: '1/12', value: '8.33333%' },
+        { key: '2/12', value: '16.66667%' },
+        { key: '3/12', value: '25%' },
+        { key: '4/12', value: '33.33333%' },
+        { key: '5/12', value: '41.66667%' },
+        { key: '6/12', value: '50%' },
+        { key: '7/12', value: '58.33333%' },
+        { key: '8/12', value: '66.66667%' },
+        { key: '9/12', value: '75%' },
+        { key: '10/12', value: '83.33333%' },
+        { key: '11/12', value: '91.66667%' },
 
-        { key: "full", value: "100%" },
-        { key: "screen", value: "100vw" },
-        { key: "inherit", value: "inherit" },
-        { key: "auto", value: "auto" }
+        { key: 'full', value: '100%' },
+        { key: 'screen', value: '100vw' },
+        { key: 'inherit', value: 'inherit' },
+        { key: 'auto', value: 'auto' }
       ],
       heights: [
         [
-          "1/12",
-          "2/12",
-          "3/12",
-          "4/12",
-          "5/12",
-          "6/12",
-          "7/12",
-          "8/12",
-          "9/12",
-          "10/12",
-          "11/12"
+          '1/12',
+          '2/12',
+          '3/12',
+          '4/12',
+          '5/12',
+          '6/12',
+          '7/12',
+          '8/12',
+          '9/12',
+          '10/12',
+          '11/12'
         ]
       ]
     }

@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 export default {
   data() {
     return {
@@ -149,7 +149,7 @@ export default {
       exemple3: null,
       exemple4: null,
       exemple5: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -158,8 +158,8 @@ export default {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit[..]</p>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="bg:grey-lighter p:1 mr:1">
@@ -167,8 +167,8 @@ export default {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit[..]</p>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="bg:grey-lighter p:1 mr:1 clearfix">
@@ -176,8 +176,8 @@ export default {
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit[..]</p>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       `<div class="bg:grey-lighter p:1 mb:2 mr:1">
@@ -188,8 +188,8 @@ export default {
   </span>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       `<div class="bg:grey-lighter p:1 clearfix">
@@ -200,8 +200,8 @@ export default {
   </span>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>

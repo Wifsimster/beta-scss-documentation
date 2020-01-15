@@ -125,19 +125,19 @@
 </template>
 
 <script>
-import Prism from "prismjs";
+import Prism from 'prismjs'
 
 export default {
   data() {
     return {
       flexs: [
-        ["auto", "1 1 auto"],
-        ["initial", "0 1 auto"],
-        ["1", "1 1 0%"],
-        ["2", "2 2 0%"],
-        ["3", "3 3 0%"],
+        ['auto', '1 1 auto'],
+        ['initial', '0 1 auto'],
+        ['1', '1 1 0%'],
+        ['2', '2 2 0%'],
+        ['3', '3 3 0%'],
         // ["full", "0 1 100%"],
-        ["none", "none"]
+        ['none', 'none']
       ],
       exemple1: null,
       exemple2: null,
@@ -145,7 +145,7 @@ export default {
       exemple4: null,
       exemple5: null,
       exemple6: null
-    };
+    }
   },
   mounted() {
     this.exemple1 = Prism.highlight(
@@ -155,8 +155,8 @@ export default {
     <div class="flex:auto">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple2 = Prism.highlight(
       `<div class="flex">
@@ -165,8 +165,8 @@ export default {
     <div class="flex:initial">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple3 = Prism.highlight(
       `<div class="flex">
@@ -175,8 +175,8 @@ export default {
     <div class="flex:1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple4 = Prism.highlight(
       `<div class="flex">
@@ -185,8 +185,8 @@ export default {
     <div class="flex:1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple5 = Prism.highlight(
       `<div class="flex">
@@ -195,8 +195,8 @@ export default {
     <div class="flex:1">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
 
     this.exemple6 = Prism.highlight(
       `<div class="flex">
@@ -205,8 +205,8 @@ export default {
     <div class="flex:none">3</div>
 </div>`,
       Prism.languages.html,
-      "html"
-    );
+      'html'
+    )
   }
-};
+}
 </script>
