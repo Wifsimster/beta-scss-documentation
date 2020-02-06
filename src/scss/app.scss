@@ -3,6 +3,7 @@
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  box-sizing: border-box;
 
   &:focus {
     outline-color: map-get($colors, "transparent");
