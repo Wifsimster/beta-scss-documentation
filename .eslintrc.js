@@ -16,17 +16,9 @@ module.exports = {
     eqeqeq: "warn", // require === and !==
     "default-case": "warn", // require default case in switch statements
     "no-implicit-coercion": "warn", // disallows implicit type conversion methods
-    "no-magic-numbers": [
-      "warn",
-      {
-        // forbid magic numbers (force declaring const)
-        ignore: [-1, 0, 1, 2]
-      }
-    ],
     yoda: "warn", // requires 'yoda' condition statements
     "no-var": "warn", // requires let or const, not var
     "no-debugger": "warn",
-
     "vue/max-attributes-per-line": [
       "warn",
       {
