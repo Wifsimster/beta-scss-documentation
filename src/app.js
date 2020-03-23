@@ -1,10 +1,8 @@
-import '@babel/polyfill'
 import Vue from 'vue'
-
-import App from 'pages/App.vue'
 import router from './router'
 
-import Card from 'components/Card.vue'
+import App from 'pages/App'
+import Card from 'components/Card'
 
 Vue.component('Card', Card)
 

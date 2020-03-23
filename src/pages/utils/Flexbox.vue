@@ -93,14 +93,14 @@
 <script>
 export default {
   created() {
-    this.$router.push("/flexbox/intro").catch(() => { });
+    this.$router.push('/flexbox/intro').catch(() => {})
   },
   watch: {
-    "$route.path"() {
-      if (this.$route.path === "/flexbox") {
-        this.$router.push("/flexbox/intro").catch(() => { });
+    '$route.path'() {
+      if (this.$route.path === '/flexbox') {
+        this.$router.push('/flexbox/intro').catch(() => {})
       }
     }
   }
-};
+}
 </script>

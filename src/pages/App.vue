@@ -27,6 +27,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/app";
-@import "../scss/prism";
+@import "~scss/app";
+@import "~scss/prism";
 </style>

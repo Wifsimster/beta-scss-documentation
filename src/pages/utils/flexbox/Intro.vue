@@ -2,8 +2,9 @@
   <div>
     <div class="flex flex:col bg:grey-lighter mt:1 p:1/2 rounded">
       <div class="flex flex:wrap">
-        <div class="flex:1 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item</div>
-        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item</div>
+        <div class="flex:1 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 1</div>
+        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 2</div>
+        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 3</div>
       </div>
       <div class="flex:1 text:center">Content</div>
     </div>
@@ -71,6 +72,7 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {

@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --fix --ext .js,.vue src/",
-    "start": "webpack-dev-server --config webpack.local.js --mode development",
-    "build:prod": "webpack --config webpack.prod.js --mode production"
+    "start": "webpack-dev-server --config ./builds/webpack.local.js --mode development",
+    "build:prod": "webpack --config ./builds/webpack.prod.js --mode production"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
@@ -34,6 +34,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "sass": "^1.26.3",

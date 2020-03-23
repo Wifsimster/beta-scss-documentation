@@ -25,6 +25,7 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
