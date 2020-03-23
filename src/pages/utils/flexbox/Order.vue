@@ -1,66 +1,31 @@
 <template>
-  <div>
-    <div class="flex flex:wrap">
-      <div class="flex:1 mr:1">
-        <table class="w:full">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Properties</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in orders" :key="item[0]">
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:purple">.order:{{ item[0] }}</pre>
-              </td>
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:blue">order: {{ item[1] }};</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="flex flex:wrap">
+    <div class="flex:1">
+      <div class="flex py:1">
+        <pre
+          v-for="(property, index) in properties"
+          :key="index"
+          @click="value = property"
+          :class="{ 'border:purple': value === property }"
+          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
+        >{{ property }}</pre>
       </div>
-
-      <div class="flex:2">
-        <div class="flex flex:col flex:wrap">
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter">
-                <div class="order:last text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple1"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="order:first text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple2"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter">
-                <div class="order:3 text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="order:2 text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="order:1 text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple3"></pre>
-            </div>
-          </div>
+      <div class="border rounded:t:1/2 p:1 overflow:hidden">
+        <div class="flex flex:wrap bg:grey-lighter">
+          <div
+            class="flex items:center text:grey-darker text:center bg:grey m:1/2 p:2"
+            :class="value"
+          >1</div>
+          <div
+            class="flex items:center text:grey-darker text:center bg:grey-light m:1/2 p:2"
+            v-for="index in [2, 3, 4, 5]"
+            :class="`order:${index}`"
+            :key="index"
+          >{{ index }}</div>
         </div>
+      </div>
+      <div class="bg:black rounded:b:1/2">
+        <pre class="language-html" v-html="exemple"></pre>
       </div>
     </div>
   </div>
@@ -72,52 +37,45 @@ import Prism from 'prismjs'
 export default {
   data() {
     return {
-      orders: [
-        ['first', '-1'],
-        ['last', '999'],
-        ['none', '0'],
-        ['1', '1'],
-        ['2', '2'],
-        ['3', '3'],
-        ['4', '4'],
-        ['5', '5']
+      value: null,
+      properties: [
+        'order:first',
+        'order:last',
+        'order:none',
+        'order:1',
+        'order:2',
+        'order:3',
+        'order:4',
+        'order:5'
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      ` <div class="flex">
-    <div class="order:last">1</div>
-    <div>2</div>
-    <div>3</div>
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="flex">
+    <div class="${this.value}">1</div>
+    <div class="order:2">2</div>
+    <div class="order:3">3</div>
+    <div class="order:4">4</div>
+    <div class="order:5">5</div>
 </div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      ` <div class="flex">
-    <div>1</div>
-    <div>2</div>
-    <div class="order:first">3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      ` <div class="flex">
-    <div class="3">1</div>
-    <div class="2">2</div>
-    <div class="1">3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
-

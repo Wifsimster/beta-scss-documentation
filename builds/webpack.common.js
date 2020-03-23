@@ -10,7 +10,7 @@ const packageJson = require('../package.json')
 module.exports = {
   entry: [path.join(__dirname, '../src/app')],
   output: {
-    filename: 'static/js/[name].js',
+    filename: 'js/[name].js',
     path: path.join(__dirname, '../docs'),
     publicPath: '/'
   },

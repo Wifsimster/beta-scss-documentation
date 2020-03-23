@@ -1,62 +1,30 @@
 <template>
-  <div>
-    <div class="flex flex:wrap">
-      <div class="flex:1 mr:1">
-        <table class="w:full">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Properties</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in grows" :key="item[0]">
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:purple">.flex:{{ item[0] }}</pre>
-                <pre
-                  class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                  v-if="item[0] === 'grow'"
-                >Default</pre>
-              </td>
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:blue">flex-grow: {{ item[1] }};</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="flex flex:wrap">
+    <div class="flex:1">
+      <div class="flex py:1">
+        <pre
+          v-for="(property, index) in properties"
+          :key="index"
+          @click="value = property"
+          :class="{ 'border:purple': value === property }"
+          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
+        >{{ property }}</pre>
       </div>
-
-      <div class="flex:2">
-        <div class="flex flex:col flex:wrap">
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter">
-                <div class="flex:none text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div
-                  class="flex:none flex:grow text:grey-darker text:center bg:grey-light m:1/2 p:1"
-                >2</div>
-                <div class="flex:none text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple1"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter">
-                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div
-                  class="flex:1 flex:grow-none text:grey-darker text:center bg:grey-light m:1/2 p:1"
-                >2</div>
-                <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple2"></pre>
-            </div>
-          </div>
+      <div class="border rounded:t:1/2 p:1 overflow:hidden">
+        <div class="flex bg:grey-lighter transition">
+          <div
+            class="transition flex items:center text:grey-darker text:center bg:grey m:1/2 p:2"
+            :class="value"
+          >1</div>
+          <div
+            class="flex items:center text:grey-darker text:center bg:grey-light m:1/2 p:2"
+            v-for="index in [2, 3, 4, 5, 6, 7, 8]"
+            :key="index"
+          >{{ index }}</div>
         </div>
+      </div>
+      <div class="bg:black rounded:b:1/2">
+        <pre class="language-html" v-html="exemple"></pre>
       </div>
     </div>
   </div>
@@ -68,32 +36,35 @@ import Prism from 'prismjs'
 export default {
   data() {
     return {
-      grows: [['grow', '1'], ['grow-none', '0']],
-      exemple1: null,
-      exemple2: null
+      value: null,
+      properties: ['flex:grow', 'flex:grow-none'],
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      ` <div class="flex">
-    <div class="flex:none">1</div>
-    <div class="flex:none flex:grow">2</div>
-    <div class="flex:none">3</div>
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="flex">
+    <div class="${this.value}">1</div>
+    <div>2</div>
+    <div>3</div>
+    [...]
 </div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      ` <div class="flex">
-    <div class="flex:1">1</div>
-    <div class="flex:1 flex:grow-none">2</div>
-    <div class="flex:1">3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
-

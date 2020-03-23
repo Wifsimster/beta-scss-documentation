@@ -1,16 +1,24 @@
 <template>
   <div>
-    <div class="flex flex:col bg:grey-lighter mt:1 p:1/2 rounded">
+    <div class="text:bold py:1/2">Structure</div>
+    <div class="flex flex:col bg:grey-lighter p:1/2 rounded border mb:2">
       <div class="flex flex:wrap">
-        <div class="flex:1 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 1</div>
-        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 2</div>
-        <div class="flex:2 text:center bg:grey-light m:1/2 px:1/4 py:1 rounded">Item 3</div>
+        <div
+          class="flex:1 text:center text:grey-darkest bg:grey-light m:1/2 px:1/4 py:1 rounded border"
+        >Item 1</div>
+        <div
+          class="flex:2 text:center text:grey-darkest bg:grey-light m:1/2 px:1/4 py:1 rounded border"
+        >Item 2</div>
+        <div
+          class="flex:2 text:center text:grey-darkest bg:grey-light m:1/2 px:1/4 py:1 rounded border"
+        >Item 3</div>
       </div>
-      <div class="flex:1 text:center">Content</div>
+      <div class="flex:1 p:1 text:center text:grey-darkest">Content</div>
     </div>
 
+    <div class="text:bold py:1/2">Boilerplates</div>
     <div class="flex flex:wrap">
-      <div class="flex:1 px:1 my:1">
+      <div class="flex:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
             <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
@@ -23,7 +31,7 @@
         </div>
       </div>
 
-      <div class="flex:1 px:1 my:1">
+      <div class="flex:1 mx:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex flex:col bg:grey-lighter">
             <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
@@ -36,7 +44,7 @@
         </div>
       </div>
 
-      <div class="flex:2 px:1 my:1">
+      <div class="flex:2 mx:1">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
             <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>
@@ -49,7 +57,7 @@
         </div>
       </div>
 
-      <div class="flex:2 px:1 my:1">
+      <div class="flex:2">
         <div class="border rounded:t:1/2 p:1">
           <div class="flex bg:grey-lighter">
             <div class="flex:1 text:grey-darker text:center bg:grey-light m:1/2 px:1/4 py:1">1</div>

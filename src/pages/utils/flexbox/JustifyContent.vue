@@ -1,94 +1,26 @@
 <template>
-  <div>
-    <div class="flex flex:wrap">
-      <div class="flex:1 mr:1">
-        <table class="w:full">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Properties</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in contents" :key="item[0]">
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:purple">.justify:{{ item[0] }}</pre>
-                <pre
-                  class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                  v-if="item[0] === 'start'"
-                >Default</pre>
-              </td>
-              <td class="py:1/2 px:1 border:b border:grey-light">
-                <pre class="inline text:blue">justify-content: {{ item[1] }}</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="flex flex:wrap">
+    <div class="flex:1">
+      <div class="flex py:1">
+        <pre
+          v-for="(property, index) in properties"
+          :key="index"
+          @click="value = property"
+          :class="{ 'border:purple': value === property }"
+          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
+        >{{ property }}</pre>
       </div>
-
-      <div class="flex:2">
-        <div class="flex flex:col flex:wrap">
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex justify:start bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple1"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex justify:center bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple2"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex justify:end bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple3"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex justify:between bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple4"></pre>
-            </div>
-          </div>
-          <div class="flex:1 mb:1">
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex justify:around bg:grey-lighter">
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">1</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">2</div>
-                <div class="text:grey-darker text:center bg:grey-light m:1/2 p:1">3</div>
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple5"></pre>
-            </div>
-          </div>
+      <div class="border rounded:t:1/2 p:1 overflow:hidden">
+        <div class="flex bg:grey-lighter" :class="value">
+          <div
+            class="flex:none w:2/5 text:grey-darker text:center bg:grey-light m:1/2 p:2"
+            v-for="index in [1, 2, 3, 4, 5, 6, 8, 9, 10]"
+            :key="index"
+          >{{ index }}</div>
         </div>
+      </div>
+      <div class="bg:black rounded:b:1/2">
+        <pre class="language-html" v-html="exemple"></pre>
       </div>
     </div>
   </div>
@@ -100,70 +32,41 @@ import Prism from 'prismjs'
 export default {
   data() {
     return {
-      contents: [
-        ['start', 'flex:start'],
-        ['center', 'center'],
-        ['end', 'flex-end'],
-        ['between', 'space-between'],
-        ['around', 'space-around']
+      value: null,
+      properties: [
+        'justify:start',
+        'justify:center',
+        'justify:end',
+        'justify:between',
+        'justify:around'
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null,
-      exemple5: null
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      ` <div class="flex justify:start">
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        ` <div class="flex ${this.value}">
     <div>1</div>
     <div>2</div>
     <div>3</div>
+    [...]
 </div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      ` <div class="flex justify:center">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      ` <div class="flex justify:end">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      ` <div class="flex justify:between">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple5 = Prism.highlight(
-      ` <div class="flex justify:around">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
