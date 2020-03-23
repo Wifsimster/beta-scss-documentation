@@ -6,7 +6,7 @@ const path = require('path')
 
 module.exports = merge(common, {
   output: {
-    filename: '[name].bundle.js',
+    filename: 'js/[name].[hash].js',
     path: path.resolve(__dirname, '../docs'),
     publicPath: '/beta-scss-documentation/'
   },
