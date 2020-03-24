@@ -2,171 +2,25 @@
   <card>
     <template #header>Display</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:2">
-          <table class="w:full">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Properties</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="display in displayList" :key="display">
-                <td class="p:0 border:b border:grey-light">
-                  <pre class="text:purple">.{{ display }}</pre>
-                </td>
-                <td class="p:0 border:b border:grey-light">
-                  <pre class="text:blue">display: {{ display }};</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="p:0 border:b border:grey-light">
-                  <pre
-                    class="text:blue"
-                  ><span class="text:purple">.visibile</span></pre>
-                </td>
-                <td class="p:0 border:b border:grey-light">
-                  <pre class="text:blue">visiblity: visible;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="p:0 border:b border:grey-light">
-                  <pre
-                    class="text:blue"
-                  ><span class="text:purple">.invisible</span></pre>
-                </td>
-                <td class="p:0 border:b border:grey-light">
-                  <pre class="text:blue">visibility: hidden;</pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex flex:col">
+        <div class="flex mb:1">
+          <pre
+            v-for="(property, index) in properties"
+            :key="index"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
+          >{{ property }}</pre>
         </div>
 
-        <div class="flex:1">
-          <div class="p:1/4 ml:1 mb:1">
-            <h2>Inline</h2>
-            <div class="border rounded:t:1/2 p:1">
-              <div class="bg:grey-lighter p:1">
-                <span
-                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >1</span
-                >
-                <span
-                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >2</span
-                >
-                <span
-                  class="inline text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >3</span
-                >
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple1"></pre>
-            </div>
-          </div>
+        <div class="border rounded:t:1/2 p:1">
+          <div
+            class="bg:grey-light rounded p:1"
+            :class="value"
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem perferendis impedit corrupti itaque odio, quidem nihil porro nam.</div>
         </div>
-
-        <div class="flex:1">
-          <div class="p:1/4 ml:1 mb:1">
-            <h2>Block</h2>
-            <div class="border rounded:t:1/2 p:1">
-              <div class="bg:grey-lighter p:1">
-                <span
-                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >1</span
-                >
-                <span
-                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >2</span
-                >
-                <span
-                  class="block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >3</span
-                >
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple2"></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex:1">
-          <div class="p:1/4 ml:1 mb:1">
-            <h2>Inline Block</h2>
-            <div class="border rounded:t:1/2 p:1">
-              <div class="bg:grey-lighter p:1">
-                <span
-                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >1</span
-                >
-                <span
-                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >2</span
-                >
-                <span
-                  class="inline-block text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >3</span
-                >
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple3"></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex:1">
-          <div class="p:1/4 ml:1 mb:1">
-            <h2>Flex</h2>
-            <div class="border rounded:t:1/2 p:1">
-              <div class="flex bg:grey-lighter p:1">
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >1</span
-                >
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >2</span
-                >
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >3</span
-                >
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple4"></pre>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex:1">
-          <div class="p:1/4 ml:1 mb:1">
-            <h2>Inline Flex</h2>
-            <div class="border rounded:t:1/2 p:1">
-              <div class="inline-flex bg:grey-lighter p:1">
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >1</span
-                >
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >2</span
-                >
-                <span
-                  class="flex:1 text:grey-dark text:center bg:grey-light py:1/2 px:1 my:1/2"
-                >3</span
-                >
-              </div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple5"></pre>
-            </div>
-          </div>
+        <div class="bg:black rounded:b:1/2">
+          <pre class="language-html" v-html="exemple"></pre>
         </div>
       </div>
     </template>
@@ -175,80 +29,45 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      displayList: [
+      properties: [
         'inline',
         'block',
         'inline-block',
         'none',
         'flex',
-        'inline-flex'
+        'inline-flex',
+        'visible',
+        'invisible'
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null,
-      exemple5: null
+      value: null,
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      `<div>
-  <span class="inline">1</span>
-  <span class="inline">2</span>
-  <span class="inline">3</span>
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="${this.value}">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit...
 </div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      `<div>
-  <span class="block">1</span>
-  <span class="block">2</span>
-  <span class="block">3</span>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      `<div>
-  <span
-    class="inline-block"
-  >1</span>
-  <span
-    class="inline-block"
-  >2</span>
-  <span
-    class="inline-block"
-  >3</span>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      `<div class="flex">
-  <span class="flex:1">1</span>
-  <span class="flex:1">2</span>
-  <span class="flex:1">3</span>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple5 = Prism.highlight(
-      `<div class="inline-flex">
-  <span class="flex:1">1</span>
-  <span class="flex:1">2</span>
-  <span class="flex:1">3</span>
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>

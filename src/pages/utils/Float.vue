@@ -1,7 +1,6 @@
 <template>
   <card>
     <template #header>Float</template>
-
     <template #content>
       <div class="flex flex:wrap">
         <div class="flex:1 mr:1 mb:1">
