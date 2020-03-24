@@ -7,6 +7,7 @@
   "scripts": {
     "lint": "eslint --fix --ext .js,.vue src/",
     "start": "webpack-dev-server --config ./builds/webpack.local.js --mode development",
+    "build:dev": "webpack --config ./builds/webpack.common.js --mode development",
     "build:prod": "webpack --config ./builds/webpack.prod.js --mode production"
   },
   "dependencies": {
