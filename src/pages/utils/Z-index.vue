@@ -30,14 +30,14 @@
               class="absolute p:4 bg:grey-dark rounded z:30 border"
               style="margin-left: 6rem"
             >z:30</div>
-            <div class="absolute p:4 bg:grey rounded z:20 border" style="margin-left: 10rem">z:20</div>
+            <div class="absolute p:4 bg:grey rounded z:20 border" style="margin-left: 8rem">z:20</div>
             <div
               class="absolute p:4 bg:grey-light rounded z:10 border"
-              style="margin-left: 12rem"
+              style="margin-left: 10rem"
             >z:10</div>
             <div
               class="absolute p:4 bg:grey-lighter rounded z:0 border"
-              style="margin-left: 14rem"
+              style="margin-left: 12rem"
             >z:0</div>
             <div
               class="absolute p:4 bg:orange rounded border text:grey-lighter"
