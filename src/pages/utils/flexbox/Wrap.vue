@@ -1,7 +1,8 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
-      <div class="flex py:1">
+      <p class="py:1">Flex items will all try to fit onto one line or not.</p>
+      <div class="flex pb:1">
         <pre
           v-for="(property, index) in properties"
           :key="index"

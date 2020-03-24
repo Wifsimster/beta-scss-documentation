@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p class="py:1">This defines the alignment along the main axis.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p class="pb:1">This is the shorthand for <pre class="inline text:purple">flex-grow</pre>, <pre class="inline text:purple">flex-shrink</pre> and <pre class="inline text:purple">flex-basis</pre> combined.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

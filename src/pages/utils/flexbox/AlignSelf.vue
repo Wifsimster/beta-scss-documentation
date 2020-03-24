@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p
+        class="pb:1"
+      >This allows the default alignment (or the one specified by <pre class="inline text:purple">align-items</pre>) to be overridden for individual flex items.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

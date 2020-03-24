@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p
+        class="pb:1"
+      >By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p class="pb:1">This defines the ability for a flex item to grow if necessary.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

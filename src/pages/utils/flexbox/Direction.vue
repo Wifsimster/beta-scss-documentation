@@ -1,7 +1,8 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
-      <div class="flex py:1">
+      <p class="py:1">Define the direction flex items are placed in the flex container.</p>
+      <div class="flex pb:1">
         <pre
           v-for="(property, index) in properties"
           :key="index"

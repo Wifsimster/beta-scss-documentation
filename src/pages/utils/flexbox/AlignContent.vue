@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p class="py:1">This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how <pre class="inline text:purple">justify-content</pre> aligns individual items within the main-axis.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

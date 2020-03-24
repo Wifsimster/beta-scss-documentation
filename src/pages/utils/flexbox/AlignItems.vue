@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p
+        class="py:1"
+      >This defines the default behavior for how flex items are laid out along the cross axis on the current line.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"

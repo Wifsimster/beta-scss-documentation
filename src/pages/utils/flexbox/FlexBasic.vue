@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex:wrap">
     <div class="flex:1">
+      <p
+        class="pb:1"
+      >This defines the default size of an element before the remaining space is distributed.</p>
       <div class="flex py:1">
         <pre
           v-for="(property, index) in properties"
