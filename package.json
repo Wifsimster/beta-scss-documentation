@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "beta-scss": "^1.5.11",
+    "core-js": "^3.6.4",
     "date-fns": "^2.11.0",
     "prismjs": "^1.19.0",
     "vue": "^2.6.11",
@@ -34,9 +35,9 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^4.0.1",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
+    "lint-staged": "^10.0.9",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "script-loader": "^0.7.2",
@@ -45,7 +46,7 @@
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.9.1",
     "vue-style-loader": "^4.1.2",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"

@@ -41,9 +41,25 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.vue$/, loader: 'vue-loader' },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.html$/, use: [{ loader: 'vue-html-loader' }] },
+      { 
+        test: /\.vue$/, 
+        loader: 'vue-loader' 
+      },
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', {
+              'useBuiltIns': 'usage',
+              'corejs': '3'
+              // 'debug': true
+            }]],
+            plugins: ['@babel/plugin-transform-runtime']
+          } 
+        }
+      },
       {
         test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
@@ -58,7 +74,7 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|eot|otf|ttf)(\?.*)?$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           limit: 10000,
           name: 'static/fonts/[name].[ext]'
