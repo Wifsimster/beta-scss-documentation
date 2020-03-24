@@ -2,14 +2,15 @@
 const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+
 const packageJson = require('../package.json')
 
 module.exports = {
   entry: [path.join(__dirname, '../src/app')],
   output: {
-    filename: 'static/js/[name].js',
+    filename: 'js/[name].js',
     path: path.join(__dirname, '../docs'),
     publicPath: '/'
   },
