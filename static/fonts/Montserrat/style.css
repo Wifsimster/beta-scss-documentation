@@ -3,7 +3,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 100;
-  src: url("Montserrat-Thin.woff2") format("woff2");
+  src: url("Montserrat-Thin.woff2") format("font-woff2");
 }
 
 /* ExtraLight */
@@ -11,7 +11,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 200;
-  src: url("Montserrat-ExtraLight.woff2") format("woff2");
+  src: url("Montserrat-ExtraLight.woff2") format("font-woff2");
 }
 
 /* Light */
@@ -19,7 +19,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
-  src: url("Montserrat-Light.woff2") format("woff2");
+  src: url("Montserrat-Light.woff2") format("font-woff2");
 }
 
 /* Regular */
@@ -27,7 +27,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("Montserrat-Regular.woff2") format("woff2");
+  src: url("Montserrat-Regular.woff2") format("font-woff2");
 }
 
 /* Medium */
@@ -35,7 +35,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  src: url("Montserrat-Medium.woff2") format("woff2");
+  src: url("Montserrat-Medium.woff2") format("font-woff2");
 }
 
 /* SemiBold */
@@ -43,7 +43,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  src: url("Montserrat-SemiBold.woff2") format("woff2");
+  src: url("Montserrat-SemiBold.woff2") format("font-woff2");
 }
 
 /* Bold */
@@ -51,7 +51,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("Montserrat-Bold.woff2") format("woff2");
+  src: url("Montserrat-Bold.woff2") format("font-woff2");
 }
 
 /* ExtraBold */
@@ -59,7 +59,7 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
-  src: url("Montserrat-ExtraBold.woff2") format("woff2");
+  src: url("Montserrat-ExtraBold.woff2") format("font-woff2");
 }
 
 /* Black */
@@ -67,5 +67,5 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
-  src: url("Montserrat-Black.woff2") format("woff2");
+  src: url("Montserrat-Black.woff2") format("font-woff2");
 }
