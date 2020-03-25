@@ -16,12 +16,19 @@ table {
       &:nth-child(odd) {
         @extend .bg\:grey-lightest;
       }
+      &.active {
+        @extend .bg\:purple-lighter;
+      }      
+      @extend .transition;
+      @extend .cursor\:pointer;
       @extend .border\:b;
-      @extend .hover\:bg\:blue-lightest;
+      &:not(.active) {
+        @extend .hover\:bg\:purple-lightest;
+      }
       td {
         @extend .px\:1\/2;
         @extend .py\:1\/3;
-      }
+      }      
     }
   }
 }
