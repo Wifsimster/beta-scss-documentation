@@ -1,7 +1,7 @@
 <template>
-  <div class="flex">
+  <div class="flex flex:wrap">
     <div class="flex:1 mr:1">
-      <div class="overflow-y:auto line:normal" style="max-height: 640px;">
+      <div class="overflow-y:auto line:normal mb:1 mx:1/2" style="max-height: 680px;">
         <table class="w:full">
           <thead>
             <tr>
@@ -10,58 +10,42 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="color in colors" :key="color">
-              <td class="py:1 border:b border:grey-lighter">
-                <pre class="inline text:purple">.border:{{ color }}</pre>
+            <tr
+              v-for="color in properties"
+              :key="color"
+              @click="value = color"
+              :class="{ 'active': value === color }"
+            >
+              <td>
+                <pre class="inline text:purple-dark">.text:{{ color }}</pre>
                 <pre
                   class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                   v-if="color === 'grey-light'"
                 >Default</pre>
               </td>
-              <td class="py:1 px:1/2 border:b border:grey-lighter">
-                <div class="border py:1 px:3" :class="'border:'+color"></div>
-              </td>
+              <td class="p:1" :class="'bg:' + color"></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <div class="flex:2">
+    <div class="flex:3">
       <div class="flex flex:wrap">
         <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border border:teal"></div>
+            <div class="p:1 rounded bg:grey-lighter" :class="'border border:' + value">
+              <p
+                class="pb:1"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti velit, ad sequi itaque perferendis quisquam in sunt deleniti blanditiis qui inventore tempora eos veniam obcaecati incidunt, et pariatur corporis molestiae!</p>
+              <p
+                class="pb:1"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores libero vero neque ullam rerum ipsum saepe sequi soluta a quo! Tenetur, maiores? Eius voluptatum, laborum laudantium eaque adipisci aperiam error!</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab in fuga doloribus natus corporis eligendi totam saepe deleniti laborum voluptatum consequuntur et, quod quaerat sapiente ex officia, ut dolor repudiandae?</p>
+            </div>
           </div>
           <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple1"></pre>
-          </div>
-        </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border:b border:red"></div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple2"></pre>
-          </div>
-        </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <input class="bg:grey-lighter border:b hover:border:green" />
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple3"></pre>
-          </div>
-        </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <input class="bg:grey-lighter border:b focus:border:green" />
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple4"></pre>
+            <pre class="language-html" v-html="exemple"></pre>
           </div>
         </div>
       </div>
@@ -71,10 +55,11 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      colors: [
+      properties: [
         'black',
         'grey-darkest',
         'grey-darker',
@@ -98,13 +83,13 @@ export default {
         'orange-light',
         'orange-lighter',
         'orange-lightest',
-        'yellow:darkest',
-        'yellow:darker',
-        'yellow:dark',
+        'yellow-darkest',
+        'yellow-darker',
+        'yellow-dark',
         'yellow',
-        'yellow:light',
-        'yellow:lighter',
-        'yellow:lightest',
+        'yellow-light',
+        'yellow-lighter',
+        'yellow-lightest',
         'green-darkest',
         'green-darker',
         'green-dark',
@@ -148,42 +133,31 @@ export default {
         'pink-lighter',
         'pink-lightest'
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null
+      value: null,
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      '<div class="py:1 bg:grey-lighter border border:teal"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      '<div class="py:1 bg:grey-lighter border:b border:red"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      '<input class="bg:grey-lighter border:b hover:border:green">',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      '<input class="bg:grey-lighter border:b focus:border:green">',
-      Prism.languages.html,
-      'html'
-    )
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="border border:${this.value}">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua...
+</div>`,
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-input {
-  height: 33px;
-}
-</style>

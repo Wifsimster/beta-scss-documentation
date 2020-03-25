@@ -113,7 +113,7 @@ export default {
     }
   },
   created() {
-    this.value = this.properties[0]
+    this.value = this.properties[6]
   },
   mounted() {
     this.setExemple()

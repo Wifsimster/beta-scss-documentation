@@ -1,105 +1,26 @@
 <template>
-  <div class="flex">
+  <div class="flex flex:row">
     <div class="flex:1 mr:1">
-      <table class="w:full">
-        <thead>
-          <tr>
-            <th>Class</th>
-            <th>
-              Side
-              <span class="text:grey text:3/4">(Optional)</span>
-            </th>
-            <th>
-              Width
-              <span class="text:grey text:3/4">(Optional)</span>
-            </th>
-            <th>
-              <select
-                v-model="selectedPixel"
-                class="text:teal text:normal text:7/8"
-              >
-                <option
-                  v-for="item in pixels" :value="item" :key="item"
-                >{{ item }}px</option
-                >
-              </select>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in sizes" :key="item">
-            <td class="py:1 border:b border:grey-lighter">
-              <code
-                v-if="index === 0"
-                class="border rounded mr:1/4 py:1/5 px:1/4"
-              >border</code
-              >
-            </td>
-            <td class="py:1 border:b border:grey-lighter">
-              <code class="border rounded m:1/4 p:1/2">{{ item.prefix }}</code>
-              {{ item.side }}
-              <pre
-                v-if="item.default"
-                class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-              >
-Default</pre
-              >
-            </td>
-            <td class="py:1 border:b border:grey-lighter">
-              <code class="border rounded mr:1/4 py:1/5 px:1/4">{{
-                item.key
-              }}</code>
-              <pre
-                v-if="item.value === '0.0625'"
-                class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-              >
-Default</pre
-              >
-            </td>
-            <td class="py:1 border:b border:grey-lighter">
-              {{ rem2Px(item.value) }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="flex flex:wrap mb:1">
+        <pre
+          v-for="property in properties"
+          :key="property.value"
+          @click="value = property"
+          :class="{ 'border:purple': value === property }"
+          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
+        >{{ property.label }}</pre>
+        <multiselect placeholder="Choose a size" :options="sizes" v-model="size" />
+      </div>
 
-    <div class="flex:1">
-      <div class="flex flex:wrap">
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border:1/2"></div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple1"></pre>
-          </div>
+      <div class="flex:1 px:1/2 mb:1">
+        <div class="border rounded:t:1/2 p:1">
+          <div
+            class="p:2 bg:grey-lighter rounded"
+            :class="`border${this.value.value ? ':' + this.value.value : ''}${this.size ? ':' + this.size : ''}`"
+          ></div>
         </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border:b:1/4"></div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple2"></pre>
-          </div>
-        </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border:l:1/2"></div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple3"></pre>
-          </div>
-        </div>
-
-        <div class="flex:1 px:1/2 mb:1">
-          <div class="border rounded:t:1/2 p:1">
-            <div class="py:1 bg:grey-lighter border:y:1"></div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple4"></pre>
-          </div>
+        <div class="bg:black rounded:b:1/2">
+          <pre class="language-html" v-html="exemple"></pre>
         </div>
       </div>
     </div>
@@ -111,56 +32,45 @@ import Prism from 'prismjs'
 export default {
   data() {
     return {
-      pixels: [12, 14, 16, 18],
-      selectedPixel: 14,
-      sizes: [
-        { prefix: '', side: 'All', default: true, key: '0', value: '0' },
-        { prefix: 't', side: 'Top', key: '1/16', value: '0.0625' },
-        { prefix: 'r', side: 'Right', key: '1/8', value: '0.125' },
-        { prefix: 'b', side: 'Bottom', key: '1/4', value: '0.25' },
-        { prefix: 'l', side: 'Left', key: '1/2', value: '0.5' },
-        { prefix: 'x', side: 'Horizontal', key: '3/4', value: '0.75' },
-        { prefix: 'y', side: 'Vertical', key: '1', value: '1' }
+      properties: [
+        { label: 'All', value: null },
+        { label: 'Top', value: 't' },
+        { label: 'Right', value: 'r' },
+        { label: 'Bottom', value: 'b' },
+        { label: 'Left', value: 'l' },
+        { label: 'Horizontal', value: 'x' },
+        { label: 'Vertical', value: 'y' }
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null
+      sizes: ['0', '1/16', '1/8', '1/4', '1/2', '3/4', '1'],
+      value: null,
+      size: '1',
+      exemple: null
+    }
+  },
+  created() {
+    this.value = this.properties[0]
+  },
+  mounted() {
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    },
+    size() {
+      this.setExemple()
     }
   },
   methods: {
-    rem2Px(val) {
-      if (val && !isNaN(Number(val))) {
-        let result = val * this.selectedPixel
-        return `${result.toFixed(1)} px`
-      }
-      return null
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="border${this.value.value ? ':' + this.value.value : ''}${
+          this.size ? ':' + this.size : ''
+        }"></div>`,
+        Prism.languages.html,
+        'html'
+      )
     }
-  },
-  mounted() {
-    this.exemple1 = Prism.highlight(
-      '<div class="border:1/2"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      '<div class="border:b:1/4"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      '<div class="border:l:1/2"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      '<div class="border:y:1"></div>',
-      Prism.languages.html,
-      'html'
-    )
   }
 }
 </script>
