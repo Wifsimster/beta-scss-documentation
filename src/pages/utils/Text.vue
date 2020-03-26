@@ -4,37 +4,37 @@
     <template #navigation>
       <div class="bg:grey-lighter w:full pt:1 pb:1/2 flex flex:wrap">
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/color'}"
           to="/text/color"
         >Color</router-link>
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/size'}"
           to="/text/size"
         >Size</router-link>
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/weigth'}"
           to="/text/weigth"
         >Weigth</router-link>
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/alignment'}"
           to="/text/alignment"
         >Alignment</router-link>
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/decoration'}"
           to="/text/decoration"
         >Decoration</router-link>
         <router-link
-          tag="div"
+          tag="span"
           class="cursor:pointer text:bold px:2 mb:1/2"
           :class="{ 'text:orange': $route.path === '/text/line-height'}"
           to="/text/line-height"
