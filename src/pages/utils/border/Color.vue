@@ -1,14 +1,8 @@
 <template>
-  <div class="flex flex:wrap">
-    <div class="flex:1 mr:1">
+  <div class="flex flex:wrap my:1">
+    <div class="flex flex:col flex:2/12">
       <div class="overflow-y:auto line:normal mb:1 mx:1/2" style="max-height: 680px;">
         <table class="w:full">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th></th>
-            </tr>
-          </thead>
           <tbody>
             <tr
               v-for="color in properties"
@@ -30,7 +24,7 @@
       </div>
     </div>
 
-    <div class="flex:3">
+    <div class="flex:10/12">
       <div class="flex flex:wrap">
         <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">

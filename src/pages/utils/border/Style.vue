@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex:col">
-    <div class="flex flex:wrap mb:1">
+  <div class="flex flex:wrap my:1">
+    <div class="flex flex:col flex:2/12">
       <pre
         v-for="property in properties"
         :key="property"
@@ -9,10 +9,14 @@
         class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
       >{{ property }}</pre>
     </div>
-    <div class="flex flex:wrap">
+
+    <div class="flex:10/12">
       <div class="flex:1">
         <div class="border rounded:t:1/2 p:1">
-          <div class="p:1 rounded bg:grey-lighter" :class="'border border:' + value">
+          <div
+            class="p:1 rounded bg:grey-lighter transition"
+            :class="'border border:1/2 border:' + value"
+          >
             <p
               class="pb:1"
             >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti velit, ad sequi itaque perferendis quisquam in sunt deleniti blanditiis qui inventore tempora eos veniam obcaecati incidunt, et pariatur corporis molestiae!</p>
@@ -54,7 +58,7 @@ export default {
   methods: {
     setExemple() {
       this.exemple = Prism.highlight(
-        `<div class="border border:${this.value}">
+        `<div class="border border:1/2 border:${this.value}">
     Lorem ispum dolor sit ...
 </div>`,
         Prism.languages.html,

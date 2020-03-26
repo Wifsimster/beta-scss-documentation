@@ -12,6 +12,7 @@
             <pre class="flex:1 text:2 text:grey-lighter ml:1/2">{{ value }}</pre>
           </div>
         </transition>
+        <p class="py:1">Select a color to copy it in the clipboard.</p>
         <div class="w:full flex flex:wrap">
           <div class="mb:2 mr:2">
             <p class="text:bold mb:1">Black & White</p>

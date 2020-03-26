@@ -2,94 +2,39 @@
   <card>
     <template #header>Rounded</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:1 flex:wrap mr:1">
-          <table class="w:full">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>
-                  Side
-                  <span class="text:grey text:3/4">(Optional)</span>
-                </th>
-                <th>
-                  Size
-                  <span class="text:grey text:3/4">(Optional)</span>
-                </th>
-                <th>
-                  <select v-model="selectedPixel" class="text:teal text:normal text:7/8">
-                    <option v-for="item in pixels" :value="item" :key="item">{{ item }}px</option>
-                  </select>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(item, index) in sizes" :key="item">
-                <td class="py:1 border:b border:grey-lighter">
-                  <code v-if="index === 0" class="border rounded mr:1/4 py:1/5 px:1/4">rounded</code>
-                </td>
-                <td class="py:1 border:b border:grey-lighter">
-                  <code v-if="item.prefix" class="border rounded m:1/4 p:1/2">{{ item.prefix }}</code>
-                  {{ item.side }}
-                  <pre
-                    v-if="item.default"
-                    class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                  >Default</pre>
-                </td>
-                <td class="py:1 border:b border:grey-lighter">
-                  <code class="border rounded mr:1/4 py:1/5 px:1/4">{{ item.key }}</code>
-                  {{ item.value }}
-                </td>
-                <td class="py:1 border:b border:grey-lighter">{{ rem2Px(item.value) }}</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex flex:wrap my:1">
+        <div class="flex flex:col flex:2/12">
+          <div class="flex mb:1">
+            <pre class="border bg:grey-light text:purple border:purple rounded px:1 py:1/2 mr:1">rounded</pre>
+          </div>
+          <multiselect
+            placeholder="Choose a position"
+            :options="positions"
+            v-model="position"
+            label="label"
+            track-by="value"
+            class="mb:1"
+          />
+          <multiselect
+            placeholder="Choose a size"
+            :options="sizes"
+            v-model="size"
+            label="label"
+            track-by="value"
+          />
         </div>
 
-        <div class="flex:1">
+        <div class="flex:10/12">
           <div class="flex flex:wrap">
             <div class="flex:1 px:1/2 mb:1">
               <div class="border rounded:t:1/2 p:1">
-                <div class="py:1 bg:grey-light rounded"></div>
+                <div
+                  class="py:4 bg:grey-light trannsition"
+                  :class="`rounded${position && position.value ? ':' + position.value : ''}${size && size.value ? ':' + size.value : ''}`"
+                ></div>
               </div>
               <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple1"></pre>
-              </div>
-            </div>
-
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="py:1 bg:grey-light rounded:t"></div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple2"></pre>
-              </div>
-            </div>
-
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="py:1 bg:grey-light rounded:b:1/2"></div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple3"></pre>
-              </div>
-            </div>
-
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="py:1 bg:grey-light rounded:t:3/4"></div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple4"></pre>
-              </div>
-            </div>
-
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div id="round" class="bg:grey-light rounded:full"></div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple5"></pre>
+                <pre class="language-html" v-html="exemple"></pre>
               </div>
             </div>
           </div>
@@ -101,73 +46,56 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      pixels: [12, 14, 16, 18],
-      selectedPixel: 14,
-      sizes: [
-        {
-          class: 'rounded',
-          prefix: ' ',
-          side: 'All',
-          default: true,
-          key: '0',
-          value: '0'
-        },
-        { prefix: 't', side: 'Top', key: '1/8', value: '0.125' },
-        { prefix: 'r', side: 'Right', key: '', value: '0.25' },
-        { prefix: 'b', side: 'Bottom', key: '1/2', value: '0.5' },
-        { prefix: 'l', side: 'Left', key: '3/4', value: '0.75' },
-        { key: '1', value: '1' },
-        { key: 'full', value: '' }
+      positions: [
+        { label: 'All', value: null },
+        { label: 'Top', value: 't' },
+        { label: 'Right', value: 'r' },
+        { label: 'Bottom', value: 'b' },
+        { label: 'Left', value: 'l' }
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null,
-      exemple5: null
+      sizes: [
+        { label: '0', value: '0' },
+        { label: '1/8', value: '1/8' },
+        { label: '1/4', value: null },
+        { label: '1/2', value: '1/2' },
+        { label: '3/4', value: '3/4' },
+        { label: '1', value: '1' },
+        { label: 'full', value: 'full' }
+      ],
+      position: null,
+      size: null,
+      exemple: null
+    }
+  },
+  created() {
+    this.position = this.positions[0]
+    this.size = this.sizes[5]
+  },
+  mounted() {
+    this.setExemple()
+  },
+  watch: {
+    position() {
+      this.setExemple()
+    },
+    size() {
+      this.setExemple()
     }
   },
   methods: {
-    rem2Px(val) {
-      if (val && !isNaN(Number(val))) {
-        let result = val * this.selectedPixel
-        return `${result.toFixed(1)} px`
-      }
-      return null
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="rounded${
+          this.position && this.position.value ? ':' + this.position.value : ''
+        }${this.size && this.size.value ? ':' + this.size.value : ''}"></div>`,
+        Prism.languages.html,
+        'html'
+      )
     }
-  },
-  mounted() {
-    this.exemple1 = Prism.highlight(
-      '<div class="py:1 bg:grey-light rounded"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      '<div class="py:1 bg:grey-light rounded:t"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      '<div class="py:1 bg:grey-light rounded:b:1/2"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      '<div class="py:1 bg:grey-light rounded:t:3/4"></div>',
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple5 = Prism.highlight(
-      '<div class="bg:grey-light rounded:full"></div>',
-      Prism.languages.html,
-      'html'
-    )
   }
 }
 </script>

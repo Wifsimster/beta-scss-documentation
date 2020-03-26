@@ -2,9 +2,9 @@
   <card>
     <template #header>Typography</template>
     <template #content>
-      <div classe="flex">
-        <div class="flex flex:col mb:2">
-          <div class="flex flex:wrap mb:1">
+      <div class="flex flex:col">
+        <div class="flex my:1">
+          <div class="flex flex:col w:2/12">
             <pre
               v-for="(property, index) in properties"
               :key="index"
@@ -14,22 +14,24 @@
             >{{ property }}</pre>
           </div>
 
-          <div class="border rounded:t:1/2 p:1">
-            <div class="bg:grey-light rounded p:1" :class="value">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam recusandae amet quaerat perspiciatis, quis aliquam culpa rem, cupiditate eos tempora eum quod excepturi voluptate assumenda, nesciunt cumque fugiat est illo.
-                <br />Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque cumque neque, tenetur ex optio animi blanditiis minima a nulla quisquam fugiat dolores molestiae voluptate libero accusantium sint fugit ea? Eum.
-                <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo cupiditate nisi deleniti blanditiis est? Eveniet natus odit error libero, autem ducimus? Fuga eaque quos corrupti ad, ea perspiciatis consectetur quisquam.
-              </p>
+          <div class="w:10/12">
+            <div class="border rounded:t:1/2 p:1">
+              <div class="bg:grey-light rounded p:1" :class="value">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam recusandae amet quaerat perspiciatis, quis aliquam culpa rem, cupiditate eos tempora eum quod excepturi voluptate assumenda, nesciunt cumque fugiat est illo.
+                  <br />Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque cumque neque, tenetur ex optio animi blanditiis minima a nulla quisquam fugiat dolores molestiae voluptate libero accusantium sint fugit ea? Eum.
+                  <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo cupiditate nisi deleniti blanditiis est? Eveniet natus odit error libero, autem ducimus? Fuga eaque quos corrupti ad, ea perspiciatis consectetur quisquam.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple"></pre>
+            <div class="bg:black rounded:b:1/2">
+              <pre class="language-html" v-html="exemple"></pre>
+            </div>
           </div>
         </div>
 
-        <div class="flex:1 flex flex:col mb:2">
-          <div class="flex flex:wrap mb:1">
+        <div class="flex my:1">
+          <div class="flex flex:col w:2/12">
             <pre
               v-for="(property, index) in wrappingProperties"
               :key="index"
@@ -39,38 +41,43 @@
             >{{ property }}</pre>
           </div>
 
-          <div class="border rounded:t:1/2 p:1">
-            <div class="bg:grey-light rounded p:1">
-              <p :class="value02">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate modi libero error qui possimus veritatis aliquam culpa praesentium enim recusandae, nisi optio, repellendus dolore? Optio eveniet libero placeat suscipit.
-                <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit distinctio atque quisquam repudiandae id quae culpa cupiditate dignissimos, quos quia incidunt. Dolores velit veritatis sapiente, aperiam suscipit earum ipsa labore.
-                <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia cumque sequi explicabo necessitatibus libero incidunt molestias rerum voluptatum beatae laboriosam et illo sunt consectetur ab natus maxime, reprehenderit voluptate animi!
-              </p>
+          <div class="w:10/12">
+            <div class="border rounded:t:1/2 p:1">
+              <div class="bg:grey-light rounded p:1">
+                <p class :class="value02">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate modi libero error qui possimus veritatis aliquam culpa praesentium enim recusandae, nisi optio, repellendus dolore? Optio eveniet libero placeat suscipit.
+                  <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit distinctio atque quisquam repudiandae id quae culpa cupiditate dignissimos, quos quia incidunt. Dolores velit veritatis sapiente, aperiam suscipit earum ipsa labore.
+                  <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia cumque sequi explicabo necessitatibus libero incidunt molestias rerum voluptatum beatae laboriosam et illo sunt consectetur ab natus maxime, reprehenderit voluptate animi!
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple02"></pre>
+            <div class="bg:black rounded:b:1/2">
+              <pre class="language-html" v-html="exemple02"></pre>
+            </div>
           </div>
         </div>
 
-        <div class="flex:1 flex flex:col">
-          <div class="flex flex:wrap mb:1">
+        <div class="flex my:1 flex:1">
+          <div class="w:2/12">
             <pre
               class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 border:purple"
             >{{ listProperty }}</pre>
           </div>
-          <div class="border rounded:t:1/2 p:1">
-            <div class="bg:grey-light rounded p:1">
-              <ul :class="listProperty">
-                <li>Lorem ipsum dolor sit amet consectetur</li>
-                <li>Lorem ipsum dolor sit amet consectetur</li>
-                <li>Lorem ipsum dolor sit amet consectetur</li>
-                <li>Lorem ipsum dolor sit amet consectetur</li>
-              </ul>
+
+          <div class="w:10/12">
+            <div class="border rounded:t:1/2 p:1">
+              <div class="bg:grey-light rounded p:1">
+                <ul :class="listProperty">
+                  <li>Lorem ipsum dolor sit amet consectetur</li>
+                  <li>Lorem ipsum dolor sit amet consectetur</li>
+                  <li>Lorem ipsum dolor sit amet consectetur</li>
+                  <li>Lorem ipsum dolor sit amet consectetur</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="bg:black rounded:b:1/2">
-            <pre class="language-html" v-html="exemple03"></pre>
+            <div class="bg:black rounded:b:1/2">
+              <pre class="language-html" v-html="exemple03"></pre>
+            </div>
           </div>
         </div>
       </div>

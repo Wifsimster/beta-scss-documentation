@@ -2,24 +2,22 @@
   <card>
     <template #header>Position</template>
     <template #content>
-      <div class="flex flex:row">
-        <div class="flex:1 mr:1">
-          <div class="flex flex:wrap mb:1">
-            <pre
-              v-for="property in properties"
-              :key="property.value"
-              @click="value = property"
-              :class="{ 'border:purple': value === property }"
-              class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
-            >{{ property }}</pre>
-          </div>
-          <div class="flex flex:wrap">
+      <div class="flex flex:wrap my:1">
+        <div class="flex flex:col flex:2/12">
+          <pre
+            v-for="property in properties"
+            :key="property.value"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
+          >{{ property }}</pre>
+          <div class="flex flex:wrap mr:1">
             <multiselect
               placeholder="Choose a position"
               :options="positions"
               v-model="position"
               label="label"
-              key="value"
+              track-by="value"
               class="mb:1/2"
             />
             <multiselect placeholder="Choose a size" :options="sizes" v-model="size" />
@@ -31,20 +29,20 @@
               :options="positions"
               v-model="position02"
               label="label"
-              key="value"
+              track-by="value"
               class="mb:1/2"
             />
             <multiselect placeholder="Choose a size" :options="sizes" v-model="size02" />
           </div>
         </div>
 
-        <div class="flex:3">
+        <div class="flex:10/12">
           <div class="flex flex:wrap">
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1" style="height: 300px">
-                <div class="relative p:4 bg:grey-light">
+            <div class="flex:1 px:1/2">
+              <div class="border rounded:t:1/2 p:1" style="min-height: 300px">
+                <div class="relative p:4 bg:grey-light rounded">
                   <div
-                    class="p:2 bg:grey-darker"
+                    class="transition p:2 bg:grey-darker rounded"
                     :class="`${value} ${position.value}:${size} ${position02.value}:${size02}`"
                   ></div>
                 </div>

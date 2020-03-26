@@ -1,12 +1,7 @@
 <template>
-  <div class="flex flex:wrap">
-    <div class="flex:1 mr:1">
+  <div class="flex flex:wrap my:1">
+    <div class="flex flex:col flex:2/12">
       <table class="w:full">
-        <thead>
-          <tr>
-            <th>Class</th>
-          </tr>
-        </thead>
         <tbody>
           <tr
             v-for="item in properties"
@@ -14,8 +9,8 @@
             @click="value = item"
             :class="{ 'active': value === item }"
           >
-            <td class="py:1/2">
-              <pre class="inline text:purple">.{{ item }}</pre>
+            <td class="flex justify:between">
+              <pre class="inline text:purple-dark">{{ item }}</pre>
               <pre
                 class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
                 v-if="item === 'normal-case'"
@@ -26,7 +21,7 @@
       </table>
     </div>
 
-    <div class="flex:3">
+    <div class="flex:10/12">
       <div class="flex flex:wrap">
         <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
@@ -66,7 +61,7 @@ export default {
     }
   },
   created() {
-    this.value = this.properties[0]
+    this.value = this.properties[5]
   },
   mounted() {
     this.setExemple()

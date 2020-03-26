@@ -4,7 +4,7 @@
     <template #content>
       <div class="flex flex:wrap">
         <div class="flex:1">
-          <p class="pb:1">
+          <p class="py:1">
             Automatically builds a responsive grid in flexbox based on media
             queries.
           </p>
