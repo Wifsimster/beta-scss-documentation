@@ -1,13 +1,19 @@
 <template>
   <div class="flex flex:wrap my:1">
-    <div class="flex flex:col flex:2/12">
-      <pre
-        v-for="property in properties"
-        :key="property"
-        @click="value = property"
-        :class="{ 'border:purple': value === property }"
-        class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
-      >{{ property }}</pre>
+    <div class="flex flex:col flex:2/12 pr:1">
+      <div
+        class="flex justify:between transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+        v-for="item in properties"
+        :key="item"
+        @click="value = item"
+        :class="{ 'border:purple': value === item }"
+      >
+        <pre>{{ item }}</pre>
+        <pre
+          class="border bg:grey-lighter text:grey-dark px:1/3 text:3/4 rounded"
+          v-if="item === 'solid'"
+        >Default</pre>
+      </div>
     </div>
 
     <div class="flex:10/12">

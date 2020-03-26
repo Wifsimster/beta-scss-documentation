@@ -1,16 +1,25 @@
 <template>
-  <div class="flex flex:wrap">
-    <div class="flex:1">
-      <p class="py:1">This defines the alignment along the main axis.</p>
-      <div class="flex py:1">
-        <pre
-          v-for="(property, index) in properties"
-          :key="index"
-          @click="value = property"
-          :class="{ 'border:purple': value === property }"
-          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
-        >{{ property }}</pre>
+  <div class="flex my:1">
+    <div class="flex:2/12 pr:1">
+      <div class="flex flex:col">
+        <div
+          class="flex justify:between transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          v-for="item in properties"
+          :key="item"
+          @click="value = item"
+          :class="{ 'border:purple': value === item }"
+        >
+          <pre>{{ item }}</pre>
+          <pre
+            class="border bg:grey-lighter text:grey-dark px:1/3 text:3/4 rounded"
+            v-if="item === 'justify:start'"
+          >Default</pre>
+        </div>
       </div>
+    </div>
+
+    <div class="flex:10/12">
+      <p class="pb:1">This defines the alignment along the main axis.</p>
       <div class="border rounded:t:1/2 p:1 overflow:hidden">
         <div class="flex bg:grey-lighter" :class="value">
           <div

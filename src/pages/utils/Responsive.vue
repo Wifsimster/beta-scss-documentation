@@ -2,35 +2,29 @@
   <card>
     <template #header>Responsive Grid</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:1">
-          <p class="py:1">
+      <div class="flex my:1">
+        <div class="flex:2/12 pr:1">
+          <pre
+            v-for="property in properties"
+            :key="property"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          >{{ property }}</pre>
+          <multiselect
+            :options="columnGapProperties"
+            v-model="columnGap"
+            placeholder="Select a column gap"
+            class="mb:1/2"
+          />
+          <multiselect :options="rowGapProperties" v-model="rowGap" placeholder="Select a row gap" />
+        </div>
+
+        <div class="flex:10/12">
+          <p class="pb:1">
             Automatically builds a responsive grid in flexbox based on media
             queries.
           </p>
-          <div class="flex flex:wrap">
-            <pre
-              v-for="(property, index) in properties"
-              :key="index"
-              @click="value = property"
-              :class="{ 'border:purple': value === property }"
-              class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mx:1 my:1/2 cursor:pointer"
-            >{{ property }}</pre>
-          </div>
-          <p class="py:1">Manage rows and columns spacing.</p>
-          <div class="flex mb:2">
-            <multiselect
-              :options="columnGapProperties"
-              v-model="columnGap"
-              placeholder="Select a column gap"
-              class="mr:1"
-            />
-            <multiselect
-              :options="rowGapProperties"
-              v-model="rowGap"
-              placeholder="Select a row gap"
-            />
-          </div>
           <div class="border rounded:t:1/2 p:1">
             <div :class="`${value} ${columnGap} ${rowGap}`">
               <div
@@ -107,13 +101,13 @@ export default {
         'row-gap:4'
       ],
       value: null,
-      columnGap: 'column-gap:0',
-      rowGap: 'row-gap:0',
+      columnGap: 'column-gap:1/2',
+      rowGap: 'row-gap:1/2',
       exemple: null
     }
   },
   created() {
-    this.value = this.properties[6]
+    this.value = this.properties[3]
   },
   mounted() {
     this.setExemple()

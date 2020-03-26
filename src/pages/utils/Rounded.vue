@@ -4,9 +4,7 @@
     <template #content>
       <div class="flex flex:wrap my:1">
         <div class="flex flex:col flex:2/12">
-          <div class="flex mb:1">
-            <pre class="border bg:grey-light text:purple border:purple rounded px:1 py:1/2 mr:1">rounded</pre>
-          </div>
+          <pre class="border bg:grey-light text:purple border:purple rounded px:1 py:1/2 mb:1">rounded</pre>
           <multiselect
             placeholder="Choose a position"
             :options="positions"

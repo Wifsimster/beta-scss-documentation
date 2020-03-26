@@ -2,148 +2,41 @@
   <card>
     <template #header>Interactivity</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:1 mr:1">
-          <table class="w:full">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Properties</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:auto</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: auto;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:default</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: default;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:pointer</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: pointer;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:wait</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: wait;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:move</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: move;</pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="border:b border:grey-light">
-                  <pre class="text:purple">.cursor:not-allowed</pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">cursor: not-allowed;</pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex flex:wrap my:1">
+        <div class="flex:2/12 pr:1">
+          <pre
+            v-for="property in properites"
+            :key="property"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          >{{ property }}</pre>
         </div>
-        <div class="flex:2">
+
+        <div class="flex:10/12">
+          <transition name="opacity">
+            <div class="mb:1 bg:grey-lighter p:1 rounded" v-if="value === 'pointer-events:none'">
+              <pre class="inline text:purple rounded">{{ value }}</pre>&nbsp;disabled JavaScript inside the element.
+            </div>
+          </transition>
+          <transition name="opacity">
+            <div class="mb:1 bg:grey-lighter p:1 rounded" v-if="value === 'pointer-events:auto'">
+              <pre class="inline text:purple rounded">{{ value }}</pre>&nbsp;enable JavaScript inside the element.
+            </div>
+          </transition>
           <div class="flex flex:wrap">
-            <div class="flex:1 mr:1 mb:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="bg:grey-lighter p:1">
-                  <div
-                    class="cursor:auto p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
-                  <div
-                    class="cursor:default p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
-                  <div
-                    class="cursor:pointer p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
-                  <div
-                    class="cursor:wait p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
-                  <div
-                    class="cursor:move p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
-                  <div
-                    class="cursor:not-allowed p:1 mr:1 mb:1 bg:grey-light inline-block"
-                  >Lorem ipsum dolor sit amet.</div>
+            <div class="flex:1">
+              <div class="border rounded:t:1/2 p:2">
+                <div class="transition border rounded bg:grey-lighter p:2" :class="`${value}`">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aliquid dolor rem sit sapiente impedit in qui repellat voluptas quisquam ad obcaecati corporis magni facilis, ex consectetur ipsa nam quidem!
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque eaque neque placeat debitis fuga sequi vero maxime voluptatem, corporis veniam provident quos sed corrupti quibusdam soluta nisi laboriosam qui.
+                  </p>
                 </div>
               </div>
               <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple1"></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex:1 mt:2">
-        <div class="flex flex:wrap">
-          <div class="flex:1 mr:1">
-            <table class="w:full">
-              <thead>
-                <tr>
-                  <th>Class</th>
-                  <th>Properties</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border:b border:grey-light">
-                    <pre class="text:purple">.pointer-events:none</pre>
-                  </td>
-                  <td class="border:b border:grey-light">
-                    <pre class="text:blue">pointer-events: none;</pre>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border:b border:grey-light">
-                    <pre class="text:purple">.pointer-events:auto</pre>
-                  </td>
-                  <td class="border:b border:grey-light">
-                    <pre class="text:blue">pointer-events: auto;</pre>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="flex:2">
-            <div class="flex flex:wrap">
-              <div class="flex:1">
-                <div class="border rounded:t:1/2 p:1">
-                  <div class="bg:grey-lighter p:1">
-                    <div
-                      class="bg:grey-light inline-block p:1 pointer-events:none cursor:pointer mr:1"
-                      onclick="alert('event')"
-                    >Click</div>
-                    <div
-                      class="bg:grey-light inline-block p:1 pointer-events:auto cursor:pointer"
-                      onclick="alert('event')"
-                    >Click</div>
-                  </div>
-                </div>
-                <div class="bg:black rounded:b:1/2">
-                  <pre class="language-html" v-html="exemple2"></pre>
-                </div>
+                <pre class="language-html" v-html="exemple"></pre>
               </div>
             </div>
           </div>
@@ -155,31 +48,43 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      exemple1: null,
-      exemple2: null
+      properites: [
+        'cursor:auto',
+        'cursor:default',
+        'cursor:pointer',
+        'cursor:wait',
+        'cursor:move',
+        'cursor:not-allowed',
+        'pointer-events:none',
+        'pointer-events:auto'
+      ],
+      value: null,
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properites[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      `<div class="cursor:auto">Lorem ipsum dolor sit amet.</div>
-<div class="cursor:default">Lorem ipsum dolor sit amet.</div>
-<div class="cursor:pointer">Lorem ipsum dolor sit amet.</div>
-<div class="cursor:wait">Lorem ipsum dolor sit amet.</div>
-<div class="cursor:move">Lorem ipsum dolor sit amet.</div>
-<div class="cursor:not-allowed">Lorem ipsum dolor sit amet.</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      `<div class="pointer-events:none" onclick="alert('event')">Click</div>
-<div class="pointer-events:auto" onclick="alert('event')">Click</div>`,
-      Prism.languages.html,
-      'html'
-    )
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="${this.value}"></div>`,
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>

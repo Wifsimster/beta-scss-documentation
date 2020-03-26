@@ -2,97 +2,28 @@
   <card>
     <template #header>Animation</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:1 mr:1">
-          <table class="w:full">
-            <thead>
-              <tr>
-                <th>Class</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.rotate:0</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.rotate:90</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.rotate:180</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.rotate:270</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.rotating</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.hover:rotate:0</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.hover:rotate:90</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.hover:rotate:180</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.hover:rotate:270</pre>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <pre class="inline text:purple">.hover:rotating</pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex flex:wrap my:1">
+        <div class="flex:2/12 pr:1">
+          <pre
+            v-for="property in properties"
+            :key="property"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          >{{ property }}</pre>
         </div>
 
-        <div class="flex:3">
+        <div class="flex:10/12">
           <div class="flex flex:wrap">
-            <div class="flex:1 mb:1 mr:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="bg:grey-lighter p:1">
-                  <i class="p:1 text:5/4 rotate:0">top</i>
-                  <i class="p:1 text:5/4 rotate:90">top</i>
-                  <i class="p:1 text:5/4 rotate:180">top</i>
-                  <i class="p:1 text:5/4 rotate:270">top</i>
-                  <i class="p:1 text:5/4 rotating">config</i>
-                </div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple1"></pre>
-              </div>
-            </div>
             <div class="flex:1">
-              <div class="border rounded:t:1/2 p:1">
-                <div class="bg:grey-lighter p:1">
-                  <i class="inline-block p:1 text:5/4 rotate:90 hover:rotate:0">top</i>
-                  <i class="inline-block p:1 text:5/4 hover:rotate:90">top</i>
-                  <i class="inline-block p:1 text:5/4 hover:rotate:180">top</i>
-                  <i class="inline-block p:1 text:5/4 hover:rotate:270">top</i>
-                  <i class="inline-block p:1 text:5/4 hover:rotating">config</i>
-                </div>
+              <div class="border rounded:t:1/2 p:4" style="min-height: 250px">
+                <div
+                  class="transition border rounded bg:grey-light p:4"
+                  :class="`${value}`"
+                >Roating box</div>
               </div>
               <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple2"></pre>
+                <pre class="language-html" v-html="exemple"></pre>
               </div>
             </div>
           </div>
@@ -104,34 +35,42 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      exemple1: null,
-      exemple2: null
+      properties: [
+        'rotate:0',
+        'rotate:90',
+        'rotate:180',
+        'rotate:270',
+        'rotating'
+      ],
+      value: null,
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properties[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      `<i class="rotate:0">top</i>
-<i class="rotate:90">top</i>
-<i class="rotate:180">top</i>
-<i class="rotate:270">top</i>
-<i class="rotating">config</i>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      `<i class="rotate:90 hover:rotate:0">top</i>
-<i class="hover:rotate:90">top</i>
-<i class="hover:rotate:180">top</i>
-<i class="hover:rotate:270">top</i>
-<i class="hover:rotating">config</i>`,
-      Prism.languages.html,
-      'html'
-    )
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="${this.value}">Rotating box</div>`,
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
+
 

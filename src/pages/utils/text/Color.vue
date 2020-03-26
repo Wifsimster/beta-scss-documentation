@@ -1,26 +1,21 @@
 <template>
-  <div class="flex flex:wrap my:1">
-    <div class="flex flex:col flex:2/12">
-      <div class="overflow-y:auto line:normal mb:1 mx:1/2" style="max-height: 680px;">
-        <table class="w:full">
-          <tbody>
-            <tr
-              v-for="color in properties"
-              :key="color"
-              @click="value = color"
-              :class="{ 'active': value === color }"
-            >
-              <td>
-                <pre class="inline text:purple-dark">text:{{ color }}</pre>
-                <pre
-                  class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                  v-if="color === 'black'"
-                >Default</pre>
-              </td>
-              <td class="p:1" :class="'bg:' + color"></td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="flex my:1">
+    <div class="flex:2/12 pr:1">
+      <div class="flex flex:col overflow-y:auto" style="max-height: 600px">
+        <div
+          class="flex justify:between transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          v-for="item in properties"
+          :key="item"
+          @click="value = item"
+          :class="{ 'border:purple': value === item }"
+        >
+          <pre>text:{{ item }}</pre>
+          <pre
+            class="border bg:grey-lighter text:grey-dark px:1/3 text:3/4 rounded"
+            v-if="item === 'black'"
+          >Default</pre>
+          <span class="p:1/2 border rounded" :class="'bg:' + item"></span>
+        </div>
       </div>
     </div>
 
@@ -29,13 +24,15 @@
         <div class="flex:1 px:1/2 mb:1">
           <div class="border rounded:t:1/2 p:1">
             <div class="py:1" :class="'text:' + value">
-              <p
-                class="pb:1"
-              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti velit, ad sequi itaque perferendis quisquam in sunt deleniti blanditiis qui inventore tempora eos veniam obcaecati incidunt, et pariatur corporis molestiae!</p>
-              <p
-                class="pb:1"
-              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores libero vero neque ullam rerum ipsum saepe sequi soluta a quo! Tenetur, maiores? Eius voluptatum, laborum laudantium eaque adipisci aperiam error!</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab in fuga doloribus natus corporis eligendi totam saepe deleniti laborum voluptatum consequuntur et, quod quaerat sapiente ex officia, ut dolor repudiandae?</p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti velit, ad sequi itaque perferendis quisquam in sunt deleniti blanditiis qui inventore tempora eos veniam obcaecati incidunt, et pariatur corporis molestiae!
+                <br />
+                <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores libero vero neque ullam rerum ipsum saepe sequi soluta a quo! Tenetur, maiores? Eius voluptatum, laborum laudantium eaque adipisci aperiam error!
+                <br />
+                <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab in fuga doloribus natus corporis eligendi totam saepe deleniti laborum voluptatum consequuntur et, quod quaerat sapiente ex officia, ut dolor repudiandae?
+                <br />
+                <br />Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit nobis expedita ad perspiciatis aperiam, a ipsa? Labore, vitae. Fugiat sed quia dolorum voluptates optio vitae ad, eveniet porro vero dignissimos.
+              </p>
             </div>
           </div>
           <div class="bg:black rounded:b:1/2">

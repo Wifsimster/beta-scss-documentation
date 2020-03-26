@@ -2,88 +2,52 @@
   <card>
     <template #header>Overflow</template>
     <template #content>
-      <div class="flex flex:wrap">
-        <div class="flex:1 mr:1">
-          <table class="w:full">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Properties</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item in overflow" :key="item[0]">
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue"><span class="text:purple">.{{ item[0] }}</span></pre>
-                </td>
-                <td class="border:b border:grey-light">
-                  <pre class="text:blue">overflow: {{ item[1] }};</pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex flex:wrap my:1">
+        <div class="flex:2/12 pr:1">
+          <pre
+            v-for="property in properites"
+            :key="property"
+            @click="value = property"
+            :class="{ 'border:purple': value === property }"
+            class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          >{{ property }}</pre>
         </div>
 
-        <div class="flex:2">
+        <div class="flex:10/12">
           <div class="flex flex:wrap">
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1 overflow:hidden">
+            <div class="flex:1">
+              <div class="border rounded:t:1/2 p:2">
                 <div
-                  class="overflow:visible bg:grey-light p:1/2"
-                  style="height: 75px;"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend rutrum auctor. Phasellus convallis sagittis augue ut ornare. Vestibulum et gravida lectus, sed ultrices sapien. Nullam aliquet elit dui, vitae hendrerit lectus volutpat eget. In porttitor tincidunt egestas. Pellentesque laoreet ligula at est vulputate facilisis. Etiam tristique justo ut odio placerat ornare. Cras bibendum, orci at ornare tincidunt, lacus nunc gravida enim, sit amet euismod nunc lectus in lectus. Ut dictum nulla et arcu aliquet ornare. Aliquam et dapibus lectus. Aenean mattis elit mi, sed ultricies augue consectetur id. Sed id magna malesuada, luctus urna a, bibendum tortor. Cras cursus cursus ex. Nulla fringilla elit vitae imperdiet scelerisque. Donec ac sem eu diam convallis mollis a sed leo. Proin congue augue turpis, eget rutrum dolor ultricies non. Nulla blandit venenatis dapibus. Sed tincidunt mollis elit, quis suscipit nibh eleifend quis. Donec ex lorem, auctor eu rutrum in, blandit id dolor. Nulla molestie arcu turpis. In id felis vulputate, tempor massa eget, malesuada mauris. Quisque fringilla consequat metus, luctus scelerisque leo fringilla vel.</div>
+                  class="transition border rounded bg:grey-lighter p:2"
+                  style="max-height: 400px;"
+                  :class="`${value}`"
+                >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aliquid dolor rem sit sapiente impedit in qui repellat voluptas quisquam ad obcaecati corporis magni facilis, ex consectetur ipsa nam quidem!
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cumque eaque neque placeat debitis fuga sequi vero maxime voluptatem, corporis veniam provident quos sed corrupti quibusdam soluta nisi laboriosam qui.
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quasi voluptate perspiciatis asperiores maxime, mollitia quas saepe magni sunt dignissimos. Animi at quae dolore obcaecati minima quia expedita quas perferendis!
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi velit inventore error laudantium ad sint illo repellendus eaque consectetur quae eum vitae, maxime ratione dignissimos beatae incidunt alias numquam iusto?
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere cupiditate ducimus beatae vitae perferendis! Doloremque fugiat quaerat vero, minima ab iusto repudiandae distinctio voluptatem eveniet deleniti! Autem maiores magnam odio.
+                    <br />
+                    <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta tempore nisi labore a vitae dolores aperiam hic asperiores aliquid accusantium incidunt minus dolore, illum, doloremque architecto atque dolorem. Repellat, porro?
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia veniam blanditiis explicabo atque nobis. Vel quia dolore explicabo nemo recusandae maiores deserunt quibusdam alias, blanditiis quos dignissimos facere veritatis minus.
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, exercitationem unde! Suscipit est id nam quas exercitationem modi aspernatur dignissimos, sequi voluptate ducimus alias qui excepturi repudiandae tempora nisi assumenda?
+                    <br />
+                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore reprehenderit, itaque nobis sapiente explicabo aspernatur velit tenetur error sed odit voluptatibus praesentium obcaecati illo culpa quam alias numquam. Earum, ex!
+                    <br />
+                    <br />Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eos error delectus dolorum, beatae velit commodi perspiciatis. Quasi quaerat debitis fuga eveniet autem sapiente deleniti voluptate sequi. Voluptatum, esse hic.
+                  </p>
+                </div>
               </div>
               <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple1"></pre>
+                <pre class="language-html" v-html="exemple"></pre>
               </div>
-            </div>
-
-            <div class="flex:1 px:1/2 mb:1">
-              <div class="border rounded:t:1/2 p:1 overflow:hidden">
-                <div
-                  class="overflow:scroll bg:grey-light p:1/2"
-                  style="height: 75px;"
-                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend rutrum auctor. Phasellus convallis sagittis augue ut ornare. Vestibulum et gravida lectus, sed ultrices sapien. Nullam aliquet elit dui, vitae hendrerit lectus volutpat eget. In porttitor tincidunt egestas. Pellentesque laoreet ligula at est vulputate facilisis. Etiam tristique justo ut odio placerat ornare. Cras bibendum, orci at ornare tincidunt, lacus nunc gravida enim, sit amet euismod nunc lectus in lectus. Ut dictum nulla et arcu aliquet ornare. Aliquam et dapibus lectus. Aenean mattis elit mi, sed ultricies augue consectetur id. Sed id magna malesuada, luctus urna a, bibendum tortor. Cras cursus cursus ex. Nulla fringilla elit vitae imperdiet scelerisque. Donec ac sem eu diam convallis mollis a sed leo. Proin congue augue turpis, eget rutrum dolor ultricies non. Nulla blandit venenatis dapibus. Sed tincidunt mollis elit, quis suscipit nibh eleifend quis. Donec ex lorem, auctor eu rutrum in, blandit id dolor. Nulla molestie arcu turpis. In id felis vulputate, tempor massa eget, malesuada mauris. Quisque fringilla consequat metus, luctus scelerisque leo fringilla vel.</div>
-              </div>
-              <div class="bg:black rounded:b:1/2">
-                <pre class="language-html" v-html="exemple2"></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex:1 px:1/2 mb:1">
-            <div class="border rounded:t:1/2 p:1 overflow:hidden">
-              <div
-                class="overflow-x:scroll bg:grey-light p:1/2"
-                style="height: 75px;"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend rutrum auctor. Phasellus convallis sagittis augue ut ornare. Vestibulum et gravida lectus, sed ultrices sapien. Nullam aliquet elit dui, vitae hendrerit lectus volutpat eget. In porttitor tincidunt egestas. Pellentesque laoreet ligula at est vulputate facilisis. Etiam tristique justo ut odio placerat ornare. Cras bibendum, orci at ornare tincidunt, lacus nunc gravida enim, sit amet euismod nunc lectus in lectus. Ut dictum nulla et arcu aliquet ornare. Aliquam et dapibus lectus. Aenean mattis elit mi, sed ultricies augue consectetur id. Sed id magna malesuada, luctus urna a, bibendum tortor. Cras cursus cursus ex. Nulla fringilla elit vitae imperdiet scelerisque. Donec ac sem eu diam convallis mollis a sed leo. Proin congue augue turpis, eget rutrum dolor ultricies non. Nulla blandit venenatis dapibus. Sed tincidunt mollis elit, quis suscipit nibh eleifend quis. Donec ex lorem, auctor eu rutrum in, blandit id dolor. Nulla molestie arcu turpis. In id felis vulputate, tempor massa eget, malesuada mauris. Quisque fringilla consequat metus, luctus scelerisque leo fringilla vel.</div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple3"></pre>
-            </div>
-          </div>
-
-          <div class="flex:1 px:1/2 mb:1">
-            <div class="border rounded:t:1/2 p:1 overflow:hidden">
-              <div
-                class="overflow-y:scroll bg:grey-light p:1/2"
-                style="height: 75px;"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend rutrum auctor. Phasellus convallis sagittis augue ut ornare. Vestibulum et gravida lectus, sed ultrices sapien. Nullam aliquet elit dui, vitae hendrerit lectus volutpat eget. In porttitor tincidunt egestas. Pellentesque laoreet ligula at est vulputate facilisis. Etiam tristique justo ut odio placerat ornare. Cras bibendum, orci at ornare tincidunt, lacus nunc gravida enim, sit amet euismod nunc lectus in lectus. Ut dictum nulla et arcu aliquet ornare. Aliquam et dapibus lectus. Aenean mattis elit mi, sed ultricies augue consectetur id. Sed id magna malesuada, luctus urna a, bibendum tortor. Cras cursus cursus ex. Nulla fringilla elit vitae imperdiet scelerisque. Donec ac sem eu diam convallis mollis a sed leo. Proin congue augue turpis, eget rutrum dolor ultricies non. Nulla blandit venenatis dapibus. Sed tincidunt mollis elit, quis suscipit nibh eleifend quis. Donec ex lorem, auctor eu rutrum in, blandit id dolor. Nulla molestie arcu turpis. In id felis vulputate, tempor massa eget, malesuada mauris. Quisque fringilla consequat metus, luctus scelerisque leo fringilla vel.</div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple4"></pre>
-            </div>
-          </div>
-
-          <div class="flex:1 px:1/2 mb:1">
-            <div class="border rounded:t:1/2 p:1 overflow:hidden">
-              <div
-                class="overflow:auto bg:grey-light p:1/2"
-                style="height: 75px;"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend rutrum auctor. Phasellus convallis sagittis augue ut ornare. Vestibulum et gravida lectus, sed ultrices sapien. Nullam aliquet elit dui, vitae hendrerit lectus volutpat eget. In porttitor tincidunt egestas. Pellentesque laoreet ligula at est vulputate facilisis. Etiam tristique justo ut odio placerat ornare. Cras bibendum, orci at ornare tincidunt, lacus nunc gravida enim, sit amet euismod nunc lectus in lectus. Ut dictum nulla et arcu aliquet ornare. Aliquam et dapibus lectus. Aenean mattis elit mi, sed ultricies augue consectetur id. Sed id magna malesuada, luctus urna a, bibendum tortor. Cras cursus cursus ex. Nulla fringilla elit vitae imperdiet scelerisque. Donec ac sem eu diam convallis mollis a sed leo. Proin congue augue turpis, eget rutrum dolor ultricies non. Nulla blandit venenatis dapibus. Sed tincidunt mollis elit, quis suscipit nibh eleifend quis. Donec ex lorem, auctor eu rutrum in, blandit id dolor. Nulla molestie arcu turpis. In id felis vulputate, tempor massa eget, malesuada mauris. Quisque fringilla consequat metus, luctus scelerisque leo fringilla vel.</div>
-            </div>
-            <div class="bg:black rounded:b:1/2">
-              <pre class="language-html" v-html="exemple5"></pre>
             </div>
           </div>
         </div>
@@ -94,71 +58,47 @@
 
 <script>
 import Prism from 'prismjs'
+
 export default {
   data() {
     return {
-      overflow: [
-        ['overflow:auto', 'auto'],
-        ['overflow:hidden', 'hidden'],
-        ['overflow:visible', 'visible'],
-        ['overflow:scroll', 'scroll'],
-        ['overflow-x:auto', 'auto'],
-        ['overflow-y:auto', 'auto'],
-        ['overflow-x:hidden', 'hidden'],
-        ['overflow-y:hidden', 'hidden'],
-        ['overflow-x:visible', 'visible'],
-        ['overflow-y:visible', 'visible'],
-        ['overflow-x:scroll', 'scroll'],
-        ['overflow-y:scroll', 'scroll']
+      properites: [
+        'overflow:auto',
+        'overflow:hidden',
+        'overflow:visible',
+        'overflow:scroll',
+        'overflow-x:auto',
+        'overflow-y:auto',
+        'overflow-x:hidden',
+        'overflow-y:hidden',
+        'overflow-x:visible',
+        'overflow-y:visible',
+        'overflow-x:scroll',
+        'overflow-y:scroll'
       ],
-      exemple1: null,
-      exemple2: null,
-      exemple3: null,
-      exemple4: null,
-      exemple5: null
+      value: null,
+      exemple: null
     }
   },
+  created() {
+    this.value = this.properites[0]
+  },
   mounted() {
-    this.exemple1 = Prism.highlight(
-      `<div class="overflow:visible">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple2 = Prism.highlight(
-      `<div class="overflow:scroll">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple3 = Prism.highlight(
-      `<div class="overflow-x:scroll">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple4 = Prism.highlight(
-      `<div class="overflow-y:scroll">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
-
-    this.exemple5 = Prism.highlight(
-      `<div class="overflow:auto">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
-</div>`,
-      Prism.languages.html,
-      'html'
-    )
+    this.setExemple()
+  },
+  watch: {
+    value() {
+      this.setExemple()
+    }
+  },
+  methods: {
+    setExemple() {
+      this.exemple = Prism.highlight(
+        `<div class="${this.value}"></div>`,
+        Prism.languages.html,
+        'html'
+      )
+    }
   }
 }
 </script>
-

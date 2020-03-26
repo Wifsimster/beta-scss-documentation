@@ -1,15 +1,29 @@
 <template>
-  <div class="flex flex:wrap">
-    <div class="flex:1">
-      <p class="pb:1">This is the shorthand for <pre class="inline text:purple">flex-grow</pre>, <pre class="inline text:purple">flex-shrink</pre> and <pre class="inline text:purple">flex-basis</pre> combined.</p>
-      <div class="flex py:1">
-        <pre
-          v-for="(property, index) in properties"
-          :key="index"
-          @click="value01 = property"
-          :class="{ 'border:purple': value01 === property }"
-          class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 cursor:pointer"
-        >{{ property }}</pre>
+  <div class="flex my:1">
+    <div class="flex:2/12 pr:1">
+      <div class="flex flex:col">
+        <div
+          class="flex justify:between transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          v-for="item in properties"
+          :key="item"
+          @click="value01 = item"
+          :class="{ 'border:purple': value01 === item }"
+        >
+          <pre>{{ item }}</pre>
+          <pre
+            class="border bg:grey-lighter text:grey-dark px:1/3 text:3/4 rounded"
+            v-if="item === 'flex:auto'"
+          >Default</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex:10/12">
+      <div class="pb:1">
+        This is the shorthand for
+        <pre class="inline text:purple">flex-grow</pre>,
+        <pre class="inline text:purple">flex-shrink</pre>&nbsp;and
+        <pre class="inline text:purple">flex-basis</pre>&nbsp;combined.
       </div>
       <div class="border rounded:t:1/2 p:1 overflow:hidden">
         <div class="flex flex:wrap bg:grey-lighter transition">
@@ -63,6 +77,9 @@ export default {
       ],
       exemple: null
     }
+  },
+  created() {
+    this.value01 = this.properties[0]
   },
   mounted() {
     this.setExemple()

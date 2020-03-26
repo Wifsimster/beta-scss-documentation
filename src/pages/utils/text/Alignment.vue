@@ -1,24 +1,21 @@
 <template>
   <div class="flex flex:wrap my:1">
-    <div class="flex flex:col flex:2/12">
-      <table class="w:full">
-        <tbody>
-          <tr
-            v-for="item in properties"
-            :key="item.key"
-            @click="value = item"
-            :class="{ 'active': value === item }"
-          >
-            <td class="flex justify:between">
-              <pre class="inline text:purple-dark">text:{{ item }}</pre>
-              <pre
-                class="inline bg:grey-light text:grey-dark text:3/4 rounded p:1/4"
-                v-if="item === 'left'"
-              >Default</pre>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="flex:2/12 pr:1">
+      <div class="flex flex:col">
+        <div
+          class="flex justify:between transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mb:1/2 cursor:pointer"
+          v-for="item in properties"
+          :key="item"
+          @click="value = item"
+          :class="{ 'border:purple': value === item }"
+        >
+          <pre>{{ item }}</pre>
+          <pre
+            class="border bg:grey-lighter text:grey-dark px:1/3 text:3/4 rounded"
+            v-if="item === 'left'"
+          >Default</pre>
+        </div>
+      </div>
     </div>
 
     <div class="flex:10/12">
