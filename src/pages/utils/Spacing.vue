@@ -11,6 +11,14 @@
             :class="{ 'border:purple': value === property }"
             class="transition border bg:grey-light hover:bg:purple-lightest text:purple focus:bg:grey-light rounded px:1 py:1/2 mr:1 mb:1/2 cursor:pointer"
           >{{ property.label }}</pre>
+          <multiselect
+            placeholder="Choose a position"
+            :options="positions"
+            v-model="position"
+            label="label"
+            track-by="value"
+            class="mb:1/2"
+          />
           <div class="flex flex:wrap">
             <multiselect placeholder="Choose a size" :options="sizes" v-model="size" />
           </div>
@@ -23,7 +31,7 @@
                 <div class="relative p:2 bg:grey-light rounded">
                   <div
                     class="rounded bg:grey"
-                    :class="`${value.value}:${size}`"
+                    :class="`${value.value}${position.value}:${size}`"
                   >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, aliquid dolor rem sit sapiente impedit in qui repellat voluptas quisquam ad obcaecati corporis magni facilis, ex consectetur ipsa nam quidem!</div>
                 </div>
               </div>
@@ -69,6 +77,16 @@ export default {
         '4',
         'auto'
       ],
+      positions: [
+        { label: 'all', value: '' },
+        { label: 'top', value: 't' },
+        { label: 'right', value: 'r' },
+        { label: 'bottom', value: 'b' },
+        { label: 'left', value: 'l' },
+        { label: 'horizontal', value: 'x' },
+        { label: 'vertical', value: 'y' }
+      ],
+      position: { label: 'all', value: '' },
       value: null,
       size: '1',
       exemple: null
@@ -94,7 +112,7 @@ export default {
   methods: {
     setExemple() {
       this.exemple = Prism.highlight(
-        `<div class="${this.value.value}:${this.size}">
+        `<div class="${this.value.value}${this.position.value}:${this.size}">
     Lorem ipsum dolor sit ...
 </div>`,
         Prism.languages.html,
