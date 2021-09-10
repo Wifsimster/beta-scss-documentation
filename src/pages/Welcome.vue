@@ -98,16 +98,32 @@
             Breakpoints :
             <ul class="line-height:2">
               <li>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">xxs:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">320px</pre>
+              </li>
+              <li>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">xs:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">375px</pre>
+              </li>
+              <li>
                 <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">sm:{class}</pre>
-                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">40 rem</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">425px</pre>
               </li>
               <li>
                 <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">md:{class}</pre>
-                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">50 rem</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">768px</pre>
               </li>
               <li>
                 <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">lg:{class}</pre>
-                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">80 rem</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">1024px</pre>
+              </li>
+              <li>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">xl:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">1440px</pre>
+              </li>
+              <li>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">xxl:{class}</pre>
+                <pre class="inline bg:grey-lighter rounded px:1/4 text:purple">2560px</pre>
               </li>
             </ul>
           </div>
