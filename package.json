@@ -2,7 +2,7 @@
   "name": "beta-scss-documentation",
   "description": "beta-scss documentation",
   "author": "Wifsimster <battistella@protonmail.com>",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "scripts": {
     "lint": "eslint --fix --ext .js,.vue src/",
